@@ -1,0 +1,109 @@
+<!-- 
+  The Castle Snippet — Anchen & Joe Wedding
+  Video widget block (row/colour/restrict-width/column classes) is generated
+  by the site builder's video embed widget — left as-is so it keeps working
+  inside that grid system. Only .ajc-wrap (the text section below) uses our
+  own inline "component" styles. Top/bottom border added per site
+  convention: border-top on the outer video row, border-bottom on .ajc-wrap.
+  YouTube embed plays automatically and muted (autoplay=1&mute=1), which is
+  required by browsers to allow autoplay without a user gesture.
+-->
+
+<!-- Google Fonts (skip if already on the page) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&amp;family=Raleway:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+
+<style>
+  .ajc-wrap { font-family:'Raleway',sans-serif; color:#252828; max-width:640px; margin:0 auto; padding:40px 20px; text-align:center; border-bottom:1px solid #BF9B3A; }
+
+  .ajc-sub { font-size:0.62rem; font-weight:500; letter-spacing:0.45em; text-transform:uppercase; color:#019CA6; display:block; margin-bottom:10px; }
+  .ajc-title { font-family:'Cormorant Garamond',serif; font-size:clamp(1.9rem,5vw,2.9rem); font-weight:300; font-style:italic; color:#252828; display:block; margin-bottom:28px; }
+
+  /* Divider */
+  .ajc-div { display:flex; align-items:center; gap:14px; margin:0 auto 30px; width:280px; max-width:90%; }
+  .ajc-div-line { flex:1; height:1px; background:linear-gradient(90deg,transparent,#BF9B3A 60%); }
+  .ajc-div-line.r { background:linear-gradient(90deg,#BF9B3A 40%,transparent); }
+  .ajc-div-gem { width:8px; height:8px; background:#BF9B3A; transform:rotate(45deg); flex-shrink:0; }
+  .ajc-div-dot { width:4px; height:4px; background:#019CA6; transform:rotate(45deg); flex-shrink:0; }
+
+  /* Castle icon */
+  .ajc-icon { color:#BF9B3A; margin-bottom:22px; opacity:0.9; }
+
+  .ajc-body { font-family:'Cormorant Garamond',serif; font-size:clamp(1.05rem,2.6vw,1.3rem); font-weight:300; font-style:italic; line-height:1.7; color:#4A4F4F; margin-bottom:30px; }
+  .ajc-body strong { font-style:normal; font-weight:500; color:#019CA6; }
+
+  .ajc-address { font-size:0.72rem; font-weight:400; letter-spacing:0.2em; text-transform:uppercase; color:#7A8080; line-height:1.9; margin-bottom:34px; }
+
+  /* CTA button */
+  .ajc-btn {
+    display:inline-flex; align-items:center; gap:8px;
+    padding:12px 30px; border:1px solid #019CA6; color:#019CA6;
+    text-decoration:none; font-size:0.68rem; font-weight:500;
+    letter-spacing:0.25em; text-transform:uppercase;
+    transition:background 0.25s, color 0.25s;
+  }
+  .ajc-btn:hover, .ajc-btn:focus { background:#019CA6; color:#FAF7EE; outline:none; }
+</style>
+
+ 	<div class="row clearfix" style="border-top:1px solid #BF9B3A; padding-top:40px;">
+<div class="colour">
+<div>
+
+        	<div class="column full">
+            		<div class="embed-responsive embed-responsive-16by9">
+            			<iframe width="560" height="315" src="https://www.youtube.com/embed/A5Ek5fn7IZE?si=T3PeV1abJPhn_WKy&controls=0&autoplay=1&mute=1&playsinline=1&cc_load_policy=0" title="YouTube video player" frameborder="0" style="pointer-events:none;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            		</div>
+        	</div>
+        
+<div class="clear"></div>
+</div>
+</div>
+</div>
+
+<div class="ajc-wrap">
+
+  <span class="ajc-sub">The Venue</span>
+  <span class="ajc-title">Powderham Castle</span>
+
+  <div class="ajc-div" aria-hidden="true">
+    <div class="ajc-div-line"></div><div class="ajc-div-dot"></div>
+    <div class="ajc-div-gem"></div><div class="ajc-div-dot"></div>
+    <div class="ajc-div-line r"></div>
+  </div>
+
+  <div class="ajc-icon" aria-hidden="true">
+    <svg width="44" height="36" viewBox="0 0 48 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="12" width="8" height="28" fill="currentColor" opacity="0.6"></rect>
+      <rect x="40" y="12" width="8" height="28" fill="currentColor" opacity="0.6"></rect>
+      <rect x="0" y="4" width="8" height="8" fill="currentColor" opacity="0.4"></rect>
+      <rect x="40" y="4" width="8" height="8" fill="currentColor" opacity="0.4"></rect>
+      <rect x="2" y="0" width="4" height="6" fill="currentColor"></rect>
+      <rect x="42" y="0" width="4" height="6" fill="currentColor"></rect>
+      <rect x="10" y="16" width="28" height="24" fill="currentColor" opacity="0.5"></rect>
+      <rect x="14" y="8" width="20" height="10" fill="currentColor" opacity="0.4"></rect>
+      <rect x="16" y="4" width="4" height="6" fill="currentColor"></rect>
+      <rect x="28" y="4" width="4" height="6" fill="currentColor"></rect>
+      <rect x="20" y="0" width="8" height="6" fill="currentColor" opacity="0.7"></rect>
+      <rect x="19" y="28" width="10" height="12" fill="#FAF7EE" opacity="0.9"></rect>
+    </svg>
+  </div>
+
+  <p class="ajc-body">
+    A family home since <strong>1391</strong>, set on the banks of the River Exe just
+    outside Exeter. Seven centuries of history provide the backdrop to our day —
+    from the historic State Rooms to the breathtaking Belvedere, overlooking the estuary.
+  </p>
+
+  <p class="ajc-address">
+    Powderham Castle &nbsp;·&nbsp; Kenton &nbsp;·&nbsp; Exeter &nbsp;·&nbsp; Devon &nbsp;·&nbsp; EX6 8JQ
+  </p>
+
+  <a class="ajc-btn" href="https://www.powderham.co.uk/" target="_blank" rel="noopener noreferrer">
+    Visit Powderham Castle
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline>
+    </svg>
+  </a>
+
+</div>

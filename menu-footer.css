@@ -1,0 +1,310 @@
+/*
+  Anchen & Joe Wedding - CMS menu and footer
+  Add this file in the CMS site's global/custom CSS area, not inside an
+  injected content snippet. The CMS developer should assign these classes
+  to the CMS-controlled menu and footer containers.
+
+  Expected menu structure:
+  <header class="site-menu">
+    <a class="site-menu__brand" href="#top">Anchen & Joe</a>
+    <button class="site-menu__toggle" aria-expanded="false">Menu</button>
+    <nav class="site-menu__nav" aria-label="Main navigation">
+      <ul class="site-menu__links"><li><a href="#...">...</a></li></ul>
+    </nav>
+  </header>
+
+  Expected footer structure:
+  <footer class="site-footer">
+    <div class="site-footer__inner">...</div>
+  </footer>
+*/
+
+:root {
+  --wedding-cream: #FAF7EE;
+  --wedding-cream-dark: #F0EBD8;
+  --wedding-teal: #019CA6;
+  --wedding-teal-dark: #017077;
+  --wedding-gold: #BF9B3A;
+  --wedding-dark: #252828;
+  --wedding-muted: #7A8080;
+  --wedding-heading: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --wedding-label: 'Raleway', Arial, Helvetica, sans-serif;
+}
+
+.site-menu {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background: rgba(250, 247, 238, 0.96);
+  border-top: 1px solid var(--wedding-gold);
+  border-bottom: 1px solid var(--wedding-cream-dark);
+  box-shadow: 0 3px 14px rgba(37, 40, 40, 0.08);
+  backdrop-filter: blur(8px);
+}
+
+.site-menu__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  width: min(1120px, calc(100% - 48px));
+  min-height: 76px;
+  margin: 0 auto;
+}
+
+.site-menu__brand {
+  flex: 0 0 auto;
+  color: var(--wedding-dark);
+  font-family: var(--wedding-heading);
+  font-size: 1.8rem;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.site-menu__brand::first-letter {
+  color: var(--wedding-teal);
+}
+
+.site-menu__nav {
+  display: flex;
+  align-items: center;
+}
+
+.site-menu__links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-menu__links a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 0;
+  color: var(--wedding-dark);
+  font-family: var(--wedding-label);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 180ms ease;
+}
+
+.site-menu__links a::after {
+  position: absolute;
+  right: 0;
+  bottom: 3px;
+  left: 0;
+  height: 1px;
+  background: var(--wedding-gold);
+  content: '';
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 180ms ease;
+}
+
+.site-menu__links a:hover,
+.site-menu__links a:focus-visible {
+  color: var(--wedding-teal-dark);
+}
+
+.site-menu__links a:hover::after,
+.site-menu__links a:focus-visible::after,
+.site-menu__links a[aria-current="page"]::after {
+  transform: scaleX(1);
+}
+
+.site-menu__links a:focus-visible,
+.site-menu__brand:focus-visible,
+.site-menu__toggle:focus-visible,
+.site-footer a:focus-visible {
+  outline: 2px solid var(--wedding-teal);
+  outline-offset: 5px;
+}
+
+.site-menu__toggle {
+  display: none;
+  border: 1px solid var(--wedding-teal);
+  border-radius: 0;
+  padding: 10px 14px;
+  color: var(--wedding-teal-dark);
+  background: transparent;
+  font-family: var(--wedding-label);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.site-footer {
+  margin-top: 64px;
+  border-top: 1px solid var(--wedding-gold);
+  background: var(--wedding-dark);
+  color: var(--wedding-cream);
+}
+
+.site-footer__inner {
+  display: grid;
+  grid-template-columns: minmax(180px, 1.2fr) 2fr;
+  gap: 48px;
+  width: min(1120px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 56px 0 28px;
+}
+
+.site-footer__brand {
+  color: var(--wedding-cream);
+  font-family: var(--wedding-heading);
+  font-size: 2.3rem;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.site-footer__tagline {
+  max-width: 250px;
+  margin: 14px 0 0;
+  color: #C8CECC;
+  font-family: var(--wedding-heading);
+  font-size: 1.1rem;
+  font-style: italic;
+  line-height: 1.45;
+}
+
+.site-footer__links {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.site-footer__heading {
+  margin: 0 0 14px;
+  color: var(--wedding-gold);
+  font-family: var(--wedding-label);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.site-footer ul {
+  display: grid;
+  gap: 9px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-footer a {
+  color: var(--wedding-cream);
+  font-family: var(--wedding-label);
+  font-size: 0.78rem;
+  font-weight: 500;
+  line-height: 1.5;
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+
+.site-footer a:hover {
+  color: var(--wedding-gold-light, #D4B45A);
+}
+
+.site-footer__bottom {
+  width: min(1120px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 20px 0 24px;
+  border-top: 1px solid rgba(240, 235, 216, 0.2);
+  color: var(--wedding-muted);
+  font-family: var(--wedding-label);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media (max-width: 760px) {
+  .site-menu__inner {
+    min-height: 66px;
+  }
+
+  .site-menu__toggle {
+    display: inline-block;
+  }
+
+  .site-menu__nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    display: none;
+    padding: 8px 24px 18px;
+    border-bottom: 1px solid var(--wedding-cream-dark);
+    background: var(--wedding-cream);
+  }
+
+  .site-menu__nav.is-open {
+    display: block;
+  }
+
+  .site-menu__links {
+    display: grid;
+    justify-content: stretch;
+    gap: 0;
+  }
+
+  .site-menu__links a {
+    display: block;
+    padding: 13px 0;
+    border-bottom: 1px solid var(--wedding-cream-dark);
+  }
+
+  .site-menu__links li:last-child a {
+    border-bottom: 0;
+  }
+
+  .site-footer__inner {
+    grid-template-columns: 1fr;
+    gap: 34px;
+    padding-top: 42px;
+  }
+
+  .site-footer__links {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px 18px;
+  }
+}
+
+@media (max-width: 420px) {
+  .site-menu__inner,
+  .site-footer__inner,
+  .site-footer__bottom {
+    width: min(100% - 32px, 1120px);
+  }
+
+  .site-menu__brand {
+    font-size: 1.55rem;
+  }
+
+  .site-footer__links {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-menu__links a,
+  .site-menu__links a::after,
+  .site-footer a {
+    transition: none;
+  }
+}

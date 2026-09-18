@@ -1,0 +1,259 @@
+/* ==========================================================================
+   Anchen & Joe Wedding — Canva Form Theme
+   Paste this into Canva's custom CSS field for your form/embed.
+   Matches the styling used across index.html, map-snippet.html,
+   faq-snippet.html, our-story-snippet.html, and menu-snippet.html.
+
+   Fonts used (add these in Canva's font settings, or via a Google Fonts
+   embed, if the form supports it):
+     Headings: "Cormorant Garamond" (italic, weight 600/700)
+     Labels/Buttons: "Raleway" (weight 600/700)
+     Body text: Georgia / "Times New Roman" / serif
+   ========================================================================== */
+
+:root {
+  --ds-gold: #BF9B3A;
+  --ds-teal: #017077;
+  --ds-heading: #000000;
+  --ds-body: #1a1a1a;
+  --ds-subheading: #252828;
+  --ds-muted: #6b6b6b;
+  --ds-border: #e2d9be;
+  --ds-font-heading: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --ds-font-label: 'Raleway', Arial, Helvetica, sans-serif;
+  --ds-font-body: Georgia, 'Times New Roman', serif;
+}
+
+/* Overall form container */
+.ds-form {
+  font-family: var(--ds-font-body);
+  color: var(--ds-heading);
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Small uppercase kicker label, e.g. "Getting There" / "Duck & Strawberry" */
+.ds-eyebrow {
+  font-family: var(--ds-font-label);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--ds-gold);
+  text-align: center;
+  margin: 0 0 10px;
+}
+
+/* Large italic serif heading, e.g. "Find Us" / "Our Menu" */
+.ds-heading {
+  font-family: var(--ds-font-heading);
+  font-size: 3rem;
+  font-weight: 700;
+  font-style: italic;
+  color: var(--ds-heading);
+  text-align: center;
+  margin: 0 0 28px;
+  line-height: 1.1;
+}
+
+/* Smaller section heading variant, e.g. "Canapés" / "Local Taxis" */
+.ds-subheading {
+  font-family: var(--ds-font-heading);
+  font-size: 2.2rem;
+  font-weight: 700;
+  font-style: italic;
+  color: var(--ds-heading);
+  text-align: center;
+  margin: 0 0 20px;
+  line-height: 1.1;
+}
+
+/* Diamond divider */
+.ds-divider {
+  width: 280px;
+  max-width: 90%;
+  margin: 0 auto 36px;
+  border-collapse: collapse;
+}
+.ds-divider td { border-top: 1px solid var(--ds-gold); width: 40%; }
+.ds-divider td.ds-divider-mark { border-top: none; width: 10px; text-align: center; }
+
+/* Body copy */
+.ds-body-text {
+  font-family: var(--ds-font-body);
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--ds-body);
+  margin: 0;
+}
+
+/* Form field labels */
+.ds-field-label {
+  font-family: var(--ds-font-label);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--ds-subheading);
+  margin: 0 0 6px;
+  display: block;
+}
+
+/* Form inputs */
+.ds-input,
+.ds-textarea,
+.ds-select {
+  width: 100%;
+  font-family: var(--ds-font-body);
+  font-size: 1rem;
+  color: var(--ds-body);
+  background: #ffffff;
+  border: 1px solid var(--ds-border);
+  border-radius: 2px;
+  padding: 12px 14px;
+  box-sizing: border-box;
+}
+.ds-input:focus,
+.ds-textarea:focus,
+.ds-select:focus {
+  outline: none;
+  border-color: var(--ds-gold);
+}
+
+/* Radio / checkbox rows (e.g. RSVP yes/no, dietary options) */
+.ds-choice-row {
+  font-family: var(--ds-font-body);
+  font-size: 1rem;
+  color: var(--ds-body);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 10px;
+}
+
+/* Card / bordered item block, e.g. dish entries, taxi entries */
+.ds-card {
+  border-bottom: 1px solid var(--ds-border);
+  padding-bottom: 18px;
+  margin-bottom: 18px;
+}
+.ds-card:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+/* Image frame with the site's signature thin gold-tinted border */
+.ds-image-frame {
+  width: 100%;
+  border-radius: 2px;
+  overflow: hidden;
+  border: 1px solid var(--ds-border);
+  margin-bottom: 20px;
+}
+.ds-image-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Primary button / call-to-action, e.g. "Submit", "Get Directions" */
+.ds-button {
+  display: inline-block;
+  font-family: var(--ds-font-label);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: var(--ds-teal);
+  text-decoration: none;
+  border: none;
+  border-radius: 2px;
+  padding: 12px 28px;
+  cursor: pointer;
+}
+.ds-button:hover { opacity: 0.9; }
+
+/* Secondary text link, e.g. "Get Directions" */
+.ds-link {
+  font-family: var(--ds-font-label);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ds-teal);
+  text-decoration: none;
+  border-bottom: 1px solid var(--ds-teal);
+  padding-bottom: 2px;
+}
+
+/* Muted helper/meta text, e.g. review counts */
+.ds-muted {
+  font-weight: 400;
+  color: var(--ds-muted);
+  font-size: 0.9rem;
+}
+
+/* Order of the Day timeline — items alternate between teal ("blue") and
+   gold as they go down the list. Markup:
+   <ul class="ds-timeline">
+     <li class="ds-timeline-item">
+       <span class="ds-timeline-time">2:00pm</span>
+       <span class="ds-timeline-dot"></span>
+       <span class="ds-timeline-event">Ceremony</span>
+     </li>
+     ...
+   </ul> */
+.ds-timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.ds-timeline-item {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--ds-border);
+}
+.ds-timeline-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.ds-timeline-time {
+  font-family: var(--ds-font-label);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  min-width: 80px;
+  flex-shrink: 0;
+}
+.ds-timeline-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.ds-timeline-event {
+  font-family: var(--ds-font-body);
+  font-size: 1.05rem;
+  color: var(--ds-body);
+}
+
+/* Alternate colours: odd rows teal, even rows gold */
+.ds-timeline-item:nth-child(odd) .ds-timeline-time,
+.ds-timeline-item:nth-child(odd) .ds-timeline-dot {
+  color: var(--ds-teal);
+  background: var(--ds-teal);
+}
+.ds-timeline-item:nth-child(odd) .ds-timeline-time { background: none; }
+
+.ds-timeline-item:nth-child(even) .ds-timeline-time,
+.ds-timeline-item:nth-child(even) .ds-timeline-dot {
+  color: var(--ds-gold);
+  background: var(--ds-gold);
+}
+.ds-timeline-item:nth-child(even) .ds-timeline-time { background: none; }

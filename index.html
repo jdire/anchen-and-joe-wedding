@@ -37,19 +37,6 @@
       overflow-x: hidden;
     }
 
-    /* ─── Gradient Border Stripe ────────────────────────────────── */
-    .stripe {
-      height: 6px;
-      background: linear-gradient(
-        90deg,
-        var(--teal)       0%,
-        var(--teal-light) 30%,
-        var(--gold-light) 50%,
-        var(--teal-light) 70%,
-        var(--teal)       100%
-      );
-    }
-
     /* ─── Page Layout ───────────────────────────────────────────── */
     .page {
       max-width: 900px;
@@ -60,20 +47,9 @@
       flex-direction: column;
       align-items: center;
       position: relative;
+      border-top: 1px solid var(--gold);
+      border-bottom: 1px solid var(--gold);
     }
-
-    /* Corner ornaments */
-    .page::before, .page::after {
-      content: '';
-      position: absolute;
-      width: 100px;
-      height: 100px;
-      border-color: var(--gold);
-      border-style: solid;
-      opacity: 0.35;
-    }
-    .page::before { top: 32px; left: 32px; border-width: 1px 0 0 1px; }
-    .page::after  { bottom: 32px; right: 32px; border-width: 0 1px 1px 0; }
 
     /* ─── Header / Eyebrow ──────────────────────────────────────── */
     .eyebrow {
@@ -213,6 +189,22 @@
       outline: none;
     }
 
+    .game-link {
+      display: inline-block;
+      margin-top: 22px;
+      color: var(--teal);
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-decoration: none;
+      text-transform: uppercase;
+      border-bottom: 1px solid var(--gold);
+      padding-bottom: 4px;
+    }
+    .game-link:hover, .game-link:focus {
+      color: var(--teal-dark);
+    }
+
     /* ─── Countdown ──────────────────────────────────────────────── */
     .countdown-wrapper {
       text-align: center;
@@ -276,14 +268,12 @@
     /* ─── Responsive ─────────────────────────────────────────────── */
     @media (max-width: 600px) {
       .page { padding: 40px 24px 60px; }
-      .page::before, .page::after { width: 60px; height: 60px; }
       .cd-item { padding: 0 14px; }
     }
   </style>
 </head>
 
 <body>
-  <div class="stripe"></div>
 
   <main class="page">
 
@@ -382,6 +372,8 @@
         </svg>
         View on Map
       </a>
+
+      <a class="game-link" href="/hidden-game/">Race to the castle</a>
     </div>
 
     <!-- Ornamental divider -->
@@ -400,8 +392,6 @@
     </p>
 
   </main>
-
-  <div class="stripe"></div>
 
   <script>
     (function () {

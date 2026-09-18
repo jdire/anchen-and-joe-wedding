@@ -1,0 +1,137 @@
+﻿<!--
+  Our Story Snippet — Anchen & Joe Wedding
+  Inline styles only (no <style> block, no CSS classes used for styling)
+  so it survives being pasted into site builders that strip <style> tags
+  or convert pasted HTML through a plain-text clipboard step.
+  Paragraph body text uses Mathematical Bold Italic Unicode characters so
+  the bold/italic look is part of the text itself and cannot be stripped.
+  Each section is a flex row with a text column and a photo column that
+  alternates sides (right, left, right, left...) down the page.
+  Flex-wrap means it naturally stacks on narrow screens with no media query.
+  Fade-in-on-scroll is handled by a small inline <script> using
+  IntersectionObserver; each reveal element starts hidden via its own
+  inline style and the script flips opacity/transform when it scrolls
+  into view.
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=Raleway:wght@600;700&display=swap" rel="stylesheet">
+
+<div style="font-family: Georgia, 'Times New Roman', serif; color:#000000; margin:0; padding:40px 0; border-top:1px solid #BF9B3A; border-bottom:1px solid #BF9B3A;">
+
+  <p style="font-family: 'Raleway', Arial, Helvetica, sans-serif; font-size:0.8rem; font-weight:700; letter-spacing:0.35em; text-transform:uppercase; color:#BF9B3A; text-align:center; margin:0 0 10px;">A Love Story</p>
+  <p style="font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif; font-size:3rem; font-weight:700; font-style:italic; color:#000000; text-align:center; margin:0 0 28px; line-height:1.1;">Our Story</p>
+
+  <!-- Divider -->
+  <table role="presentation" style="width:280px; max-width:90%; margin:0 auto 44px; border-collapse:collapse;"><tr>
+    <td style="border-top:1px solid #BF9B3A; width:40%;"></td>
+    <td style="width:10px; text-align:center;">&#9670;</td>
+    <td style="border-top:1px solid #BF9B3A; width:40%;"></td>
+  </tr></table>
+
+  <!-- How We Met — photo right -->
+  <div class="reveal" style="display:flex; flex-wrap:wrap; justify-content:center; gap:28px; align-items:flex-start; margin-bottom:40px; opacity:0; transform:translateY(24px); transition:opacity 0.9s ease, transform 0.9s ease;">
+    <div style="flex:2 1 320px; min-width:260px;">
+      <h2 style="font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif; font-size:2rem; font-weight:700; font-style:italic; color:#000000; margin:0 0 18px;">How We Met</h2>
+      <p style="font-family: Georgia, 'Times New Roman', serif; font-size:1.1rem; font-weight:400; line-height:1.75; color:#1a1a1a; margin:0;">𝑾𝒆 𝒎𝒆𝒕 𝒂𝒕 𝒕𝒉𝒆 𝑼𝒏𝒊𝒗𝒆𝒓𝒔𝒊𝒕𝒚 𝒐𝒇 𝑷𝒍𝒚𝒎𝒐𝒖𝒕𝒉 𝒊𝒏 𝟐𝟎𝟏𝟐, 𝒘𝒉𝒆𝒓𝒆 𝒘𝒆 𝒔𝒕𝒖𝒅𝒊𝒆𝒅 𝑪𝒉𝒆𝒎𝒊𝒔𝒕𝒓𝒚 (𝒊𝒏𝒔𝒆𝒓𝒕 𝒕𝒉𝒆 𝒐𝒃𝒗𝒊𝒐𝒖𝒔 𝒋𝒐𝒌𝒆 𝒉𝒆𝒓𝒆). 𝑾𝒆 𝒈𝒐𝒕 𝒂𝒍𝒐𝒏𝒈 𝒘𝒆𝒍𝒍, 𝒃𝒖𝒕 𝒊𝒕 𝒘𝒂𝒔𝒏'𝒕 𝒖𝒏𝒕𝒊𝒍 𝒐𝒖𝒓 𝒔𝒆𝒄𝒐𝒏𝒅 𝒚𝒆𝒂𝒓 𝒕𝒉𝒂𝒕 𝒘𝒆 𝒕𝒓𝒖𝒍𝒚 𝒃𝒆𝒄𝒂𝒎𝒆 𝒄𝒍𝒐𝒔𝒆 𝒇𝒓𝒊𝒆𝒏𝒅𝒔. 𝑨𝒔 𝒘𝒆 𝒑𝒓𝒆𝒑𝒂𝒓𝒆𝒅 𝒕𝒐 𝒔𝒂𝒚 𝒈𝒐𝒐𝒅𝒃𝒚𝒆 𝒂𝒏𝒅 𝒈𝒐 𝒐𝒖𝒓 𝒔𝒆𝒑𝒂𝒓𝒂𝒕𝒆 𝒘𝒂𝒚𝒔, 𝒘𝒆 𝒅𝒆𝒄𝒊𝒅𝒆𝒅 𝒐𝒖𝒓 𝒇𝒓𝒊𝒆𝒏𝒅𝒔𝒉𝒊𝒑 𝒘𝒂𝒔 𝒘𝒐𝒓𝒕𝒉 𝒌𝒆𝒆𝒑𝒊𝒏𝒈 𝒊𝒏 𝒕𝒐𝒖𝒄𝒉 𝒇𝒐𝒓.</p>
+    </div>
+    <img src="websites/AD2903022/images/central-park-qwdl9o.jpg" alt="Anchen and Joe" style="flex:1 1 200px; max-width:260px; aspect-ratio:3/4; object-fit:cover; border:1px solid #e2d9be;">
+  </div>
+
+  <!-- How We Fell in Love — photo left on desktop, below text on mobile -->
+  <div class="reveal photo-left" style="display:flex; flex-wrap:wrap; justify-content:center; gap:28px; align-items:flex-start; margin-bottom:40px; opacity:0; transform:translateY(24px); transition:opacity 0.9s ease, transform 0.9s ease;">
+    <div style="flex:2 1 320px; min-width:260px;">
+      <h2 style="font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif; font-size:2rem; font-weight:700; font-style:italic; color:#000000; margin:0 0 18px;">How We Fell in Love</h2>
+      <p style="font-family: Georgia, 'Times New Roman', serif; font-size:1.1rem; font-weight:400; line-height:1.75; color:#1a1a1a; margin:0 0 18px;">𝑻𝒉𝒊𝒏𝒈𝒔 𝒃𝒆𝒈𝒂𝒏 𝒕𝒐 𝒄𝒉𝒂𝒏𝒈𝒆 𝒂𝒇𝒕𝒆𝒓 𝒘𝒆 𝒔𝒑𝒆𝒏𝒕 𝒔𝒆𝒗𝒆𝒓𝒂𝒍 𝒎𝒐𝒏𝒕𝒉𝒔 𝒕𝒓𝒂𝒗𝒆𝒍𝒍𝒊𝒏𝒈 𝒕𝒐 𝒂𝒏𝒅 𝒇𝒓𝒐𝒎 𝒆𝒂𝒄𝒉 𝒐𝒕𝒉𝒆𝒓'𝒔 𝒉𝒐𝒖𝒔𝒆𝒔 — 𝒎𝒆 𝒅𝒓𝒊𝒗𝒊𝒏𝒈 𝒇𝒊𝒗𝒆 𝒉𝒐𝒖𝒓𝒔 𝒔𝒐𝒖𝒕𝒉, 𝒐𝒓 𝑨𝒏𝒄𝒉𝒆𝒏 𝒄𝒐𝒂𝒄𝒉𝒊𝒏𝒈 𝒆𝒊𝒈𝒉𝒕 𝒉𝒐𝒖𝒓𝒔 𝒏𝒐𝒓𝒕𝒉 — 𝒋𝒖𝒔𝒕 𝒕𝒐 𝒔𝒑𝒆𝒏𝒅 𝒕𝒊𝒎𝒆 𝒕𝒐𝒈𝒆𝒕𝒉𝒆𝒓. 𝑺𝒐𝒎𝒆𝒘𝒉𝒆𝒓𝒆 𝒊𝒏 𝒂𝒍𝒍 𝒕𝒉𝒂𝒕 𝒕𝒓𝒂𝒗𝒆𝒍𝒍𝒊𝒏𝒈, 𝒘𝒆 𝒓𝒆𝒂𝒍𝒊𝒔𝒆𝒅 𝒘𝒆 𝒎𝒊𝒈𝒉𝒕 𝒎𝒆𝒂𝒏 𝒎𝒐𝒓𝒆 𝒕𝒐 𝒆𝒂𝒄𝒉 𝒐𝒕𝒉𝒆𝒓 𝒕𝒉𝒂𝒏 𝒘𝒆'𝒅 𝒕𝒉𝒐𝒖𝒈𝒉𝒕.</p>
+      <p style="font-family: Georgia, 'Times New Roman', serif; font-size:1.1rem; font-weight:400; line-height:1.75; color:#1a1a1a; margin:0;">𝑾𝒆 𝒔𝒕𝒂𝒓𝒕𝒆𝒅 𝒔𝒆𝒆𝒊𝒏𝒈 𝒆𝒂𝒄𝒉 𝒐𝒕𝒉𝒆𝒓, 𝒂𝒏𝒅 𝒂𝒇𝒕𝒆𝒓 𝒂 𝒍𝒐𝒗𝒆𝒍𝒚 𝒅𝒂𝒕𝒆 𝒂𝒕 𝑴𝒐𝒖𝒏𝒕 𝑬𝒅𝒈𝒄𝒐𝒎𝒃𝒆, 𝑷𝒍𝒚𝒎𝒐𝒖𝒕𝒉, 𝑰 (𝑱𝒐𝒆) 𝒄𝒂𝒓𝒗𝒆𝒅 𝒂 𝒉𝒆𝒂𝒓𝒕 𝒐𝒖𝒕 𝒐𝒇 𝒂 𝒑𝒆𝒃𝒃𝒍𝒆 𝒐𝒏 𝒕𝒉𝒆 𝒃𝒆𝒂𝒄𝒉 — 𝒎𝒂𝒓𝒌𝒊𝒏𝒈 𝒕𝒉𝒆 𝒔𝒕𝒂𝒓𝒕 𝒐𝒇 𝒐𝒖𝒓 𝒓𝒆𝒍𝒂𝒕𝒊𝒐𝒏𝒔𝒉𝒊𝒑.</p>
+    </div>
+    <img src="websites/AD2903022/images/mount-edgcumbe-d4ikuy.jpg" alt="How We Fell in Love" style="flex:1 1 200px; max-width:260px; aspect-ratio:3/4; object-fit:cover; border:1px solid #e2d9be;">
+  </div>
+
+  <!-- The Last 11 Years — photo right -->
+  <div class="reveal" style="display:flex; flex-wrap:wrap; justify-content:center; gap:28px; align-items:flex-start; margin-bottom:40px; opacity:0; transform:translateY(24px); transition:opacity 0.9s ease, transform 0.9s ease;">
+    <div style="flex:2 1 320px; min-width:260px;">
+      <h2 style="font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif; font-size:2rem; font-weight:700; font-style:italic; color:#000000; margin:0 0 18px;">The Last 11 Years</h2>
+      <p style="font-family: Georgia, 'Times New Roman', serif; font-size:1.1rem; font-weight:400; line-height:1.75; color:#1a1a1a; margin:0 0 18px;">𝑨𝒏𝒅 𝒔𝒐 𝒃𝒆𝒈𝒂𝒏 𝒂 𝒘𝒐𝒏𝒅𝒆𝒓𝒇𝒖𝒍 𝒆𝒍𝒆𝒗𝒆𝒏-𝒚𝒆𝒂𝒓 𝒓𝒆𝒍𝒂𝒕𝒊𝒐𝒏𝒔𝒉𝒊𝒑 𝒇𝒖𝒍𝒍 𝒐𝒇 𝒂𝒅𝒗𝒆𝒏𝒕𝒖𝒓𝒆, 𝒕𝒓𝒂𝒗𝒆𝒍, 𝒂𝒏𝒅 𝒖𝒏𝒑𝒂𝒓𝒂𝒍𝒍𝒆𝒍𝒆𝒅 𝒋𝒐𝒚. 𝑾𝒆'𝒗𝒆 𝒎𝒂𝒅𝒆 𝒆𝒂𝒄𝒉 𝒐𝒕𝒉𝒆𝒓 𝒔𝒕𝒓𝒐𝒏𝒈𝒆𝒓 𝒂𝒏𝒅 𝒃𝒆𝒕𝒕𝒆𝒓 𝒑𝒆𝒐𝒑𝒍𝒆, 𝒊𝒏 𝒕𝒉𝒆 𝒌𝒊𝒏𝒅 𝒐𝒇 𝒓𝒆𝒍𝒂𝒕𝒊𝒐𝒏𝒔𝒉𝒊𝒑 𝒘𝒆 𝒌𝒏𝒐𝒘 𝒘𝒆'𝒓𝒆 𝒃𝒍𝒆𝒔𝒔𝒆𝒅 𝒕𝒐 𝒉𝒂𝒗𝒆.</p>
+      <p style="font-family: 'Raleway', Arial, Helvetica, sans-serif; font-size:1rem; font-weight:700; color:#252828; margin:0 0 12px;">A couple of highlights:</p>
+      <ul style="margin:0 0 18px; padding-left:22px;">
+        <li style="font-family: Georgia, 'Times New Roman', serif; font-size:1.1rem; font-weight:400; line-height:1.75; color:#1a1a1a; margin:0 0 10px;">𝑾𝒆 𝒄𝒍𝒊𝒎𝒃𝒆𝒅 𝒕𝒉𝒆 𝒕𝒂𝒍𝒍𝒆𝒔𝒕 𝒎𝒐𝒖𝒏𝒕𝒂𝒊𝒏 𝒊𝒏 𝒕𝒉𝒆 𝑼𝑲.</li>
+        <li style="font-family: Georgia, 'Times New Roman', serif; font-size:1.1rem; font-weight:400; line-height:1.75; color:#1a1a1a; margin:0 0 10px;">𝑾𝒆 𝒉𝒊𝒌𝒆𝒅 𝒕𝒐 𝒕𝒉𝒆 𝑯𝒐𝒍𝒍𝒚𝒘𝒐𝒐𝒅 𝒔𝒊𝒈𝒏.</li>
+        <li style="font-family: Georgia, 'Times New Roman', serif; font-size:1.1rem; font-weight:400; line-height:1.75; color:#1a1a1a; margin:0 0 10px;">𝑾𝒆 𝒉𝒂𝒅 𝒃𝒓𝒆𝒂𝒌𝒇𝒂𝒔𝒕 𝒂𝒕 𝑻𝒊𝒇𝒇𝒂𝒏𝒚'𝒔.</li>
+        <li style="font-family: Georgia, 'Times New Roman', serif; font-size:1.1rem; font-weight:400; line-height:1.75; color:#1a1a1a; margin:0 0 10px;">𝑩𝒆𝒄𝒂𝒎𝒆 𝒑𝒂𝒓𝒆𝒏𝒕𝒔 𝒕𝒐 𝟗 <a href="https://www.anchenandjoe.wedding/q---a">𝑭𝒂𝒏𝒄𝒚 𝑹𝒂𝒕𝒔</a>.</li>
+        <li style="font-family: Georgia, 'Times New Roman', serif; font-size:1.1rem; font-weight:400; line-height:1.75; color:#1a1a1a; margin:0;">𝑾𝒆 𝒃𝒐𝒖𝒈𝒉𝒕 𝒂 𝒉𝒐𝒖𝒔𝒆 𝒂𝒏𝒅 𝒈𝒐𝒕 𝒆𝒏𝒈𝒂𝒈𝒆𝒅 𝒊𝒏 𝟐𝟎𝟐𝟓.</li>
+      </ul>
+      <p style="font-family: Georgia, 'Times New Roman', serif; font-size:1.1rem; font-weight:400; line-height:1.75; color:#1a1a1a; margin:0;">𝑨𝒏𝒅 𝒏𝒐𝒘, 𝒘𝒆'𝒓𝒆 𝒓𝒆𝒂𝒅𝒚 𝒕𝒐 𝒔𝒕𝒂𝒓𝒕 𝒂 𝒏𝒆𝒘 𝒂𝒅𝒗𝒆𝒏𝒕𝒖𝒓𝒆.</p>
+    </div>
+    <img src="websites/AD2903022/images/last-11-years-ben-nevis-ogn6i7.jpg" alt="The Last 11 Years" style="flex:1 1 200px; max-width:260px; aspect-ratio:3/4; object-fit:cover; border:1px solid #e2d9be;">
+  </div>
+
+  <!-- The Engagement — Joe's Tale — photo left on desktop, below text on mobile -->
+  <div class="reveal photo-left" style="display:flex; flex-wrap:wrap; justify-content:center; gap:28px; align-items:flex-start; margin-bottom:40px; opacity:0; transform:translateY(24px); transition:opacity 0.9s ease, transform 0.9s ease;">
+    <div style="flex:2 1 320px; min-width:260px;">
+      <h2 style="font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif; font-size:2rem; font-weight:700; font-style:italic; color:#000000; margin:0 0 18px;">The Engagement &ndash; Joe's Tale</h2>
+      <p style="font-family: Georgia, 'Times New Roman', serif; font-size:1.1rem; font-weight:400; line-height:1.75; color:#1a1a1a; margin:0 0 18px;">𝑼𝒏𝒇𝒐𝒓𝒕𝒖𝒏𝒂𝒕𝒆𝒍𝒚 𝒇𝒐𝒓 𝒎𝒆, 𝑰 𝒕𝒐𝒍𝒅 𝑨𝒏𝒄𝒉𝒆𝒏 𝒎𝒚 𝒑𝒓𝒐𝒑𝒐𝒔𝒂𝒍 𝒑𝒍𝒂𝒏 𝒔𝒊𝒙 𝒚𝒆𝒂𝒓𝒔 𝒆𝒂𝒓𝒍𝒊𝒆𝒓, 𝒘𝒉𝒆𝒏 𝒘𝒆 𝒘𝒆𝒓𝒆 𝒃𝒐𝒕𝒉 𝒄𝒆𝒓𝒕𝒂𝒊𝒏 𝒘𝒆 𝒅𝒊𝒅𝒏'𝒕 𝒘𝒂𝒏𝒕 𝒕𝒐 𝒈𝒆𝒕 𝒎𝒂𝒓𝒓𝒊𝒆𝒅 — 𝒘𝒉𝒊𝒄𝒉 𝒎𝒆𝒂𝒏𝒕 𝒕𝒉𝒆 𝒑𝒍𝒂𝒏𝒔 𝒄𝒐𝒖𝒍𝒅 𝒃𝒆 𝒂𝒔 𝒇𝒂𝒏𝒕𝒂𝒔𝒕𝒊𝒄𝒂𝒍 𝒂𝒔 𝑰 𝒄𝒐𝒖𝒍𝒅 𝒅𝒓𝒆𝒂𝒎 𝒉𝒐𝒘𝒆𝒗𝒆𝒓, 𝒕𝒉𝒊𝒏𝒈𝒔 𝒄𝒉𝒂𝒏𝒈𝒆𝒅 𝒂𝒏𝒅 𝒏𝒐𝒘 𝑰 𝒉𝒂𝒅 𝒑𝒂𝒊𝒏𝒕𝒆𝒅 𝒎𝒚𝒔𝒆𝒍𝒇 𝒊𝒏𝒕𝒐 𝒂 𝒄𝒐𝒓𝒏𝒆𝒓.</p>
+      <p style="font-family: Georgia, 'Times New Roman', serif; font-size:1.1rem; font-weight:400; line-height:1.75; color:#1a1a1a; margin:0 0 18px;">𝑨𝒇𝒕𝒆𝒓 𝒈𝒆𝒕𝒕𝒊𝒏𝒈 𝒗𝒆𝒓𝒚 𝒔𝒖𝒃𝒕𝒍𝒆 𝒉𝒊𝒏𝒕𝒔 𝒍𝒊𝒌𝒆 '𝒕𝒉𝒊𝒔 𝒊𝒔 𝒎𝒚 𝒓𝒊𝒏𝒈 𝒔𝒊𝒛𝒆,' 𝑰 𝒌𝒆𝒑𝒕 𝒎𝒚 𝒆𝒚𝒆𝒔 𝒑𝒆𝒆𝒍𝒆𝒅 𝒇𝒐𝒓 𝒕𝒉𝒆 𝒓𝒊𝒏𝒈 𝒐𝒇 𝑨𝒏𝒄𝒉𝒆𝒏'𝒔 𝒅𝒓𝒆𝒂𝒎𝒔. 𝑶𝒏 𝒐𝒖𝒓 𝒕𝒆𝒏𝒕𝒉 𝒂𝒏𝒏𝒊𝒗𝒆𝒓𝒔𝒂𝒓𝒚, 𝒘𝒆 𝒗𝒊𝒔𝒊𝒕𝒆𝒅 𝒕𝒉𝒆 𝒋𝒆𝒘𝒆𝒍𝒍𝒆𝒓𝒚 𝒔𝒉𝒐𝒑𝒔 𝒐𝒇 𝑨𝒎𝒔𝒕𝒆𝒓𝒅𝒂𝒎, 𝒂𝒏𝒅 𝒕𝒉𝒆𝒓𝒆 𝒊𝒏 𝑫𝒆 𝑩𝒊𝒋𝒆𝒏𝒌𝒐𝒓𝒇 𝒘𝒆 𝒇𝒐𝒖𝒏𝒅 𝒕𝒉𝒆 𝒓𝒊𝒏𝒈. 𝑨𝒏𝒄𝒉𝒆𝒏 𝒕𝒓𝒊𝒆𝒅 𝒕𝒐 𝒑𝒍𝒂𝒚 𝒊𝒕 𝒄𝒐𝒐𝒍, 𝒃𝒖𝒕 𝒔𝒉𝒆 𝒅𝒊𝒅𝒏'𝒕 𝒒𝒖𝒊𝒕𝒆 𝒔𝒖𝒄𝒄𝒆𝒆𝒅 𝒊𝒏 𝒉𝒊𝒅𝒊𝒏𝒈 𝒉𝒐𝒘 𝒊𝒕 𝒎𝒂𝒅𝒆 𝒉𝒆𝒓 𝒇𝒆𝒆𝒍.</p>
+      <p style="font-family: Georgia, 'Times New Roman', serif; font-size:1.1rem; font-weight:400; line-height:1.75; color:#1a1a1a; margin:0;">𝑰 𝒃𝒐𝒖𝒈𝒉𝒕 𝒕𝒉𝒆 𝒓𝒊𝒏𝒈 𝒕𝒉𝒓𝒆𝒆 𝒘𝒆𝒆𝒌𝒔 𝒍𝒂𝒕𝒆𝒓, 𝒉𝒊𝒅 𝒊𝒕 𝒊𝒏 𝒎𝒚 𝒐𝒇𝒇𝒊𝒄𝒆 𝒄𝒖𝒑𝒃𝒐𝒂𝒓𝒅, 𝒂𝒏𝒅 𝒃𝒆𝒈𝒂𝒏 𝒑𝒍𝒂𝒏𝒏𝒊𝒏𝒈 𝒕𝒉𝒆 𝒑𝒓𝒐𝒑𝒐𝒔𝒂𝒍.</p>
+    </div>
+    <img src="websites/AD2903022/images/1000052603-22lpz.jpg" alt="The Engagement – Joe's Tale" style="flex:1 1 200px; max-width:260px; aspect-ratio:3/4; object-fit:cover; border:1px solid #e2d9be;">
+  </div>
+
+  <!-- The Proposal — Anchen's Tale — photo right -->
+  <div class="reveal" style="display:flex; flex-wrap:wrap; justify-content:center; gap:28px; align-items:flex-start; margin-bottom:40px; opacity:0; transform:translateY(24px); transition:opacity 0.9s ease, transform 0.9s ease;">
+    <div style="flex:2 1 320px; min-width:260px;">
+      <h2 style="font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif; font-size:2rem; font-weight:700; font-style:italic; color:#000000; margin:0 0 18px;">The Proposal &ndash; Anchen's Tale</h2>
+      <p style="font-family: Georgia, 'Times New Roman', serif; font-size:1.1rem; font-weight:400; line-height:1.75; color:#1a1a1a; margin:0 0 18px;">𝑻𝒉𝒆 𝒑𝒓𝒐𝒑𝒐𝒔𝒂𝒍 𝒐𝒇 𝒎𝒚 𝒅𝒓𝒆𝒂𝒎𝒔! 𝑱𝒐𝒆 𝒕𝒐𝒐𝒌 𝒎𝒆 𝒕𝒐 𝑻𝒓𝒐𝒎𝒔ø, 𝑵𝒐𝒓𝒘𝒂𝒚 𝒋𝒖𝒔𝒕 𝒃𝒆𝒇𝒐𝒓𝒆 𝑪𝒉𝒓𝒊𝒔𝒕𝒎𝒂𝒔 𝒇𝒐𝒓 𝒂 𝒄𝒐𝒔𝒚 𝒘𝒊𝒏𝒕𝒆𝒓 𝒃𝒓𝒆𝒂𝒌. 𝑶𝒏𝒆 𝒏𝒊𝒈𝒉𝒕, 𝒉𝒆 𝒕𝒐𝒐𝒌 𝒎𝒆 𝒉𝒖𝒏𝒕𝒊𝒏𝒈 𝒇𝒐𝒓 𝒕𝒉𝒆 𝑨𝒖𝒓𝒐𝒓𝒂 𝑩𝒐𝒓𝒆𝒂𝒍𝒊𝒔 𝒂𝒔 𝒕𝒉𝒆 𝒔𝒌𝒊𝒆𝒔 𝒘𝒆𝒓𝒆 𝒑𝒆𝒓𝒇𝒆𝒄𝒕𝒍𝒚 𝒄𝒍𝒆𝒂𝒓 (𝒘𝒆'𝒅 𝒉𝒂𝒅 𝒂 𝒔𝒏𝒐𝒘 𝒃𝒍𝒊𝒛𝒛𝒂𝒓𝒅 𝒕𝒉𝒆 𝒏𝒊𝒈𝒉𝒕 𝒃𝒆𝒇𝒐𝒓𝒆!), 𝒔𝒐 𝒘𝒆 𝒉𝒆𝒂𝒅𝒆𝒅 𝒕𝒐 𝑲𝒗𝒂𝒍ø𝒚𝒂 𝒊𝒏 𝒕𝒉𝒆 𝒆𝒗𝒆𝒏𝒊𝒏𝒈. 𝑻𝒉𝒆 𝒔𝒏𝒐𝒘 𝒘𝒂𝒔 𝒌𝒏𝒆𝒆-𝒅𝒆𝒆𝒑, 𝒕𝒉𝒆 𝒕𝒆𝒎𝒑𝒆𝒓𝒂𝒕𝒖𝒓𝒆 𝒘𝒂𝒔... 𝒘𝒆𝒍𝒍, 𝒂𝒓𝒄𝒕𝒊𝒄... 𝒂𝒏𝒅 𝒕𝒉𝒆 𝒍𝒊𝒈𝒉𝒕𝒔 𝒗𝒊𝒔𝒊𝒃𝒍𝒚 𝒅𝒂𝒏𝒄𝒆𝒅 𝒂𝒃𝒐𝒗𝒆 𝒕𝒉𝒆 𝒇𝒋𝒐𝒓𝒅 𝒂𝒏𝒅 𝒇𝒊𝒆𝒍𝒅𝒔.</p>
+      <p style="font-family: Georgia, 'Times New Roman', serif; font-size:1.1rem; font-weight:400; line-height:1.75; color:#1a1a1a; margin:0;">𝑱𝒐𝒆 𝒘𝒂𝒍𝒌𝒆𝒅 𝒎𝒆 𝒕𝒐 𝒂 𝒔𝒑𝒐𝒕 𝒓𝒊𝒈𝒉𝒕 𝒃𝒚 𝒕𝒉𝒆 𝒘𝒂𝒕𝒆𝒓, 𝒂𝒏𝒅 𝒖𝒏𝒅𝒆𝒓 𝒕𝒉𝒆 𝑨𝒖𝒓𝒐𝒓𝒂 𝑩𝒐𝒓𝒆𝒂𝒍𝒊𝒔, 𝒈𝒐𝒕 𝒅𝒐𝒘𝒏 𝒐𝒏 𝒐𝒏𝒆 𝒌𝒏𝒆𝒆 𝒂𝒏𝒅 𝒂𝒔𝒌𝒆𝒅 𝒎𝒆 𝒕𝒐 𝒔𝒑𝒆𝒏𝒅 𝒕𝒉𝒆 𝒓𝒆𝒔𝒕 𝒐𝒇 𝒎𝒚 𝒍𝒊𝒇𝒆 𝒘𝒊𝒕𝒉 𝒉𝒊𝒎!</p>
+    </div>
+    <img src="websites/AD2903022/images/1000065006-dakojn.jpg" alt="The Proposal – Anchen's Tale" style="flex:1 1 200px; max-width:260px; aspect-ratio:3/4; object-fit:cover; border:1px solid #e2d9be;">
+  </div>
+
+  <!-- The Wedding — photo left on desktop, below text on mobile -->
+  <div class="reveal photo-left" style="display:flex; flex-wrap:wrap; justify-content:center; gap:28px; align-items:flex-start; opacity:0; transform:translateY(24px); transition:opacity 0.9s ease, transform 0.9s ease;">
+    <div style="flex:2 1 320px; min-width:260px;">
+      <h2 style="font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif; font-size:2rem; font-weight:700; font-style:italic; color:#000000; margin:0 0 18px;">The Wedding</h2>
+      <p style="font-family: Georgia, 'Times New Roman', serif; font-size:1.1rem; font-weight:400; line-height:1.75; color:#1a1a1a; margin:0 0 18px;">𝑾𝒆 𝒔𝒆𝒕 𝒐𝒇𝒇 𝒕𝒐 𝒔𝒕𝒂𝒓𝒕 𝒑𝒍𝒂𝒏𝒏𝒊𝒏𝒈 𝒕𝒉𝒆 𝒘𝒆𝒅𝒅𝒊𝒏𝒈.</p>
+      <p style="font-family: Georgia, 'Times New Roman', serif; font-size:1.1rem; font-weight:400; line-height:1.75; color:#1a1a1a; margin:0;">𝑭𝒐𝒓𝒕𝒖𝒏𝒂𝒕𝒆𝒍𝒚 𝒊𝒕 𝒅𝒊𝒅𝒏'𝒕 𝒕𝒂𝒌𝒆 𝒖𝒔 𝒍𝒐𝒏𝒈 𝒕𝒐 𝒇𝒊𝒏𝒅 𝒕𝒉𝒆 𝒗𝒆𝒏𝒖𝒆 𝒐𝒇 𝑷𝒐𝒘𝒅𝒆𝒓𝒉𝒂𝒎 𝑪𝒂𝒔𝒕𝒍𝒆, 𝒕𝒉𝒆 𝒉𝒊𝒔𝒕𝒐𝒓𝒊𝒄 𝒉𝒐𝒎𝒆 𝒐𝒇 𝒕𝒉𝒆 𝑬𝒂𝒓𝒍 𝒐𝒇 𝑫𝒆𝒗𝒐𝒏, 𝒊𝒏 𝒕𝒉𝒆 𝒄𝒐𝒖𝒏𝒕𝒚 𝒘𝒆 𝒉𝒂𝒗𝒆 𝒃𝒖𝒊𝒍𝒕 𝒐𝒖𝒓 𝒍𝒊𝒗𝒆𝒔 𝒕𝒐𝒈𝒆𝒕𝒉𝒆𝒓.</p>
+    </div>
+    <img src="websites/AD2903022/images/f10f39b9-9faa-4b7f-8458-740ae19db3ba-1voe5w.jpg" alt="The Wedding" style="flex:1 1 200px; max-width:260px; aspect-ratio:3/4; object-fit:cover; border:1px solid #e2d9be;">
+  </div>
+
+</div>
+
+<script>
+(function () {
+  var els = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window)) {
+    for (var i = 0; i < els.length; i++) {
+      els[i].style.opacity = '1';
+      els[i].style.transform = 'none';
+    }
+    return;
+  }
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'none';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+  els.forEach(function (el) { observer.observe(el); });
+})();
+</script>
+
+<script>
+// DOM order is always text-then-photo (mobile-safe); only reverse the row visually to put the photo on the left once there's room for two columns.
+(function () {
+  var leftRows = document.querySelectorAll('.reveal.photo-left');
+  var mq = window.matchMedia('(min-width: 701px)');
+  function applyDirection(e) {
+    leftRows.forEach(function (row) { row.style.flexDirection = e.matches ? 'row-reverse' : 'row'; });
+  }
+  applyDirection(mq);
+  if (mq.addEventListener) { mq.addEventListener('change', applyDirection); } else { mq.addListener(applyDirection); }
+})();
+</script>

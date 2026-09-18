@@ -1,0 +1,291 @@
+<!-- 
+  Order of the Day Snippet — Anchen & Joe Wedding
+  Self-contained timeline component (needs its own <style> block for the
+  ajp- classes below — the alternating left/right layout, connecting line,
+  and reveal-on-scroll animations can't be done with inline styles alone).
+  Colour alternates strictly gold/blue/gold/blue down the timeline via the
+  ajp-key class (key = blue variant), regardless of event importance.
+-->
+
+<!-- Google Fonts (skip if already on the page) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&amp;family=Raleway:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+
+<style>
+  .ajp-wrap { font-family:'Raleway',sans-serif; color:#252828; max-width:none; margin:0 auto; padding:40px 20px; border-top:1px solid #BF9B3A; border-bottom:1px solid #BF9B3A; }
+  .ajp-title { font-family:'Cormorant Garamond',serif; font-size:clamp(1.8rem,5vw,2.8rem); font-weight:300; font-style:italic; text-align:center; display:block; margin-bottom:4px; }
+  .ajp-sub { font-size:0.62rem; font-weight:500; letter-spacing:0.45em; text-transform:uppercase; color:#019CA6; text-align:center; display:block; margin-bottom:40px; }
+
+  .ajp-div { display:flex; align-items:center; gap:14px; margin:0 auto 44px; width:280px; max-width:90%; }
+  .ajp-div-line { flex:1; height:1px; background:linear-gradient(90deg,transparent,#BF9B3A 60%); }
+  .ajp-div-line.r { background:linear-gradient(90deg,#BF9B3A 40%,transparent); }
+  .ajp-div-gem { width:8px; height:8px; background:#BF9B3A; transform:rotate(45deg); flex-shrink:0; }
+  .ajp-div-dot { width:4px; height:4px; background:#019CA6; transform:rotate(45deg); flex-shrink:0; }
+
+  .ajp-tl { position:relative; }
+  .ajp-tl-track {
+    position:absolute; left:50%; top:0; bottom:0; width:1px;
+    background:linear-gradient(to bottom, transparent, #BF9B3A 3%, #BF9B3A 97%, transparent);
+    transform:translateX(-50%);
+    transform-origin:top center;
+    scale:1 0;
+    transition:scale 0.6s cubic-bezier(0.22,1,0.36,1);
+  }
+  .ajp-tl.ajp-grown .ajp-tl-track { scale:1 1; }
+
+  .ajp-row {
+    display:flex; align-items:center; position:relative; min-height:80px; margin-bottom:2px;
+    opacity:0; translate:0 18px;
+    transition: opacity 0.55s ease, translate 0.55s cubic-bezier(0.22,1,0.36,1);
+  }
+  .ajp-row.ajp-visible { opacity:1; translate:0 0; }
+
+  .ajp-ls, .ajp-rs { width:50%; flex-shrink:0; display:flex; align-items:center; }
+  .ajp-ls { justify-content:flex-end; }
+  .ajp-rs { justify-content:flex-start; }
+
+  .ajp-icon {
+    width:56px; height:56px; border-radius:50%;
+    background:#FAF7EE; border:1px solid #BF9B3A;
+    display:flex; align-items:center; justify-content:center;
+    flex-shrink:0; z-index:2; position:relative;
+    scale:0; transition:scale 0.45s cubic-bezier(0.34,1.56,0.64,1) 0.15s;
+  }
+  .ajp-row.ajp-visible .ajp-icon { scale:1; }
+  .ajp-row.ajp-key .ajp-icon { background:#D4E8E8; border-color:#017077; }
+  .ajp-row.ajp-key .ajp-icon svg { stroke:#017077; }
+
+  .ajp-arm {
+    flex:0 0 44px; height:1px; background:#BF9B3A;
+    scale:0 1; transition:scale 0.4s cubic-bezier(0.22,1,0.36,1) 0.25s;
+  }
+  .ajp-ls .ajp-arm { transform-origin:right center; }
+  .ajp-rs .ajp-arm { transform-origin:left center; }
+  .ajp-row.ajp-visible .ajp-arm { scale:1 1; }
+  .ajp-row.ajp-key .ajp-arm { background:#017077; }
+
+  .ajp-dot {
+    position:absolute; left:50%; top:50%;
+    transform:translate(-50%,-50%) rotate(45deg);
+    width:10px; height:10px; background:#BF9B3A; z-index:4;
+    scale:0; transition:scale 0.35s cubic-bezier(0.34,1.8,0.64,1) 0.35s;
+  }
+  .ajp-row.ajp-visible .ajp-dot { scale:1; }
+  .ajp-row.ajp-key .ajp-dot { background:#017077; }
+
+  .ajp-lbl { flex:1; min-width:0; }
+  .ajp-ls .ajp-lbl { text-align:right; padding-right:20px; }
+  .ajp-rs .ajp-lbl { text-align:left; padding-left:20px; }
+  .ajp-ev { display:block; font-size:0.72rem; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:#252828; }
+  .ajp-tm { display:block; font-family:'Cormorant Garamond',serif; font-size:1.1rem; color:#BF9B3A; margin-bottom:2px; }
+  .ajp-ds { display:block; font-family:'Cormorant Garamond',serif; font-size:0.88rem; font-style:italic; color:#9AA0A0; margin-top:3px; }
+
+  @media (max-width:540px) {
+    .ajp-tl-track { left:27px; transform:none; }
+    .ajp-dot { left:27px !important; }
+    .ajp-r .ajp-ls { width:0; overflow:hidden; }
+    .ajp-r .ajp-rs { width:100%; padding-left:52px; }
+    .ajp-r .ajp-rs .ajp-arm { display:none; }
+    .ajp-l .ajp-rs { width:0; overflow:hidden; }
+    .ajp-l .ajp-ls { width:100%; padding-left:52px; justify-content:flex-start; }
+    .ajp-l .ajp-ls .ajp-arm { display:none; }
+    .ajp-l .ajp-ls .ajp-icon { order:-1; }
+    .ajp-l .ajp-ls .ajp-lbl { text-align:left !important; padding-right:0 !important; padding-left:20px; }
+  }
+</style>
+
+<div class="ajp-wrap">
+
+  <span class="ajp-title"><br>Order of the Day</span>
+  <span class="ajp-sub">4th September 2027 &nbsp;·&nbsp; Powderham Castle</span>
+
+  <div class="ajp-div" aria-hidden="true">
+    <div class="ajp-div-line"></div><div class="ajp-div-dot"></div>
+    <div class="ajp-div-gem"></div><div class="ajp-div-dot"></div>
+    <div class="ajp-div-line r"></div>
+  </div>
+
+  <div class="ajp-tl ajp-grown" id="ajp-tl">
+    <div class="ajp-tl-track"></div>
+
+    <!-- LEFT · Arrival -->
+    <div class="ajp-row ajp-l ajp-visible">
+      <div class="ajp-ls">
+        <div class="ajp-lbl">
+          <span class="ajp-tm">1:30 pm</span>
+          <span class="ajp-ev">Arrival</span>
+        </div>
+        <div class="ajp-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#BF9B3A" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 10.5L12 3l9 7.5V21a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z"></path><polyline points="9 21 9 12 15 12 15 21"></polyline>
+          </svg>
+        </div>
+        <div class="ajp-arm"></div>
+      </div>
+      <div class="ajp-dot"></div>
+      <div class="ajp-rs"></div>
+    </div>
+
+    <!-- RIGHT · Ceremony — KEY -->
+    <div class="ajp-row ajp-r ajp-key ajp-visible">
+      <div class="ajp-ls"></div>
+      <div class="ajp-dot"></div>
+      <div class="ajp-rs">
+        <div class="ajp-arm"></div>
+        <div class="ajp-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#BF9B3A" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="7.5" cy="12" r="4.5"></circle><circle cx="16.5" cy="12" r="4.5"></circle>
+          </svg>
+        </div>
+        <div class="ajp-lbl">
+          <span class="ajp-tm">2:00 pm</span>
+          <span class="ajp-ev">The Ceremony</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- LEFT · Drinks Reception -->
+    <div class="ajp-row ajp-l ajp-visible">
+      <div class="ajp-ls">
+        <div class="ajp-lbl">
+          <span class="ajp-tm">2:45 pm</span>
+          <span class="ajp-ev">Drinks Reception</span>
+        </div>
+        <div class="ajp-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#BF9B3A" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8 3h8l-2 9.5H10L8 3z"></path><line x1="12" y1="12.5" x2="12" y2="19"></line><line x1="8" y1="19" x2="16" y2="19"></line>
+            <path d="M16 5.5l1.5-1 1 2" stroke-width="1.1"></path>
+          </svg>
+        </div>
+        <div class="ajp-arm"></div>
+      </div>
+      <div class="ajp-dot"></div>
+      <div class="ajp-rs"></div>
+    </div>
+
+    <!-- RIGHT · Speeches — KEY -->
+    <div class="ajp-row ajp-r ajp-key ajp-visible">
+      <div class="ajp-ls"></div>
+      <div class="ajp-dot"></div>
+      <div class="ajp-rs">
+        <div class="ajp-arm"></div>
+        <div class="ajp-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#BF9B3A" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="9" y="2" width="6" height="10" rx="3"></rect><path d="M5 10a7 7 0 0 0 14 0"></path><line x1="12" y1="17" x2="12" y2="21"></line><line x1="8" y1="21" x2="16" y2="21"></line>
+          </svg>
+        </div>
+        <div class="ajp-lbl">
+          <span class="ajp-tm">4:30 pm</span>
+          <span class="ajp-ev">The Speeches</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- LEFT · Wedding Breakfast -->
+    <div class="ajp-row ajp-l ajp-visible">
+      <div class="ajp-ls">
+        <div class="ajp-lbl">
+          <span class="ajp-tm">5:00 pm</span>
+          <span class="ajp-ev">The Wedding Breakfast</span>
+        </div>
+        <div class="ajp-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#BF9B3A" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="8" y1="3" x2="8" y2="21"></line><path d="M5 3v6a3 3 0 0 0 6 0V3"></path><line x1="16" y1="3" x2="16" y2="21"></line><path d="M16 3a4 4 0 0 1 0 8"></path>
+          </svg>
+        </div>
+        <div class="ajp-arm"></div>
+      </div>
+      <div class="ajp-dot"></div>
+      <div class="ajp-rs"></div>
+    </div>
+
+    <!-- RIGHT · Cake & First Dance — KEY -->
+    <div class="ajp-row ajp-r ajp-key ajp-visible">
+      <div class="ajp-ls"></div>
+      <div class="ajp-dot"></div>
+      <div class="ajp-rs">
+        <div class="ajp-arm"></div>
+        <div class="ajp-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#BF9B3A" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+        </div>
+        <div class="ajp-lbl">
+          <span class="ajp-tm">7:30 pm</span>
+          <span class="ajp-ev">Cake Cutting &amp; First Dance</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- LEFT · Lets Dance + Evening Guests -->
+    <div class="ajp-row ajp-l ajp-visible">
+      <div class="ajp-ls">
+        <div class="ajp-lbl">
+          <span class="ajp-tm">7:45 pm</span>
+          <span class="ajp-ev">Lets Dance + evening guests!</span>
+        </div>
+        <div class="ajp-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#BF9B3A" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle>
+          </svg>
+        </div>
+        <div class="ajp-arm"></div>
+      </div>
+      <div class="ajp-dot"></div>
+      <div class="ajp-rs"></div>
+    </div>
+
+    <!-- RIGHT · Evening Food — KEY -->
+    <div class="ajp-row ajp-r ajp-key ajp-visible">
+      <div class="ajp-ls"></div>
+      <div class="ajp-dot"></div>
+      <div class="ajp-rs">
+        <div class="ajp-arm"></div>
+        <div class="ajp-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#BF9B3A" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 12a8 8 0 0 1 16 0"></path><line x1="2" y1="12" x2="22" y2="12"></line><rect x="3" y="12" width="18" height="2.5" rx="0.5"></rect>
+            <line x1="12" y1="14.5" x2="12" y2="19"></line><line x1="8" y1="19" x2="16" y2="19"></line>
+          </svg>
+        </div>
+        <div class="ajp-lbl">
+          <span class="ajp-tm">8:45 pm</span>
+          <span class="ajp-ev">Evening Food</span>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /ajp-tl -->
+
+  <div class="ajp-div" aria-hidden="true" style="margin-top:32px; margin-bottom:0;">
+    <div class="ajp-div-line"></div><div class="ajp-div-dot"></div>
+    <div class="ajp-div-gem"></div><div class="ajp-div-dot"></div>
+    <div class="ajp-div-line r"></div>
+  </div>
+
+</div>
+
+<script>
+(function () {
+  var tl    = document.getElementById('ajp-tl');
+  var rows  = Array.from(tl.querySelectorAll('.ajp-row'));
+
+  var tlObs = new IntersectionObserver(function (entries) {
+    if (entries[0].isIntersecting) { tl.classList.add('ajp-grown'); tlObs.disconnect(); }
+  }, { threshold: 0.05 });
+  tlObs.observe(tl);
+
+  var rowObs = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        var row = entry.target;
+        var idx = rows.indexOf(row);
+        setTimeout(function () { row.classList.add('ajp-visible'); }, idx * 80);
+        rowObs.unobserve(row);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  rows.forEach(function (row) { rowObs.observe(row); });
+})();
+</script>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The wedding of Anchen Kehler and Joe Hollingshead at Powderham Castle on 4th September 2027.">
+  <title>{{PAGE_TITLE}} | Anchen &amp; Joe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/site.css">
+  {{HOME_STYLE}}
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-brand" href="/" aria-label="Anchen and Joe wedding home">
+        <span class="site-brand__names">Anchen <i>&amp;</i> Joe</span>
+        <span class="site-brand__date">4 September 2027</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">
+        <span class="menu-toggle__label">Menu</span>
+        <span class="menu-toggle__icon" aria-hidden="true"><span></span><span></span></span>
+      </button>
+      <nav class="site-navigation" id="site-navigation" aria-label="Main navigation">
+        <ul class="site-navigation__links">
+          <li><a href="/">Home</a></li>
+          {{PRIMARY_NAV}}
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div id="main-content">{{PAGE_CONTENT}}</div>
+  <script src="/site.js" defer></script>
+</body>
+</html>
