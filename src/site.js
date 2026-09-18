@@ -3,10 +3,15 @@
   var navigation = document.querySelector(".site-navigation");
 
   function applyRoleNavigation(principal) {
+    var authControl = document.getElementById("auth-control");
+    var isAuthenticated = Boolean(principal && principal.clientPrincipal);
     var roles =
-      principal && Array.isArray(principal.clientPrincipal?.userRoles)
+      isAuthenticated && Array.isArray(principal.clientPrincipal?.userRoles)
         ? principal.clientPrincipal.userRoles
         : [];
+    if (authControl) {
+      authControl.hidden = !isAuthenticated;
+    }
     document.querySelectorAll("[data-required-role]").forEach(function (item) {
       var requiredRole = item.getAttribute("data-required-role");
       var visible = roles.indexOf(requiredRole) !== -1;
