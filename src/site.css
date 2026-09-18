@@ -106,9 +106,9 @@ a {
   font-size: 0.65rem;
   font-weight: 700;
   letter-spacing: 0.11em;
-  text-decoration: none;
-  text-transform: uppercase;
-}
+    display: flex;
+    align-items: center;
+    justify-content: center;
 .site-navigation__links a::after {
   position: absolute;
   right: 0;
