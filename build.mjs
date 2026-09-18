@@ -35,10 +35,6 @@ const siteJs = fs.readFileSync(path.join(root, 'src', 'site.js'), 'utf8');
 const homeSource = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
 const homeStyle = homeSource.match(/<style>([\s\S]*?)<\/style>/i)?.[1] ?? '';
 
-if (!fs.existsSync(path.join(root, 'websites'))) {
-  console.warn('CMS image folder not found: copy websites/AD2903022/images into the project before publishing to Azure.');
-}
-
 function getBody(source) {
   const body = source.match(/<body[^>]*>([\s\S]*?)<\/body>/i);
   return body ? body[1] : source;
@@ -50,7 +46,11 @@ function getContent(route) {
   content = content
     .replace(/<link[^>]+>/gi, '')
     .replace(/<p class="footer-note">[\s\S]*?<\/p>/i, '')
-    .replace(/(?:src|href)=["']websites\//gi, (match) => match.replace('websites/', '/websites/'));
+    .replace(/(src|href)=["']websites\/([^"']+)["']/gi, (match, attribute, assetPath) => {
+      const assetFile = path.join(root, 'websites', assetPath);
+      const publicPath = fs.existsSync(assetFile) ? `/websites/${assetPath}` : '/placeholders/wedding-photo.svg';
+      return `${attribute}="${publicPath}"`;
+    });
   return content;
 }
 
@@ -63,6 +63,9 @@ fs.mkdirSync(output, { recursive: true });
 fs.writeFileSync(path.join(output, 'site.css'), siteCss);
 fs.writeFileSync(path.join(output, 'site.js'), siteJs);
 fs.cpSync(path.join(root, 'public'), output, { recursive: true });
+if (fs.existsSync(path.join(root, 'websites'))) {
+  fs.cpSync(path.join(root, 'websites'), path.join(output, 'websites'), { recursive: true });
+}
 fs.copyFileSync(path.join(root, 'staticwebapp.config.json'), path.join(output, 'staticwebapp.config.json'));
 
 for (const route of routes) {
