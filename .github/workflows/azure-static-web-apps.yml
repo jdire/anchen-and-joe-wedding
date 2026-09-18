@@ -26,6 +26,7 @@ jobs:
           action: upload
           app_location: /
           output_location: dist
+          app_artifact_location: dist
           app_build_command: npm run build
 
   close_pull_request:
