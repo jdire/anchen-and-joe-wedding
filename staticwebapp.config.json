@@ -1,4 +1,26 @@
 {
+  "auth": {
+    "identityProviders": {
+      "customOpenIdConnectProviders": {
+        "wedding": {
+          "registration": {
+            "clientIdSettingName": "WEDDING_CLIENT_ID",
+            "clientCredential": {
+              "clientSecretSettingName": "WEDDING_CLIENT_SECRET"
+            },
+            "openIdConnectConfiguration": {
+              "wellKnownOpenIdConfiguration": "https://AnchenandJoeWedding.ciamlogin.com/77169875-115f-4516-8543-daf5aaf2e0c4/v2.0/.well-known/openid-configuration"
+            }
+          },
+          "login": {
+            "nameClaimType": "email",
+            "scopes": ["openid", "profile", "email"],
+            "loginParameterNames": []
+          }
+        }
+      }
+    }
+  },
   "routes": [
     {
       "route": "/site.css",
