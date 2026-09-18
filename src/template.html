@@ -21,6 +21,13 @@
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <div class="site-header__inner">
+        <a
+          class="auth-control"
+          id="auth-control"
+          href="/.auth/logout?post_logout_redirect_uri=/login/"
+          hidden
+          >Sign out</a
+        >
         <button
           class="menu-toggle"
           type="button"
@@ -40,13 +47,6 @@
           <ul class="site-navigation__links">
             <li><a href="/">Home</a></li>
             {{PRIMARY_NAV}}
-            <li class="auth-control" id="auth-control" hidden>
-              <a
-                id="sign-out"
-                href="/.auth/logout?post_logout_redirect_uri=/login/"
-                >Sign out</a
-              >
-            </li>
           </ul>
         </nav>
       </div>
