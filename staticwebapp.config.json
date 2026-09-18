@@ -1,6 +1,22 @@
 {
   "routes": [
     {
+      "route": "/site.css",
+      "allowedRoles": ["anonymous"]
+    },
+    {
+      "route": "/site.js",
+      "allowedRoles": ["anonymous"]
+    },
+    {
+      "route": "/placeholders/*",
+      "allowedRoles": ["anonymous"]
+    },
+    {
+      "route": "/websites/*",
+      "allowedRoles": ["anonymous"]
+    },
+    {
       "route": "/login/*",
       "allowedRoles": ["anonymous"]
     },
