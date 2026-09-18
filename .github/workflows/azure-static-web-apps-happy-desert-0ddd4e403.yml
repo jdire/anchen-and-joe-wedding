@@ -35,6 +35,7 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for Github integrations (i.e. PR comments)
           action: upload
           app_location: dist
+          api_location: api
           output_location: ""
           skip_app_build: true
 
