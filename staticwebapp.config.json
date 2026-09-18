@@ -56,6 +56,26 @@
       "allowedRoles": ["authenticated"]
     },
     {
+      "route": "/q---a-s/*",
+      "allowedRoles": ["ceremony"]
+    },
+    {
+      "route": "/food/*",
+      "allowedRoles": ["ceremony"]
+    },
+    {
+      "route": "/rsvp/*",
+      "allowedRoles": ["ceremony"]
+    },
+    {
+      "route": "/evening-qa/*",
+      "allowedRoles": ["evening"]
+    },
+    {
+      "route": "/evening-rsvp/*",
+      "allowedRoles": ["evening"]
+    },
+    {
       "route": "/*",
       "allowedRoles": ["authenticated"]
     }

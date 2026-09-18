@@ -37,9 +37,34 @@ const routes = [
     path: "q---a-s",
     source: "faq-snippet-v2.html",
     title: "Questions & Answers",
+    requiredRole: "ceremony",
   },
-  { path: "food", source: "menu-snippet.html", title: "Our Menu" },
-  { path: "rsvp", source: "rsvp-snippet.html", title: "RSVP" },
+  {
+    path: "food",
+    source: "menu-snippet.html",
+    title: "Our Menu",
+    requiredRole: "ceremony",
+  },
+  {
+    path: "rsvp",
+    source: "rsvp-snippet.html",
+    title: "RSVP",
+    requiredRole: "ceremony",
+  },
+  {
+    path: "evening-qa",
+    source: "faq-snippet-v2.html",
+    title: "Evening Guests Q&A",
+    requiredRole: "evening",
+    headingReplacement: ["Questions &amp; Answers", "Evening Guests Q&amp;A"],
+  },
+  {
+    path: "evening-rsvp",
+    source: "rsvp-snippet.html",
+    title: "Evening Guests RSVP",
+    requiredRole: "evening",
+    headingReplacement: [">RSVP<", ">Evening Guests RSVP<"],
+  },
   {
     path: "hidden-game",
     source: "wedding-game-snippet.html",
@@ -53,9 +78,11 @@ const navigation = [
   ["Our Story", "/story-time/"],
   ["The Castle", "/the-castle/"],
   ["Travel", "/travel---accommodation/"],
-  ["Q&A", "/q---a-s/"],
-  ["Food & Drink", "/food/"],
-  ["RSVP", "/rsvp/"],
+  ["Q&A", "/q---a-s/", "ceremony"],
+  ["Food & Drink", "/food/", "ceremony"],
+  ["RSVP", "/rsvp/", "ceremony"],
+  ["Evening Q&A", "/evening-qa/", "evening"],
+  ["Evening RSVP", "/evening-rsvp/", "evening"],
 ];
 
 const template = fs.readFileSync(
@@ -88,6 +115,12 @@ function getContent(route) {
         return `${attribute}="${publicPath}"`;
       },
     );
+  if (route.headingReplacement) {
+    content = content.replace(
+      route.headingReplacement[0],
+      route.headingReplacement[1],
+    );
+  }
   return content;
 }
 
