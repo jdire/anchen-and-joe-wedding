@@ -49,11 +49,11 @@
     },
     {
       "route": "/story-time/*",
-      "allowedRoles": ["ceremony"]
+      "allowedRoles": ["authenticated"]
     },
     {
       "route": "/the-castle/*",
-      "allowedRoles": ["ceremony"]
+      "allowedRoles": ["authenticated"]
     },
     {
       "route": "/*",
