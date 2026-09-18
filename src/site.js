@@ -4,11 +4,12 @@
 
   function applyRoleNavigation(principal) {
     var authControl = document.getElementById("auth-control");
-    var isAuthenticated = Boolean(principal && principal.clientPrincipal);
-    var roles =
-      isAuthenticated && Array.isArray(principal.clientPrincipal?.userRoles)
-        ? principal.clientPrincipal.userRoles
-        : [];
+    var isAuthenticated = Boolean(principal && principal.authenticated);
+    var roles = isAuthenticated
+      ? principal.role === "day"
+        ? ["ceremony"]
+        : ["evening"]
+      : [];
     if (authControl) {
       authControl.hidden = !isAuthenticated;
     }
@@ -20,7 +21,7 @@
     });
   }
 
-  fetch("/.auth/me", { credentials: "same-origin" })
+  fetch("/auth/me", { credentials: "same-origin" })
     .then(function (response) {
       return response.ok ? response.json() : null;
     })

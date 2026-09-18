@@ -209,6 +209,38 @@ a {
   color: var(--cream);
   background: var(--teal-dark);
 }
+.access-form {
+  display: grid;
+  gap: 0.75rem;
+  max-width: 320px;
+  margin: 0 auto;
+  text-align: left;
+}
+.access-form label {
+  color: var(--teal-dark);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.access-form input {
+  width: 100%;
+  border: 1px solid var(--gold);
+  padding: 0.85rem 0.9rem;
+  color: var(--ink);
+  background: #fffdf7;
+  font: 1rem var(--label);
+}
+.access-form .auth-card__button {
+  width: 100%;
+  cursor: pointer;
+}
+.auth-card__error {
+  margin: 0;
+  color: #9b3030;
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
 .auth-card__note {
   margin: 2rem auto 0;
   color: var(--muted);
@@ -252,6 +284,10 @@ a {
     letter-spacing: 0.12em;
     text-transform: uppercase;
     margin-left: auto;
+  }
+  .auth-control {
+    right: 0;
+    left: auto;
   }
   .menu-toggle__icon {
     display: grid;

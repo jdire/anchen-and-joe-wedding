@@ -23,6 +23,7 @@ const routes = [
     title: "The Reception",
   },
   { path: "story-time", source: "our-story-snippet.html", title: "Our Story" },
+  { path: "rats", source: "rats-snippet.html", title: "Our Fancy Rats" },
   {
     path: "the-castle",
     source: "the-castle-snippet.html",

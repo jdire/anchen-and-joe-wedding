@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow, noarchive" />
     <title>Guest access | Anchen &amp; Joe</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,9 +18,22 @@
       <p class="auth-card__eyebrow">Anchen &amp; Joe</p>
       <h1>Welcome, guest</h1>
       <p class="auth-card__intro">
-        Please sign in to view the wedding details.
+        Enter your guest username and password to view the wedding details.
       </p>
-      <a class="auth-card__button" href="/.auth/login/wedding">Sign in</a>
+      <form class="access-form" method="post" action="/auth/login">
+        <label for="username">Username</label>
+        <input id="username" name="username" type="text" autocomplete="username" required />
+        <label for="password">Password</label>
+        <input
+          id="password"
+          name="password"
+          type="password"
+          autocomplete="current-password"
+          required
+        />
+        <button class="auth-card__button" type="submit">Continue</button>
+        {{ERROR_MESSAGE}}
+      </form>
     </main>
   </body>
 </html>
