@@ -260,12 +260,14 @@
   .site-menu__links {
     display: grid;
     justify-content: stretch;
+    text-align: left;
     gap: 0;
   }
 
   .site-menu__links a {
     display: block;
     padding: 13px 0;
+    text-align: left;
     border-bottom: 1px solid var(--wedding-cream-dark);
   }
 

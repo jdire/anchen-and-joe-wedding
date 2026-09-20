@@ -1,17 +1,13 @@
 <!--
-  Wedding Mini-Game Snippet — Anchen & Joe Wedding
-  A tiny Mario-esque platformer: help a guest run, jump gaps, dodge
-  the delays, pack everything they need (outfit, makeup, card, gift,
-  shoes), and reach the wedding at Powderham Castle just in time to
-  see Anchen & Joe kiss. A mission-log banner over the canvas tells the
-  story as each item is collected; missing any of them ends in a
-  "didn't make it in time" scene instead of the kiss. Fully self-contained —
-  canvas is drawn entirely via JS (no external images/sprites needed),
-  and every wrapper element uses inline styles only (no <style> block,
-  no CSS classes) so it survives hosts that strip <style> tags.
-  Matches the site's gold/teal palette and top/bottom border convention.
+  Wedding Mini-Game Snippet — pixel-art edition — Anchen & Joe Wedding
+  Run, jump gaps, dodge the delays, collect 5 essentials, and reach the
+  castle in time for the kiss. Chunky Game Boy / Mario-era style pixel-art
+  sprites: an animated run-cycle guest character, a detailed blocky gremlin
+  enemy, a tiled castle with crenellations and windows, and a simple
+  parallax hill background. Every sprite is drawn on-canvas from small
+  pixel-grid maps (no external images), scaled up with crisp square pixels —
+  fully self-contained, matching the site's gold/teal/cream palette.
 -->
-
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,29 +20,30 @@
   <p style="font-family: Georgia, 'Times New Roman', serif; font-size:1rem; font-weight:400; line-height:1.6; color:#1a1a1a; margin:0 0 22px;">Help a guest run, jump the gaps, dodge the delays, pack their outfit, makeup, card &amp; gift, and make it to Anchen &amp; Joe's wedding at Powderham Castle &mdash; just in time!<br>
   <span style="font-family:'Raleway', Arial, Helvetica, sans-serif; font-size:0.85rem; font-weight:700; color:#019CA6;">&larr; &rarr; or A / D to run &middot; Space or &uarr; to jump</span></p>
 
-  <div id="ajg-frame" style="position:relative; display:inline-block; width:100%; max-width:800px; border:1px solid #e2d9be; border-radius:2px; overflow:hidden; background:#FAF7EE; box-shadow:0 2px 10px rgba(37,40,40,0.08);">
-    <canvas id="ajg-canvas" width="800" height="300" style="display:block; width:100%; height:auto; touch-action:none;"></canvas>
-    <div id="ajg-mission" style="position:absolute; top:10px; left:10px; right:10px; text-align:center; font-family:'Raleway', Arial, Helvetica, sans-serif; font-size:0.78rem; font-weight:700; letter-spacing:0.02em; color:#252828; background:rgba(250,247,238,0.9); border:1px solid #BF9B3A; border-radius:4px; padding:6px 12px; pointer-events:none; z-index:2;">You're running late! Quickly — get dressed!</div>
+  <div id="ajg2-frame" style="position:relative; display:inline-block; width:100%; max-width:800px; border:1px solid #e2d9be; border-radius:2px; overflow:hidden; background:#FAF7EE; box-shadow:0 2px 10px rgba(37,40,40,0.08);">
+    <canvas id="ajg2-canvas" width="800" height="300" style="display:block; width:100%; height:auto; touch-action:none; image-rendering:pixelated;"></canvas>
+    <div id="ajg2-mission" style="position:absolute; top:10px; left:10px; right:10px; text-align:center; font-family:'Raleway', Arial, Helvetica, sans-serif; font-size:0.78rem; font-weight:700; letter-spacing:0.02em; color:#252828; background:rgba(250,247,238,0.9); border:1px solid #BF9B3A; border-radius:4px; padding:6px 12px; pointer-events:none; z-index:2;">You're running late! Quickly — get dressed!</div>
   </div>
 
   <p style="font-family:'Raleway', Arial, Helvetica, sans-serif; font-size:0.85rem; font-weight:700; color:#4A4F4F; margin:14px 0 0;">
-    Essentials: <span id="ajg-coins" style="color:#BF9B3A;">0</span>/5 &nbsp;&middot;&nbsp; Attempts: <span id="ajg-attempts" style="color:#019CA6;">1</span>
+    Essentials: <span id="ajg2-coins" style="color:#BF9B3A;">0</span>/5 &nbsp;&middot;&nbsp; Attempts: <span id="ajg2-attempts" style="color:#019CA6;">1</span>
   </p>
 
   <!-- Mobile touch controls -->
   <div style="display:flex; justify-content:center; gap:10px; margin-top:16px;">
-    <button id="ajg-left" style="font-family:'Raleway', Arial, Helvetica, sans-serif; font-size:1.2rem; font-weight:700; width:52px; height:44px; border:1px solid #019CA6; background:#FAF7EE; color:#019CA6; border-radius:4px; cursor:pointer;">&larr;</button>
-    <button id="ajg-jump" style="font-family:'Raleway', Arial, Helvetica, sans-serif; font-size:0.75rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; width:96px; height:44px; border:1px solid #BF9B3A; background:#BF9B3A; color:#FAF7EE; border-radius:4px; cursor:pointer;">Jump</button>
-    <button id="ajg-right" style="font-family:'Raleway', Arial, Helvetica, sans-serif; font-size:1.2rem; font-weight:700; width:52px; height:44px; border:1px solid #019CA6; background:#FAF7EE; color:#019CA6; border-radius:4px; cursor:pointer;">&rarr;</button>
+    <button id="ajg2-left" style="font-family:'Raleway', Arial, Helvetica, sans-serif; font-size:1.2rem; font-weight:700; width:52px; height:44px; border:1px solid #019CA6; background:#FAF7EE; color:#019CA6; border-radius:4px; cursor:pointer;">&larr;</button>
+    <button id="ajg2-jump" style="font-family:'Raleway', Arial, Helvetica, sans-serif; font-size:0.75rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; width:96px; height:44px; border:1px solid #BF9B3A; background:#BF9B3A; color:#FAF7EE; border-radius:4px; cursor:pointer;">Jump</button>
+    <button id="ajg2-right" style="font-family:'Raleway', Arial, Helvetica, sans-serif; font-size:1.2rem; font-weight:700; width:52px; height:44px; border:1px solid #019CA6; background:#FAF7EE; color:#019CA6; border-radius:4px; cursor:pointer;">&rarr;</button>
   </div>
 
 </div>
 
 <script>
 (function () {
-  var canvas = document.getElementById('ajg-canvas');
+  var canvas = document.getElementById('ajg2-canvas');
   if (canvas.__ajgStop) canvas.__ajgStop();
   var ctx = canvas.getContext('2d');
+  ctx.imageSmoothingEnabled = false;
   var W = canvas.width, H = canvas.height;
   var GROUND_Y = 250;
   var GRAVITY = 0.55;
@@ -55,6 +52,89 @@
   var WORLD_W = 3000;
 
   var COLORS = { cream:'#FAF7EE', gold:'#BF9B3A', goldLight:'#D4B45A', teal:'#019CA6', tealPale:'#D4E8E8', dark:'#252828', darkMid:'#4A4F4F' };
+
+  /* ---------- Pixel-art sprite engine ---------- */
+  /* Each sprite is a small grid of characters; '.' is transparent, any other
+     char maps to a colour in PAL. drawSprite() blits it as chunky square
+     pixels at PIX size, with optional horizontal flip. */
+  var PIX = 3;
+  var PAL = {
+    k: '#252828', s: '#F2C9A0', h: '#5C4030', H: '#7A5A42',
+    t: '#019CA6', T: '#017077', g: '#BF9B3A', G: '#D4B45A',
+    c: '#FAF7EE', C: '#F0EBD8', d: '#4A4F4F', r: '#C1665A',
+    R: '#8C4A40', w: '#FFFFFF', b: '#5AAFE0', x: '#9AA7A7', X: '#6E7A7A'
+  };
+
+  function drawSprite(rows, x, y, flip) {
+    var cols = rows[0].length;
+    for (var row = 0; row < rows.length; row++) {
+      for (var col = 0; col < cols; col++) {
+        var ch = rows[row][col];
+        if (ch === '.') continue;
+        var color = PAL[ch];
+        if (!color) continue;
+        var px = flip ? (cols - 1 - col) : col;
+        ctx.fillStyle = color;
+        ctx.fillRect(Math.round(x + px * PIX), Math.round(y + row * PIX), PIX, PIX);
+      }
+    }
+  }
+
+  function spriteSize(rows) {
+    return { w: rows[0].length * PIX, h: rows.length * PIX };
+  }
+
+  /* Guest character: idle / two run frames / jump frame (10 cols wide). */
+  var GUEST_IDLE = [
+    '..hhhh....',
+    '.hhhhhhh..',
+    '.hsssssh..',
+    '.hskhksh..',
+    '.hssssssh.',
+    '..sstts...',
+    '.ttttttt..',
+    '.ttttttt..',
+    '.tgggggt..',
+    '.ttttttt..',
+    '..gg.gg...',
+    '..gg.gg...',
+    '..dd.dd...',
+    '.ddd.ddd..'
+  ];
+  var GUEST_RUN_A = GUEST_IDLE.slice(0, 10).concat([
+    'gg....gg..',
+    'gg....gg..',
+    'dd....dd..',
+    'ddd..ddd..'
+  ]);
+  var GUEST_RUN_B = GUEST_IDLE.slice(0, 10).concat([
+    '...gggg...',
+    '...gggg...',
+    '...dddd...',
+    '..dddddd..'
+  ]);
+  var GUEST_JUMP = GUEST_IDLE.slice(0, 10).concat([
+    '...gggg...',
+    '...dddd...'
+  ]);
+
+  /* Enemy: a small blocky "delay gremlin", two idle-wobble frames. */
+  var GREMLIN_A = [
+    '..RRRRRR..',
+    '.rrrrrrrr.',
+    '.rrwrrwrr.',
+    '.rrrRRrrr.',
+    '.rrrrrrrr.',
+    '..d....d..'
+  ];
+  var GREMLIN_B = [
+    '..RRRRRR..',
+    '.rrrrrrrr.',
+    '.rrwrrwrr.',
+    '.rrrRRrrr.',
+    '.rrrrrrrr.',
+    '.d......d.'
+  ];
 
   var pits = [
     { x: 480,  w: 70 },
@@ -79,8 +159,16 @@
 
   var CASTLE_X = WORLD_W - 220;
 
+  /* Background hills for a simple two-layer parallax (classic GB-level feel). */
+  var HILLS = [
+    { x: 40,  w: 160, h: 26 }, { x: 260, w: 120, h: 18 }, { x: 520, w: 190, h: 30 },
+    { x: 820, w: 140, h: 20 }, { x: 1080, w: 170, h: 28 }, { x: 1360, w: 130, h: 18 },
+    { x: 1620, w: 200, h: 32 }, { x: 1930, w: 150, h: 22 }, { x: 2220, w: 180, h: 28 },
+    { x: 2520, w: 160, h: 24 }
+  ];
+
   var startX = 60;
-  var player, camera, coinsCollected, attempts, state, cutsceneFrame, keys;
+  var player, camera, coinsCollected, attempts, state, cutsceneFrame, keys, walkTimer, walkFrame;
   var CUTSCENE_LEN = 130;
 
   var MISSION_TEXT = {
@@ -97,7 +185,7 @@
   var MISSION_KEYS = ['start', 'makeup', 'card', 'gift', 'shoes'];
 
   function resetPlayer() {
-    player = { x: startX, y: GROUND_Y - 36, vx: 0, vy: 0, w: 22, h: 36, facing: 1, onGround: true };
+    player = { x: startX, y: GROUND_Y - 42, vx: 0, vy: 0, w: 30, h: 42, facing: 1, onGround: true };
   }
 
   function resetGame() {
@@ -107,6 +195,8 @@
     attempts = 1;
     state = 'play';
     cutsceneFrame = 0;
+    walkTimer = 0;
+    walkFrame = 0;
     coinsData.forEach(function (c) { c.taken = false; });
     updateHud();
   }
@@ -115,8 +205,8 @@
   resetGame();
 
   function updateHud() {
-    document.getElementById('ajg-coins').textContent = coinsCollected;
-    document.getElementById('ajg-attempts').textContent = attempts;
+    document.getElementById('ajg2-coins').textContent = coinsCollected;
+    document.getElementById('ajg2-attempts').textContent = attempts;
     updateMission();
   }
 
@@ -131,7 +221,7 @@
         if (!coinsData[i].taken) { text = MISSION_TEXT[MISSION_KEYS[i]]; break; }
       }
     }
-    document.getElementById('ajg-mission').textContent = text;
+    document.getElementById('ajg2-mission').textContent = text;
   }
 
   function isOverPit(x) {
@@ -167,6 +257,13 @@
     else if (keys.right) { player.vx = MOVE_SPEED; player.facing = 1; }
     else { player.vx = 0; }
 
+    if (player.vx !== 0 && player.onGround) {
+      walkTimer++;
+      if (walkTimer > 7) { walkTimer = 0; walkFrame = 1 - walkFrame; }
+    } else if (player.onGround) {
+      walkTimer = 0;
+    }
+
     if (keys.jump && player.onGround) {
       player.vy = JUMP_V;
       player.onGround = false;
@@ -181,8 +278,12 @@
 
     var footX = player.x + player.w / 2;
     var groundHere = !isOverPit(footX);
+    /* Only snap onto the ground when landing near its surface — once you've
+       fallen well past it (mid-pit), forward speed carrying you past the far
+       edge shouldn't teleport you back up onto the platform. */
+    var nearGroundSurface = player.y + player.h <= GROUND_Y + 16;
 
-    if (groundHere && player.y + player.h >= GROUND_Y) {
+    if (groundHere && nearGroundSurface && player.y + player.h >= GROUND_Y) {
       player.y = GROUND_Y - player.h;
       player.vy = 0;
       player.onGround = true;
@@ -223,6 +324,20 @@
     camera = Math.max(0, Math.min(player.x - W / 2.6, WORLD_W - W));
   }
 
+  function drawSky() {
+    ctx.fillStyle = COLORS.cream;
+    ctx.fillRect(0, 0, W, H);
+  }
+
+  function drawHills() {
+    ctx.fillStyle = COLORS.tealPale;
+    HILLS.forEach(function (hill) {
+      var sx = hill.x - camera * 0.35;
+      if (sx < -hill.w || sx > W + hill.w) return;
+      ctx.fillRect(Math.round(sx), GROUND_Y - hill.h, hill.w, hill.h);
+    });
+  }
+
   function drawGround() {
     ctx.fillStyle = COLORS.tealPale;
     ctx.fillRect(0, GROUND_Y, W, H - GROUND_Y);
@@ -235,64 +350,96 @@
       segStart = p.x + p.w;
     });
     ctx.fillRect(segStart - camera, GROUND_Y, (WORLD_W - segStart), 6);
+
+    /* Chunky brick texture, skipped across pit gaps so it never visually
+       covers a gap or implies solid ground where there is none. */
+    ctx.fillStyle = COLORS.goldLight;
+    var brick = PIX * 2;
+    for (var bx = -((camera) % (brick * 2)); bx < W; bx += brick * 2) {
+      var worldX = bx + camera;
+      if (isOverPit(worldX) || isOverPit(worldX + brick)) continue;
+      ctx.fillRect(bx, GROUND_Y + 1, brick, PIX);
+    }
   }
 
+  /* ---------- Pixel-art collectible icons ---------- */
   function drawItem(sx, y, type) {
     ctx.save();
-    ctx.translate(sx, y);
+    ctx.translate(Math.round(sx), Math.round(y));
     ctx.fillStyle = COLORS.gold;
     ctx.strokeStyle = COLORS.dark;
     ctx.lineWidth = 1.5;
     if (type === 'outfit') {
       ctx.beginPath();
-      ctx.moveTo(-7, -11); ctx.lineTo(-13, -5); ctx.lineTo(-7, -2); ctx.lineTo(-7, 12);
-      ctx.lineTo(7, 12); ctx.lineTo(7, -2); ctx.lineTo(13, -5); ctx.lineTo(7, -11);
+      ctx.moveTo(-8, -13); ctx.lineTo(-15, -6); ctx.lineTo(-8, -2); ctx.lineTo(-8, 14);
+      ctx.lineTo(8, 14); ctx.lineTo(8, -2); ctx.lineTo(15, -6); ctx.lineTo(8, -13);
       ctx.closePath();
       ctx.fill();
+      ctx.stroke();
     } else if (type === 'makeup') {
-      ctx.fillRect(-4, -10, 8, 16);
+      ctx.fillRect(-5, -12, 10, 19);
+      ctx.strokeRect(-5, -12, 10, 19);
       ctx.beginPath();
-      ctx.moveTo(-4, -10); ctx.lineTo(0, -17); ctx.lineTo(4, -10);
+      ctx.moveTo(-5, -12); ctx.lineTo(0, -20); ctx.lineTo(5, -12);
       ctx.closePath();
       ctx.fillStyle = COLORS.teal;
       ctx.fill();
+      ctx.stroke();
     } else if (type === 'card') {
-      ctx.fillRect(-13, -9, 26, 18);
+      ctx.fillStyle = COLORS.cream;
+      ctx.fillRect(-15, -10, 30, 21);
+      ctx.strokeRect(-15, -10, 30, 21);
       ctx.beginPath();
-      ctx.moveTo(-13, -9); ctx.lineTo(0, 2); ctx.lineTo(13, -9);
+      ctx.moveTo(-15, -10); ctx.lineTo(0, 3); ctx.lineTo(15, -10);
       ctx.stroke();
+      ctx.fillStyle = COLORS.gold;
+      ctx.beginPath();
+      ctx.moveTo(0, 6);
+      ctx.bezierCurveTo(-5, 0, -10, 4, 0, 10);
+      ctx.bezierCurveTo(10, 4, 5, 0, 0, 6);
+      ctx.fill();
     } else if (type === 'gift') {
-      ctx.fillRect(-13, -4, 26, 17);
+      ctx.fillRect(-15, -4, 30, 20);
+      ctx.strokeRect(-15, -4, 30, 20);
       ctx.fillStyle = COLORS.goldLight;
-      ctx.fillRect(-13, -11, 26, 7);
+      ctx.fillRect(-15, -12, 30, 8);
+      ctx.strokeRect(-15, -12, 30, 8);
       ctx.strokeStyle = COLORS.teal;
-      ctx.lineWidth = 3;
+      ctx.lineWidth = 3.5;
       ctx.beginPath();
-      ctx.moveTo(0, -11); ctx.lineTo(0, 13);
+      ctx.moveTo(0, -12); ctx.lineTo(0, 16);
       ctx.stroke();
+      ctx.beginPath();
+      ctx.moveTo(-15, 4); ctx.lineTo(15, 4);
+      ctx.stroke();
+      ctx.fillStyle = COLORS.teal;
+      ctx.beginPath();
+      ctx.moveTo(0, -12); ctx.lineTo(-9, -19); ctx.lineTo(-2, -19); ctx.lineTo(0, -14);
+      ctx.lineTo(2, -19); ctx.lineTo(9, -19); ctx.closePath();
+      ctx.fill();
     } else if (type === 'shoes') {
       ctx.beginPath();
-      ctx.moveTo(-12, 8);
-      ctx.lineTo(-12, -1);
-      ctx.quadraticCurveTo(-12, -7, -5, -7);
-      ctx.quadraticCurveTo(3, -7, 9, -3);
-      ctx.quadraticCurveTo(13, -1, 13, 3);
-      ctx.quadraticCurveTo(13, 7, 9, 8);
-      ctx.lineTo(-12, 8);
+      ctx.moveTo(-14, 9);
+      ctx.lineTo(-14, -2);
+      ctx.quadraticCurveTo(-14, -9, -6, -9);
+      ctx.quadraticCurveTo(4, -9, 11, -4);
+      ctx.quadraticCurveTo(16, -1, 16, 4);
+      ctx.quadraticCurveTo(16, 9, 11, 9);
+      ctx.lineTo(-14, 9);
       ctx.closePath();
       ctx.fill();
       ctx.stroke();
       ctx.strokeStyle = COLORS.teal;
-      ctx.lineWidth = 1.5;
+      ctx.lineWidth = 2;
       ctx.beginPath();
-      ctx.moveTo(-4, -6);
-      ctx.lineTo(-4, 8);
+      ctx.moveTo(-5, -7);
+      ctx.lineTo(-5, 9);
       ctx.stroke();
       ctx.strokeStyle = 'rgba(255,255,255,0.7)';
-      ctx.lineWidth = 1.2;
+      ctx.lineWidth = 1.4;
       ctx.beginPath();
-      ctx.moveTo(3, -2);
-      ctx.lineTo(9, 1);
+      ctx.moveTo(3, -3);
+      ctx.lineTo(11, 1);
       ctx.stroke();
     }
     ctx.restore();
@@ -303,7 +450,8 @@
       if (c.taken) return;
       var sx = c.x - camera;
       if (sx < -30 || sx > W + 30) return;
-      drawItem(sx, c.y, c.type);
+      var bob = Math.sin((Date.now() / 260) + c.x) * 3;
+      drawItem(sx, c.y + bob, c.type);
     });
   }
 
@@ -311,77 +459,125 @@
     enemies.forEach(function (e) {
       var sx = e.x - camera;
       if (sx < -30 || sx > W + 30) return;
-      ctx.fillStyle = '#C1665A';
-      ctx.beginPath();
-      ctx.ellipse(sx + e.w / 2, e.y + e.h / 2, e.w / 2, e.h / 2, 0, 0, Math.PI * 2);
-      ctx.fill();
-      ctx.fillStyle = COLORS.cream;
-      ctx.beginPath();
-      ctx.arc(sx + e.w / 2 - 5, e.y + e.h / 2 - 2, 2.5, 0, Math.PI * 2);
-      ctx.arc(sx + e.w / 2 + 5, e.y + e.h / 2 - 2, 2.5, 0, Math.PI * 2);
-      ctx.fill();
+      var frame = Math.floor(Date.now() / 220) % 2 === 0 ? GREMLIN_A : GREMLIN_B;
+      var size = spriteSize(frame);
+      drawSprite(frame, sx + e.w / 2 - size.w / 2, e.y + e.h - size.h, e.dir < 0);
     });
   }
 
   function drawCastle() {
     var sx = CASTLE_X - camera;
-    ctx.fillStyle = COLORS.darkMid;
-    ctx.globalAlpha = 0.85;
-    ctx.fillRect(sx, GROUND_Y - 90, 12, 90);
-    ctx.fillRect(sx + 70, GROUND_Y - 90, 12, 90);
-    ctx.fillRect(sx + 12, GROUND_Y - 60, 58, 60);
-    ctx.fillRect(sx + 30, GROUND_Y - 40, 24, 40);
-    ctx.globalAlpha = 1;
+    var baseW = 200, baseH = 110, towerW = 30, towerH = 150;
+
+    /* Stone base with two-tone brick texture. */
+    ctx.fillStyle = PAL.x;
+    ctx.fillRect(sx, GROUND_Y - baseH, baseW, baseH);
+    ctx.fillStyle = PAL.X;
+    for (var row = 0; row < baseH / PIX; row++) {
+      var offset = (row % 2 === 0) ? 0 : PIX * 1.5;
+      for (var col = -1; col * PIX * 3 + offset < baseW; col++) {
+        ctx.fillRect(sx + col * PIX * 3 + offset, GROUND_Y - baseH + row * PIX, PIX, PIX);
+      }
+    }
+
+    /* Towers either side. */
+    [sx - towerW + 6, sx + baseW - 6].forEach(function (tx) {
+      ctx.fillStyle = PAL.x;
+      ctx.fillRect(tx, GROUND_Y - towerH, towerW, towerH);
+      /* Crenellations. */
+      ctx.fillStyle = PAL.X;
+      for (var i = 0; i < towerW; i += PIX * 2) {
+        ctx.fillRect(tx + i, GROUND_Y - towerH - PIX * 2, PIX, PIX * 2);
+      }
+      /* Cross-slit window. */
+      ctx.fillStyle = PAL.k;
+      ctx.fillRect(tx + towerW / 2 - PIX / 2, GROUND_Y - towerH + 40, PIX, PIX * 4);
+      ctx.fillRect(tx + towerW / 2 - PIX * 1.5, GROUND_Y - towerH + 44, PIX * 3, PIX);
+    });
+
+    /* Base crenellations. */
+    ctx.fillStyle = PAL.X;
+    for (var j = 0; j < baseW; j += PIX * 2) {
+      ctx.fillRect(sx + j, GROUND_Y - baseH - PIX * 2, PIX, PIX * 2);
+    }
+
+    /* Gate. */
+    ctx.fillStyle = PAL.k;
+    ctx.fillRect(sx + baseW / 2 - 16, GROUND_Y - 46, 32, 46);
+    ctx.beginPath();
+    ctx.arc(sx + baseW / 2, GROUND_Y - 46, 16, Math.PI, 0);
+    ctx.fill();
+
+    /* Flag. */
+    ctx.fillStyle = PAL.k;
+    ctx.fillRect(sx + baseW - 6 + towerW / 2 - 1, GROUND_Y - towerH - PIX * 2 - 18, 2, 18);
     ctx.fillStyle = COLORS.gold;
-    ctx.fillRect(sx - 2, GROUND_Y - 100, 6, 12);
-    ctx.fillRect(sx + 76, GROUND_Y - 100, 6, 12);
+    ctx.beginPath();
+    var flagX = sx + baseW - 6 + towerW / 2 + 1;
+    var flagY = GROUND_Y - towerH - PIX * 2 - 17;
+    var wave = Math.sin(Date.now() / 300) * 3;
+    ctx.moveTo(flagX, flagY);
+    ctx.lineTo(flagX + 14 + wave, flagY + 4);
+    ctx.lineTo(flagX, flagY + 8);
+    ctx.closePath();
+    ctx.fill();
   }
 
   function drawPlayer() {
     if (state !== 'play') return;
-    var sx = player.x - camera;
-    ctx.fillStyle = COLORS.teal;
-    ctx.fillRect(sx, player.y + 12, player.w, player.h - 12);
-    ctx.fillStyle = '#F2C9A0';
-    ctx.beginPath();
-    ctx.arc(sx + player.w / 2, player.y + 8, 9, 0, Math.PI * 2);
-    ctx.fill();
-    ctx.fillStyle = COLORS.dark;
-    ctx.fillRect(sx + player.w / 2 - (player.facing < 0 ? 5 : -1), player.y + 3, 4, 3);
+    var frame;
+    if (!player.onGround) frame = GUEST_JUMP;
+    else if (player.vx !== 0) frame = walkFrame === 0 ? GUEST_RUN_A : GUEST_RUN_B;
+    else frame = GUEST_IDLE;
+    var size = spriteSize(frame);
+    var screenX = player.x - camera;
+    var sx = screenX + player.w / 2 - size.w / 2;
+    var sy = player.y + player.h - size.h;
+    drawSprite(frame, sx, sy, player.facing < 0);
   }
 
   function lerp(a, b, t) { return a + (b - a) * t; }
 
+  var GROOM_SPRITE = [
+    '..hhhh....',
+    '.hhhhhhh..',
+    '.hsssssh..',
+    '.hskhksh..',
+    '.hssssssh.',
+    '..sskss...',
+    '.kkkkkkk..',
+    '.kkGkGkk..',
+    '.kktkgtk..',
+    '.kkkkkkk..',
+    '..kk.kk...',
+    '..kk.kk...',
+    '..dd.dd...',
+    '.ddd.ddd..'
+  ];
+
+  var BRIDE_SPRITE = [
+    '..HHHH....',
+    '.HHHHHHH..',
+    '.HsssssH..',
+    '.HskhksH..',
+    '.HssssssH.',
+    '..scGcs...',
+    '.cccccccc.',
+    'ccccccccccc',
+    'ccccccccccc',
+    'cCcccccCc.',
+    'cCcccccCc.',
+    'CcCcccCcC.'
+  ];
+
   function drawGroom(x, y) {
-    ctx.fillStyle = '#252828';
-    ctx.fillRect(x - 9, y - 24, 18, 28);
-    ctx.fillStyle = COLORS.teal;
-    ctx.fillRect(x - 2, y - 24, 4, 10);
-    ctx.fillStyle = '#F2C9A0';
-    ctx.beginPath();
-    ctx.arc(x, y - 32, 9, 0, Math.PI * 2);
-    ctx.fill();
+    var size = spriteSize(GROOM_SPRITE);
+    drawSprite(GROOM_SPRITE, x - size.w / 2, y - size.h, false);
   }
 
   function drawBride(x, y) {
-    ctx.fillStyle = COLORS.cream;
-    ctx.beginPath();
-    ctx.moveTo(x, y - 20);
-    ctx.lineTo(x - 14, y + 4);
-    ctx.lineTo(x + 14, y + 4);
-    ctx.closePath();
-    ctx.fill();
-    ctx.strokeStyle = COLORS.gold;
-    ctx.lineWidth = 1.5;
-    ctx.stroke();
-    ctx.fillStyle = 'rgba(250,247,238,0.7)';
-    ctx.beginPath();
-    ctx.arc(x, y - 30, 11, Math.PI, Math.PI * 2);
-    ctx.fill();
-    ctx.fillStyle = '#F2C9A0';
-    ctx.beginPath();
-    ctx.arc(x, y - 32, 9, 0, Math.PI * 2);
-    ctx.fill();
+    var size = spriteSize(BRIDE_SPRITE);
+    drawSprite(BRIDE_SPRITE, x - size.w / 2, y - size.h, false);
   }
 
   function drawHeart(x, y, scale) {
@@ -424,7 +620,7 @@
     var dy = loop * 16;
     ctx.save();
     ctx.globalAlpha = 1 - loop * 0.4;
-    ctx.fillStyle = '#5AAFE0';
+    ctx.fillStyle = PAL.b;
     drawTearDrop(x - 4, faceY + 2 + dy);
     drawTearDrop(x + 4, faceY + 2 + dy);
     ctx.restore();
@@ -477,8 +673,8 @@
 
   function draw() {
     ctx.clearRect(0, 0, W, H);
-    ctx.fillStyle = COLORS.cream;
-    ctx.fillRect(0, 0, W, H);
+    drawSky();
+    drawHills();
     drawGround();
     drawCoins();
     drawEnemies();
@@ -523,10 +719,10 @@
     el.addEventListener('mouseleave', onUp);
     el.addEventListener('touchend', onUp);
   }
-  bindHold(document.getElementById('ajg-left'), function () { keys.left = true; }, function () { keys.left = false; });
-  bindHold(document.getElementById('ajg-right'), function () { keys.right = true; }, function () { keys.right = false; });
-  bindHold(document.getElementById('ajg-jump'), function () { keys.jump = true; }, function () { keys.jump = false; });
-  document.getElementById('ajg-jump').addEventListener('click', function () { if (state === 'won' || state === 'lost') resetGame(); });
+  bindHold(document.getElementById('ajg2-left'), function () { keys.left = true; }, function () { keys.left = false; });
+  bindHold(document.getElementById('ajg2-right'), function () { keys.right = true; }, function () { keys.right = false; });
+  bindHold(document.getElementById('ajg2-jump'), function () { keys.jump = true; }, function () { keys.jump = false; });
+  document.getElementById('ajg2-jump').addEventListener('click', function () { if (state === 'won' || state === 'lost') resetGame(); });
   canvas.addEventListener('touchstart', function (ev) {
     if (state === 'won' || state === 'lost') { ev.preventDefault(); resetGame(); }
   }, { passive: false });

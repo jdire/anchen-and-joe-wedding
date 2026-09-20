@@ -9,6 +9,20 @@
     />
     <meta name="robots" content="noindex, nofollow, noarchive" />
     <title>{{PAGE_TITLE}} | Anchen &amp; Joe</title>
+    <script>
+      // Tracks every setInterval so client-side page swaps in site.js can
+      // clear them, since swapped pages share this JS realm instead of reloading.
+      (function () {
+        var active = [];
+        window.__activeTimers = active;
+        var nativeSetInterval = window.setInterval;
+        window.setInterval = function () {
+          var id = nativeSetInterval.apply(window, arguments);
+          active.push(id);
+          return id;
+        };
+      })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link

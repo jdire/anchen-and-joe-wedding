@@ -68,7 +68,7 @@ const routes = [
   },
   {
     path: "hidden-game",
-    source: "wedding-game-snippet.html",
+    source: "wedding-game-snippet-v2.html",
     title: "Race to the Wedding",
   },
 ];
@@ -128,8 +128,9 @@ function getContent(route) {
 function renderNavigation(items) {
   return items
     .map(([label, href, requiredRole]) => {
+      // Start role-gated links hidden so nothing wraps to a second line and shifts the header before JS confirms the guest's role.
       const roleAttribute = requiredRole
-        ? ` data-required-role="${requiredRole}"`
+        ? ` data-required-role="${requiredRole}" hidden aria-hidden="true"`
         : "";
       return `<li${roleAttribute}><a href="${href}">${label}</a></li>`;
     })
@@ -156,7 +157,7 @@ for (const route of routes) {
   fs.mkdirSync(pageDirectory, { recursive: true });
   const page = template
     .replaceAll("{{PAGE_TITLE}}", route.title)
-    .replace("{{HOME_STYLE}}", route.home ? `<style>${homeStyle}</style>` : "")
+    .replace("{{HOME_STYLE}}", route.home ? `<style id="home-inline-style">${homeStyle}</style>` : "")
     .replace("{{PRIMARY_NAV}}", renderNavigation(navigation))
     .replace(
       "{{PAGE_CONTENT}}",
