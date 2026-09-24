@@ -1,0 +1,79 @@
+﻿[
+  {
+    "details_url": null,
+    "id": "c481bdd3-d501-41d0-bdbb-dbd6261e3269",
+    "log_time": "2026-09-18T15:54:49.810699Z",
+    "message": "Updating submodules.",
+    "type": 0
+  },
+  {
+    "details_url": null,
+    "id": "431698bf-7819-4e52-99f5-32634d77244b",
+    "log_time": "2026-09-18T15:54:51.5704104Z",
+    "message": "Preparing deployment for commit id 'b3f9ccb4-9'.",
+    "type": 0
+  },
+  {
+    "details_url": null,
+    "id": "3f45c2d9-b57f-4382-8e5a-3b2b3a19c267",
+    "log_time": "2026-09-18T15:54:52.8872743Z",
+    "message": "PreDeployment: context.CleanOutputPath False",
+    "type": 0
+  },
+  {
+    "details_url": null,
+    "id": "af608e62-5175-4e11-afbe-fc0bfa874cc8",
+    "log_time": "2026-09-18T15:54:53.5224845Z",
+    "message": "PreDeployment: context.OutputPath /home/site/wwwroot",
+    "type": 0
+  },
+  {
+    "details_url": null,
+    "id": "d473c908-7554-4f00-8292-7f30e76fa205",
+    "log_time": "2026-09-18T15:54:54.0058841Z",
+    "message": "Running build. Project type: OneDeploy",
+    "type": 0
+  },
+  {
+    "details_url": null,
+    "id": "ded41965-d311-4776-88ce-af7403cc1faf",
+    "log_time": "2026-09-18T15:54:55.2019941Z",
+    "message": "Copying the manifest",
+    "type": 0
+  },
+  {
+    "details_url": null,
+    "id": "6883cb8f-4df2-4ca3-974d-6ed2357b2055",
+    "log_time": "2026-09-18T15:54:55.8361304Z",
+    "message": "Clean deploying to /home/site/wwwroot",
+    "type": 0
+  },
+  {
+    "details_url": null,
+    "id": "c9c020f7-79e2-44e0-bb3c-8fc854767582",
+    "log_time": "2026-09-18T15:54:56.3970749Z",
+    "message": "Generating deployment script.",
+    "type": 0
+  },
+  {
+    "details_url": "https://anchen-joe-protected.scm.azurewebsites.net/api/deployments/b3f9ccb4-90d1-4630-aa06-32a30cf1f57f/log/b4246260-ad63-44c5-86c9-c1304305c6f6",
+    "id": "b4246260-ad63-44c5-86c9-c1304305c6f6",
+    "log_time": "2026-09-18T15:54:56.791277Z",
+    "message": "Running deployment command...",
+    "type": 2
+  },
+  {
+    "details_url": "https://anchen-joe-protected.scm.azurewebsites.net/api/deployments/b3f9ccb4-90d1-4630-aa06-32a30cf1f57f/log/09904214-d72b-4f2b-91fa-da112dc0f4cd",
+    "id": "09904214-d72b-4f2b-91fa-da112dc0f4cd",
+    "log_time": "2026-09-18T15:55:29.7519887Z",
+    "message": "Running deployment command...",
+    "type": 2
+  },
+  {
+    "details_url": null,
+    "id": "9c3d0587-a729-440c-93a0-3b8124d0ba06",
+    "log_time": "2026-09-18T15:55:31.8168366Z",
+    "message": "Deployment Failed. deployer = OneDeploy deploymentPath = OneDeploy",
+    "type": 0
+  }
+]

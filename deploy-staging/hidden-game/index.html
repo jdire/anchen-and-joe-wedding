@@ -1,0 +1,819 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="The wedding of Anchen Kehler and Joe Hollingshead at Powderham Castle on 4th September 2027."
+    />
+    <meta name="robots" content="noindex, nofollow, noarchive" />
+    <title>Race to the Wedding | Anchen &amp; Joe</title>
+    <script>
+      // Tracks every setInterval so client-side page swaps in site.js can
+      // clear them, since swapped pages share this JS realm instead of reloading.
+      (function () {
+        var active = [];
+        window.__activeTimers = active;
+        var nativeSetInterval = window.setInterval;
+        window.setInterval = function () {
+          var id = nativeSetInterval.apply(window, arguments);
+          active.push(id);
+          return id;
+        };
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/site.css" />
+    
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a
+          class="auth-control"
+          id="auth-control"
+          href="/logout"
+          hidden
+          >Sign out</a
+        >
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-navigation"
+        >
+          <span class="menu-toggle__label">Menu</span>
+          <span class="menu-toggle__icon" aria-hidden="true"
+            ><span></span><span></span
+          ></span>
+        </button>
+        <nav
+          class="site-navigation"
+          id="site-navigation"
+          aria-label="Main navigation"
+        >
+          <ul class="site-navigation__links">
+            <li><a href="/">Home</a></li>
+            <li data-required-role="ceremony" hidden aria-hidden="true"><a href="/order-of-the-day/">Order of the Day</a></li><li><a href="/the-reception/">The Reception</a></li><li><a href="/story-time/">Our Story</a></li><li><a href="/the-castle/">The Castle</a></li><li><a href="/travel---accommodation/">Travel</a></li><li data-required-role="ceremony" hidden aria-hidden="true"><a href="/q---a-s/">Q&A</a></li><li data-required-role="ceremony" hidden aria-hidden="true"><a href="/food/">Food & Drink</a></li><li data-required-role="ceremony" hidden aria-hidden="true"><a href="/rsvp/">RSVP</a></li><li data-required-role="evening" hidden aria-hidden="true"><a href="/evening-qa/">Evening Q&A</a></li><li data-required-role="evening" hidden aria-hidden="true"><a href="/evening-rsvp/">Evening RSVP</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div id="main-content"><main class="content-shell"><!--
+  Wedding Mini-Game Snippet — pixel-art edition — Anchen & Joe Wedding
+  Run, jump gaps, dodge the delays, collect 5 essentials, and reach the
+  castle in time for the kiss. Chunky Game Boy / Mario-era style pixel-art
+  sprites: an animated run-cycle guest character, a detailed blocky gremlin
+  enemy, a tiled castle with crenellations and windows, and a simple
+  parallax hill background. Every sprite is drawn on-canvas from small
+  pixel-grid maps (no external images), scaled up with crisp square pixels —
+  fully self-contained, matching the site's gold/teal/cream palette.
+-->
+
+
+
+
+
+<div style="font-family: Georgia, 'Times New Roman', serif; color:#000000; max-width:none; margin:0 auto; padding:40px 20px; border-top:1px solid #BF9B3A; border-bottom:1px solid #BF9B3A; text-align:center;">
+
+  <p style="font-family: 'Raleway', Arial, Helvetica, sans-serif; font-size:0.8rem; font-weight:700; letter-spacing:0.35em; text-transform:uppercase; color:#00AAB9; margin:0 0 10px;">A Little Adventure</p>
+  <p style="font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif; font-size:2.6rem; font-weight:700; font-style:italic; color:#000000; margin:0 0 14px; line-height:1.1;">Race to the Wedding</p>
+  <p style="font-family: Georgia, 'Times New Roman', serif; font-size:1rem; font-weight:400; line-height:1.6; color:#1a1a1a; margin:0 0 22px;">Help a guest run, jump the gaps, dodge the delays, pack their outfit, makeup, card &amp; gift, and make it to Anchen &amp; Joe's wedding at Powderham Castle &mdash; just in time!<br>
+  <span style="font-family:'Raleway', Arial, Helvetica, sans-serif; font-size:0.85rem; font-weight:700; color:#019CA6;">&larr; &rarr; or A / D to run &middot; Space or &uarr; to jump</span></p>
+
+  <div id="ajg2-frame" style="position:relative; display:inline-block; width:100%; max-width:800px; border:1px solid #e2d9be; border-radius:2px; overflow:hidden; background:#FAF7EE; box-shadow:0 2px 10px rgba(37,40,40,0.08);">
+    <canvas id="ajg2-canvas" width="800" height="300" style="display:block; width:100%; height:auto; touch-action:none; image-rendering:pixelated;"></canvas>
+    <div id="ajg2-mission" style="position:absolute; top:10px; left:10px; right:10px; text-align:center; font-family:'Raleway', Arial, Helvetica, sans-serif; font-size:0.78rem; font-weight:700; letter-spacing:0.02em; color:#252828; background:rgba(250,247,238,0.9); border:1px solid #BF9B3A; border-radius:4px; padding:6px 12px; pointer-events:none; z-index:2;">You're running late! Quickly — get dressed!</div>
+  </div>
+
+  <p style="font-family:'Raleway', Arial, Helvetica, sans-serif; font-size:0.85rem; font-weight:700; color:#4A4F4F; margin:14px 0 0;">
+    Essentials: <span id="ajg2-coins" style="color:#BF9B3A;">0</span>/5 &nbsp;&middot;&nbsp; Attempts: <span id="ajg2-attempts" style="color:#019CA6;">1</span>
+  </p>
+
+  <!-- Mobile touch controls -->
+  <div style="display:flex; justify-content:center; gap:10px; margin-top:16px;">
+    <button id="ajg2-left" style="font-family:'Raleway', Arial, Helvetica, sans-serif; font-size:1.2rem; font-weight:700; width:52px; height:44px; border:1px solid #019CA6; background:#FAF7EE; color:#019CA6; border-radius:4px; cursor:pointer;">&larr;</button>
+    <button id="ajg2-jump" style="font-family:'Raleway', Arial, Helvetica, sans-serif; font-size:0.75rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; width:96px; height:44px; border:1px solid #BF9B3A; background:#BF9B3A; color:#FAF7EE; border-radius:4px; cursor:pointer;">Jump</button>
+    <button id="ajg2-right" style="font-family:'Raleway', Arial, Helvetica, sans-serif; font-size:1.2rem; font-weight:700; width:52px; height:44px; border:1px solid #019CA6; background:#FAF7EE; color:#019CA6; border-radius:4px; cursor:pointer;">&rarr;</button>
+  </div>
+
+</div>
+
+<script>
+(function () {
+  var canvas = document.getElementById('ajg2-canvas');
+  if (canvas.__ajgStop) canvas.__ajgStop();
+  var ctx = canvas.getContext('2d');
+  ctx.imageSmoothingEnabled = false;
+  var W = canvas.width, H = canvas.height;
+  var GROUND_Y = 250;
+  var GRAVITY = 0.55;
+  var JUMP_V = -11.5;
+  var MOVE_SPEED = 3.4;
+  var WORLD_W = 3000;
+
+  var COLORS = { cream:'#FAF7EE', gold:'#BF9B3A', goldLight:'#D4B45A', teal:'#019CA6', tealPale:'#D4E8E8', dark:'#252828', darkMid:'#4A4F4F' };
+
+  /* ---------- Pixel-art sprite engine ---------- */
+  /* Each sprite is a small grid of characters; '.' is transparent, any other
+     char maps to a colour in PAL. drawSprite() blits it as chunky square
+     pixels at PIX size, with optional horizontal flip. */
+  var PIX = 3;
+  var PAL = {
+    k: '#252828', s: '#F2C9A0', h: '#5C4030', H: '#7A5A42',
+    t: '#019CA6', T: '#017077', g: '#BF9B3A', G: '#D4B45A',
+    c: '#FAF7EE', C: '#F0EBD8', d: '#4A4F4F', r: '#C1665A',
+    R: '#8C4A40', w: '#FFFFFF', b: '#5AAFE0', x: '#9AA7A7', X: '#6E7A7A'
+  };
+
+  function drawSprite(rows, x, y, flip) {
+    var cols = rows[0].length;
+    for (var row = 0; row < rows.length; row++) {
+      for (var col = 0; col < cols; col++) {
+        var ch = rows[row][col];
+        if (ch === '.') continue;
+        var color = PAL[ch];
+        if (!color) continue;
+        var px = flip ? (cols - 1 - col) : col;
+        ctx.fillStyle = color;
+        ctx.fillRect(Math.round(x + px * PIX), Math.round(y + row * PIX), PIX, PIX);
+      }
+    }
+  }
+
+  function spriteSize(rows) {
+    return { w: rows[0].length * PIX, h: rows.length * PIX };
+  }
+
+  /* Guest character: idle / two run frames / jump frame (10 cols wide). */
+  var GUEST_IDLE = [
+    '..hhhh....',
+    '.hhhhhhh..',
+    '.hsssssh..',
+    '.hskhksh..',
+    '.hssssssh.',
+    '..sstts...',
+    '.ttttttt..',
+    '.ttttttt..',
+    '.tgggggt..',
+    '.ttttttt..',
+    '..gg.gg...',
+    '..gg.gg...',
+    '..dd.dd...',
+    '.ddd.ddd..'
+  ];
+  var GUEST_RUN_A = GUEST_IDLE.slice(0, 10).concat([
+    'gg....gg..',
+    'gg....gg..',
+    'dd....dd..',
+    'ddd..ddd..'
+  ]);
+  var GUEST_RUN_B = GUEST_IDLE.slice(0, 10).concat([
+    '...gggg...',
+    '...gggg...',
+    '...dddd...',
+    '..dddddd..'
+  ]);
+  var GUEST_JUMP = GUEST_IDLE.slice(0, 10).concat([
+    '...gggg...',
+    '...dddd...'
+  ]);
+
+  /* Enemy: a small blocky "delay gremlin", two idle-wobble frames. */
+  var GREMLIN_A = [
+    '..RRRRRR..',
+    '.rrrrrrrr.',
+    '.rrwrrwrr.',
+    '.rrrRRrrr.',
+    '.rrrrrrrr.',
+    '..d....d..'
+  ];
+  var GREMLIN_B = [
+    '..RRRRRR..',
+    '.rrrrrrrr.',
+    '.rrwrrwrr.',
+    '.rrrRRrrr.',
+    '.rrrrrrrr.',
+    '.d......d.'
+  ];
+
+  var pits = [
+    { x: 480,  w: 70 },
+    { x: 1050, w: 85 },
+    { x: 1750, w: 70 },
+    { x: 2250, w: 90 }
+  ];
+
+  var coinsData = [
+    { x: 300,  y: GROUND_Y - 60, taken: false, type: 'outfit' },
+    { x: 760,  y: GROUND_Y - 90, taken: false, type: 'makeup' },
+    { x: 1300, y: GROUND_Y - 60, taken: false, type: 'card' },
+    { x: 1950, y: GROUND_Y - 90, taken: false, type: 'gift' },
+    { x: 2600, y: GROUND_Y - 60, taken: false, type: 'shoes' }
+  ];
+
+  var enemies = [
+    { x: 650,  minX: 620,  maxX: 780,  y: GROUND_Y - 22, w: 22, h: 22, dir: 1, speed: 1.3 },
+    { x: 1500, minX: 1450, maxX: 1650, y: GROUND_Y - 22, w: 22, h: 22, dir: 1, speed: 1.6 },
+    { x: 2100, minX: 2050, maxX: 2200, y: GROUND_Y - 22, w: 22, h: 22, dir: -1, speed: 1.4 }
+  ];
+
+  var CASTLE_X = WORLD_W - 220;
+
+  /* Background hills for a simple two-layer parallax (classic GB-level feel). */
+  var HILLS = [
+    { x: 40,  w: 160, h: 26 }, { x: 260, w: 120, h: 18 }, { x: 520, w: 190, h: 30 },
+    { x: 820, w: 140, h: 20 }, { x: 1080, w: 170, h: 28 }, { x: 1360, w: 130, h: 18 },
+    { x: 1620, w: 200, h: 32 }, { x: 1930, w: 150, h: 22 }, { x: 2220, w: 180, h: 28 },
+    { x: 2520, w: 160, h: 24 }
+  ];
+
+  var startX = 60;
+  var player, camera, coinsCollected, attempts, state, cutsceneFrame, keys, walkTimer, walkFrame;
+  var CUTSCENE_LEN = 130;
+
+  var MISSION_TEXT = {
+    start:   "You're running late! Quickly — get dressed!",
+    makeup:  "Now do your hair and makeup!",
+    card:    "Grab the card on your way out the door!",
+    gift:    "Don't forget the present!",
+    shoes:   "Quick — get those shoes polished!",
+    allDone: "You've got everything — now RUN to the castle!",
+    cutscene:"Nearly there — go, go, go!",
+    win:     "You made it just in time!",
+    fail:    "You didn't get ready in time..."
+  };
+  var MISSION_KEYS = ['start', 'makeup', 'card', 'gift', 'shoes'];
+
+  function resetPlayer() {
+    player = { x: startX, y: GROUND_Y - 42, vx: 0, vy: 0, w: 30, h: 42, facing: 1, onGround: true };
+  }
+
+  function resetGame() {
+    resetPlayer();
+    camera = 0;
+    coinsCollected = 0;
+    attempts = 1;
+    state = 'play';
+    cutsceneFrame = 0;
+    walkTimer = 0;
+    walkFrame = 0;
+    coinsData.forEach(function (c) { c.taken = false; });
+    updateHud();
+  }
+
+  keys = {};
+  resetGame();
+
+  function updateHud() {
+    document.getElementById('ajg2-coins').textContent = coinsCollected;
+    document.getElementById('ajg2-attempts').textContent = attempts;
+    updateMission();
+  }
+
+  function updateMission() {
+    var text;
+    if (state === 'lost' || state === 'cutscene_fail') text = MISSION_TEXT.fail;
+    else if (state === 'won') text = MISSION_TEXT.win;
+    else if (state === 'cutscene') text = MISSION_TEXT.cutscene;
+    else {
+      text = MISSION_TEXT.allDone;
+      for (var i = 0; i < coinsData.length; i++) {
+        if (!coinsData[i].taken) { text = MISSION_TEXT[MISSION_KEYS[i]]; break; }
+      }
+    }
+    document.getElementById('ajg2-mission').textContent = text;
+  }
+
+  function isOverPit(x) {
+    for (var i = 0; i < pits.length; i++) {
+      if (x > pits[i].x && x < pits[i].x + pits[i].w) return true;
+    }
+    return false;
+  }
+
+  function respawn() {
+    attempts++;
+    keys.left = false;
+    keys.right = false;
+    keys.jump = false;
+    resetPlayer();
+    updateHud();
+  }
+
+  function update() {
+    if (state === 'cutscene') {
+      cutsceneFrame++;
+      if (cutsceneFrame >= CUTSCENE_LEN) { state = 'won'; updateMission(); }
+      return;
+    }
+    if (state === 'cutscene_fail') {
+      cutsceneFrame++;
+      if (cutsceneFrame >= CUTSCENE_LEN) { state = 'lost'; updateMission(); }
+      return;
+    }
+    if (state === 'won' || state === 'lost') return;
+
+    if (keys.left) { player.vx = -MOVE_SPEED; player.facing = -1; }
+    else if (keys.right) { player.vx = MOVE_SPEED; player.facing = 1; }
+    else { player.vx = 0; }
+
+    if (player.vx !== 0 && player.onGround) {
+      walkTimer++;
+      if (walkTimer > 7) { walkTimer = 0; walkFrame = 1 - walkFrame; }
+    } else if (player.onGround) {
+      walkTimer = 0;
+    }
+
+    if (keys.jump && player.onGround) {
+      player.vy = JUMP_V;
+      player.onGround = false;
+    }
+
+    player.vy += GRAVITY;
+    player.x += player.vx;
+    player.y += player.vy;
+
+    if (player.x < 10) player.x = 10;
+    if (player.x > WORLD_W - 10) player.x = WORLD_W - 10;
+
+    var footX = player.x + player.w / 2;
+    var groundHere = !isOverPit(footX);
+    /* Only snap onto the ground when landing near its surface — once you've
+       fallen well past it (mid-pit), forward speed carrying you past the far
+       edge shouldn't teleport you back up onto the platform. */
+    var nearGroundSurface = player.y + player.h <= GROUND_Y + 16;
+
+    if (groundHere && nearGroundSurface && player.y + player.h >= GROUND_Y) {
+      player.y = GROUND_Y - player.h;
+      player.vy = 0;
+      player.onGround = true;
+    } else if (player.y > H + 60) {
+      respawn();
+      return;
+    }
+
+    var hitEnemy = false;
+    enemies.forEach(function (e) {
+      e.x += e.speed * e.dir;
+      if (e.x < e.minX || e.x > e.maxX) e.dir *= -1;
+      if (!hitEnemy && player.x < e.x + e.w && player.x + player.w > e.x &&
+          player.y < e.y + e.h && player.y + player.h > e.y) {
+        hitEnemy = true;
+        respawn();
+      }
+    });
+    if (hitEnemy) return;
+
+    coinsData.forEach(function (c) {
+      if (c.taken) return;
+      var dx = (player.x + player.w / 2) - c.x;
+      var dy = (player.y + player.h / 2) - c.y;
+      if (Math.sqrt(dx * dx + dy * dy) < 30) {
+        c.taken = true;
+        coinsCollected++;
+        updateHud();
+      }
+    });
+
+    if (player.x + player.w > CASTLE_X) {
+      state = coinsCollected >= coinsData.length ? 'cutscene' : 'cutscene_fail';
+      cutsceneFrame = 0;
+      updateMission();
+    }
+
+    camera = Math.max(0, Math.min(player.x - W / 2.6, WORLD_W - W));
+  }
+
+  function drawSky() {
+    ctx.fillStyle = COLORS.cream;
+    ctx.fillRect(0, 0, W, H);
+  }
+
+  function drawHills() {
+    ctx.fillStyle = COLORS.tealPale;
+    HILLS.forEach(function (hill) {
+      var sx = hill.x - camera * 0.35;
+      if (sx < -hill.w || sx > W + hill.w) return;
+      ctx.fillRect(Math.round(sx), GROUND_Y - hill.h, hill.w, hill.h);
+    });
+  }
+
+  function drawGround() {
+    ctx.fillStyle = COLORS.tealPale;
+    ctx.fillRect(0, GROUND_Y, W, H - GROUND_Y);
+
+    var segStart = 0;
+    var allPits = pits.slice().sort(function (a, b) { return a.x - b.x; });
+    allPits.forEach(function (p) {
+      ctx.fillStyle = COLORS.gold;
+      ctx.fillRect(segStart - camera, GROUND_Y, (p.x - segStart), 6);
+      segStart = p.x + p.w;
+    });
+    ctx.fillRect(segStart - camera, GROUND_Y, (WORLD_W - segStart), 6);
+
+    /* Chunky brick texture, skipped across pit gaps so it never visually
+       covers a gap or implies solid ground where there is none. */
+    ctx.fillStyle = COLORS.goldLight;
+    var brick = PIX * 2;
+    for (var bx = -((camera) % (brick * 2)); bx < W; bx += brick * 2) {
+      var worldX = bx + camera;
+      if (isOverPit(worldX) || isOverPit(worldX + brick)) continue;
+      ctx.fillRect(bx, GROUND_Y + 1, brick, PIX);
+    }
+  }
+
+  /* ---------- Pixel-art collectible icons ---------- */
+  function drawItem(sx, y, type) {
+    ctx.save();
+    ctx.translate(Math.round(sx), Math.round(y));
+    ctx.fillStyle = COLORS.gold;
+    ctx.strokeStyle = COLORS.dark;
+    ctx.lineWidth = 1.5;
+    if (type === 'outfit') {
+      ctx.beginPath();
+      ctx.moveTo(-8, -13); ctx.lineTo(-15, -6); ctx.lineTo(-8, -2); ctx.lineTo(-8, 14);
+      ctx.lineTo(8, 14); ctx.lineTo(8, -2); ctx.lineTo(15, -6); ctx.lineTo(8, -13);
+      ctx.closePath();
+      ctx.fill();
+      ctx.stroke();
+    } else if (type === 'makeup') {
+      ctx.fillRect(-5, -12, 10, 19);
+      ctx.strokeRect(-5, -12, 10, 19);
+      ctx.beginPath();
+      ctx.moveTo(-5, -12); ctx.lineTo(0, -20); ctx.lineTo(5, -12);
+      ctx.closePath();
+      ctx.fillStyle = COLORS.teal;
+      ctx.fill();
+      ctx.stroke();
+    } else if (type === 'card') {
+      ctx.fillStyle = COLORS.cream;
+      ctx.fillRect(-15, -10, 30, 21);
+      ctx.strokeRect(-15, -10, 30, 21);
+      ctx.beginPath();
+      ctx.moveTo(-15, -10); ctx.lineTo(0, 3); ctx.lineTo(15, -10);
+      ctx.stroke();
+      ctx.fillStyle = COLORS.gold;
+      ctx.beginPath();
+      ctx.moveTo(0, 6);
+      ctx.bezierCurveTo(-5, 0, -10, 4, 0, 10);
+      ctx.bezierCurveTo(10, 4, 5, 0, 0, 6);
+      ctx.fill();
+    } else if (type === 'gift') {
+      ctx.fillRect(-15, -4, 30, 20);
+      ctx.strokeRect(-15, -4, 30, 20);
+      ctx.fillStyle = COLORS.goldLight;
+      ctx.fillRect(-15, -12, 30, 8);
+      ctx.strokeRect(-15, -12, 30, 8);
+      ctx.strokeStyle = COLORS.teal;
+      ctx.lineWidth = 3.5;
+      ctx.beginPath();
+      ctx.moveTo(0, -12); ctx.lineTo(0, 16);
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.moveTo(-15, 4); ctx.lineTo(15, 4);
+      ctx.stroke();
+      ctx.fillStyle = COLORS.teal;
+      ctx.beginPath();
+      ctx.moveTo(0, -12); ctx.lineTo(-9, -19); ctx.lineTo(-2, -19); ctx.lineTo(0, -14);
+      ctx.lineTo(2, -19); ctx.lineTo(9, -19); ctx.closePath();
+      ctx.fill();
+    } else if (type === 'shoes') {
+      ctx.beginPath();
+      ctx.moveTo(-14, 9);
+      ctx.lineTo(-14, -2);
+      ctx.quadraticCurveTo(-14, -9, -6, -9);
+      ctx.quadraticCurveTo(4, -9, 11, -4);
+      ctx.quadraticCurveTo(16, -1, 16, 4);
+      ctx.quadraticCurveTo(16, 9, 11, 9);
+      ctx.lineTo(-14, 9);
+      ctx.closePath();
+      ctx.fill();
+      ctx.stroke();
+      ctx.strokeStyle = COLORS.teal;
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.moveTo(-5, -7);
+      ctx.lineTo(-5, 9);
+      ctx.stroke();
+      ctx.strokeStyle = 'rgba(255,255,255,0.7)';
+      ctx.lineWidth = 1.4;
+      ctx.beginPath();
+      ctx.moveTo(3, -3);
+      ctx.lineTo(11, 1);
+      ctx.stroke();
+    }
+    ctx.restore();
+  }
+
+  function drawCoins() {
+    coinsData.forEach(function (c) {
+      if (c.taken) return;
+      var sx = c.x - camera;
+      if (sx < -30 || sx > W + 30) return;
+      var bob = Math.sin((Date.now() / 260) + c.x) * 3;
+      drawItem(sx, c.y + bob, c.type);
+    });
+  }
+
+  function drawEnemies() {
+    enemies.forEach(function (e) {
+      var sx = e.x - camera;
+      if (sx < -30 || sx > W + 30) return;
+      var frame = Math.floor(Date.now() / 220) % 2 === 0 ? GREMLIN_A : GREMLIN_B;
+      var size = spriteSize(frame);
+      drawSprite(frame, sx + e.w / 2 - size.w / 2, e.y + e.h - size.h, e.dir < 0);
+    });
+  }
+
+  function drawCastle() {
+    var sx = CASTLE_X - camera;
+    var baseW = 200, baseH = 110, towerW = 30, towerH = 150;
+
+    /* Stone base with two-tone brick texture. */
+    ctx.fillStyle = PAL.x;
+    ctx.fillRect(sx, GROUND_Y - baseH, baseW, baseH);
+    ctx.fillStyle = PAL.X;
+    for (var row = 0; row < baseH / PIX; row++) {
+      var offset = (row % 2 === 0) ? 0 : PIX * 1.5;
+      for (var col = -1; col * PIX * 3 + offset < baseW; col++) {
+        ctx.fillRect(sx + col * PIX * 3 + offset, GROUND_Y - baseH + row * PIX, PIX, PIX);
+      }
+    }
+
+    /* Towers either side. */
+    [sx - towerW + 6, sx + baseW - 6].forEach(function (tx) {
+      ctx.fillStyle = PAL.x;
+      ctx.fillRect(tx, GROUND_Y - towerH, towerW, towerH);
+      /* Crenellations. */
+      ctx.fillStyle = PAL.X;
+      for (var i = 0; i < towerW; i += PIX * 2) {
+        ctx.fillRect(tx + i, GROUND_Y - towerH - PIX * 2, PIX, PIX * 2);
+      }
+      /* Cross-slit window. */
+      ctx.fillStyle = PAL.k;
+      ctx.fillRect(tx + towerW / 2 - PIX / 2, GROUND_Y - towerH + 40, PIX, PIX * 4);
+      ctx.fillRect(tx + towerW / 2 - PIX * 1.5, GROUND_Y - towerH + 44, PIX * 3, PIX);
+    });
+
+    /* Base crenellations. */
+    ctx.fillStyle = PAL.X;
+    for (var j = 0; j < baseW; j += PIX * 2) {
+      ctx.fillRect(sx + j, GROUND_Y - baseH - PIX * 2, PIX, PIX * 2);
+    }
+
+    /* Gate. */
+    ctx.fillStyle = PAL.k;
+    ctx.fillRect(sx + baseW / 2 - 16, GROUND_Y - 46, 32, 46);
+    ctx.beginPath();
+    ctx.arc(sx + baseW / 2, GROUND_Y - 46, 16, Math.PI, 0);
+    ctx.fill();
+
+    /* Flag. */
+    ctx.fillStyle = PAL.k;
+    ctx.fillRect(sx + baseW - 6 + towerW / 2 - 1, GROUND_Y - towerH - PIX * 2 - 18, 2, 18);
+    ctx.fillStyle = COLORS.gold;
+    ctx.beginPath();
+    var flagX = sx + baseW - 6 + towerW / 2 + 1;
+    var flagY = GROUND_Y - towerH - PIX * 2 - 17;
+    var wave = Math.sin(Date.now() / 300) * 3;
+    ctx.moveTo(flagX, flagY);
+    ctx.lineTo(flagX + 14 + wave, flagY + 4);
+    ctx.lineTo(flagX, flagY + 8);
+    ctx.closePath();
+    ctx.fill();
+  }
+
+  function drawPlayer() {
+    if (state !== 'play') return;
+    var frame;
+    if (!player.onGround) frame = GUEST_JUMP;
+    else if (player.vx !== 0) frame = walkFrame === 0 ? GUEST_RUN_A : GUEST_RUN_B;
+    else frame = GUEST_IDLE;
+    var size = spriteSize(frame);
+    var screenX = player.x - camera;
+    var sx = screenX + player.w / 2 - size.w / 2;
+    var sy = player.y + player.h - size.h;
+    drawSprite(frame, sx, sy, player.facing < 0);
+  }
+
+  function lerp(a, b, t) { return a + (b - a) * t; }
+
+  var GROOM_SPRITE = [
+    '..hhhh....',
+    '.hhhhhhh..',
+    '.hsssssh..',
+    '.hskhksh..',
+    '.hssssssh.',
+    '..sskss...',
+    '.kkkkkkk..',
+    '.kkGkGkk..',
+    '.kktkgtk..',
+    '.kkkkkkk..',
+    '..kk.kk...',
+    '..kk.kk...',
+    '..dd.dd...',
+    '.ddd.ddd..'
+  ];
+
+  var BRIDE_SPRITE = [
+    '..HHHH....',
+    '.HHHHHHH..',
+    '.HsssssH..',
+    '.HskhksH..',
+    '.HssssssH.',
+    '..scGcs...',
+    '.cccccccc.',
+    'ccccccccccc',
+    'ccccccccccc',
+    'cCcccccCc.',
+    'cCcccccCc.',
+    'CcCcccCcC.'
+  ];
+
+  function drawGroom(x, y) {
+    var size = spriteSize(GROOM_SPRITE);
+    drawSprite(GROOM_SPRITE, x - size.w / 2, y - size.h, false);
+  }
+
+  function drawBride(x, y) {
+    var size = spriteSize(BRIDE_SPRITE);
+    drawSprite(BRIDE_SPRITE, x - size.w / 2, y - size.h, false);
+  }
+
+  function drawHeart(x, y, scale) {
+    ctx.save();
+    ctx.translate(x, y);
+    ctx.scale(scale, scale);
+    ctx.fillStyle = COLORS.gold;
+    ctx.beginPath();
+    ctx.moveTo(0, 4);
+    ctx.bezierCurveTo(-8, -6, -16, 2, 0, 12);
+    ctx.bezierCurveTo(16, 2, 8, -6, 0, 4);
+    ctx.fill();
+    ctx.restore();
+  }
+
+  function drawCutscene(frame) {
+    var doorCenterX = CASTLE_X + 39 - camera;
+    var doorY = GROUND_Y;
+    var approachT = Math.min(frame / (CUTSCENE_LEN * 0.55), 1);
+    var offset = lerp(40, 7, approachT);
+    drawGroom(doorCenterX - offset, doorY);
+    drawBride(doorCenterX + offset, doorY);
+    if (frame > CUTSCENE_LEN * 0.55) {
+      var kissT = (frame - CUTSCENE_LEN * 0.55) / (CUTSCENE_LEN * 0.45);
+      drawHeart(doorCenterX, doorY - 46 - kissT * 16, 1 - kissT * 0.25);
+    }
+  }
+
+  function drawTearDrop(x, y) {
+    ctx.beginPath();
+    ctx.moveTo(x, y - 4);
+    ctx.bezierCurveTo(x - 2.5, y + 1, x - 2.5, y + 5, x, y + 6);
+    ctx.bezierCurveTo(x + 2.5, y + 5, x + 2.5, y + 1, x, y - 4);
+    ctx.closePath();
+    ctx.fill();
+  }
+
+  function drawTears(x, faceY, frame) {
+    var loop = (frame % 36) / 36;
+    var dy = loop * 16;
+    ctx.save();
+    ctx.globalAlpha = 1 - loop * 0.4;
+    ctx.fillStyle = PAL.b;
+    drawTearDrop(x - 4, faceY + 2 + dy);
+    drawTearDrop(x + 4, faceY + 2 + dy);
+    ctx.restore();
+  }
+
+  function drawCutsceneFail(frame) {
+    var doorCenterX = CASTLE_X + 39 - camera;
+    var doorY = GROUND_Y;
+    var t = Math.min(frame / CUTSCENE_LEN, 1);
+    var offset = lerp(7, 110, t);
+    var groomX = doorCenterX - offset;
+    var brideX = doorCenterX + offset;
+    ctx.save();
+    ctx.filter = 'grayscale(70%)';
+    ctx.globalAlpha = 0.9;
+    drawGroom(groomX, doorY);
+    drawBride(brideX, doorY);
+    ctx.restore();
+    drawTears(groomX, doorY - 32, frame);
+    drawTears(brideX, doorY - 32, frame);
+  }
+
+  function drawWin() {
+    ctx.fillStyle = 'rgba(37,40,40,0.72)';
+    ctx.fillRect(0, 0, W, H);
+    ctx.fillStyle = COLORS.cream;
+    ctx.font = "italic 700 32px 'Cormorant Garamond', Georgia, serif";
+    ctx.textAlign = 'center';
+    ctx.fillText('You made it just in time!', W / 2, H / 2 - 20);
+    ctx.font = "700 15px 'Raleway', Arial, sans-serif";
+    ctx.fillText('Essentials packed: ' + coinsCollected + ' / 5  \u2014  Attempts: ' + attempts, W / 2, H / 2 + 14);
+    ctx.font = "700 13px 'Raleway', Arial, sans-serif";
+    ctx.fillStyle = COLORS.goldLight;
+    ctx.fillText('Press R to play again', W / 2, H / 2 + 44);
+  }
+
+  function drawLost() {
+    ctx.fillStyle = 'rgba(37,40,40,0.72)';
+    ctx.fillRect(0, 0, W, H);
+    ctx.fillStyle = COLORS.cream;
+    ctx.font = "italic 700 30px 'Cormorant Garamond', Georgia, serif";
+    ctx.textAlign = 'center';
+    ctx.fillText("You didn't get ready in time...", W / 2, H / 2 - 20);
+    ctx.font = "700 15px 'Raleway', Arial, sans-serif";
+    ctx.fillText('Essentials packed: ' + coinsCollected + ' / 5  \u2014  Attempts: ' + attempts, W / 2, H / 2 + 14);
+    ctx.font = "700 13px 'Raleway', Arial, sans-serif";
+    ctx.fillStyle = COLORS.goldLight;
+    ctx.fillText('Press R to try again', W / 2, H / 2 + 44);
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+    drawSky();
+    drawHills();
+    drawGround();
+    drawCoins();
+    drawEnemies();
+    drawCastle();
+    drawPlayer();
+    if (state === 'cutscene') drawCutscene(cutsceneFrame);
+    if (state === 'cutscene_fail') drawCutsceneFail(cutsceneFrame);
+    if (state === 'won') { drawCutscene(CUTSCENE_LEN); drawWin(); }
+    if (state === 'lost') { drawCutsceneFail(CUTSCENE_LEN); drawLost(); }
+  }
+
+  var rafId;
+  function loop() {
+    update();
+    draw();
+    rafId = requestAnimationFrame(loop);
+  }
+  canvas.__ajgStop = function () { cancelAnimationFrame(rafId); };
+
+  window.addEventListener('keydown', function (e) {
+    if (['ArrowLeft', 'ArrowRight', 'ArrowUp', 'Space'].indexOf(e.code) !== -1) e.preventDefault();
+    if (e.code === 'ArrowLeft' || e.code === 'KeyA') keys.left = true;
+    if (e.code === 'ArrowRight' || e.code === 'KeyD') keys.right = true;
+    if (e.code === 'ArrowUp' || e.code === 'Space' || e.code === 'KeyW') keys.jump = true;
+    if (e.code === 'KeyR' && (state === 'won' || state === 'lost')) resetGame();
+  });
+  window.addEventListener('keyup', function (e) {
+    if (e.code === 'ArrowLeft' || e.code === 'KeyA') keys.left = false;
+    if (e.code === 'ArrowRight' || e.code === 'KeyD') keys.right = false;
+    if (e.code === 'ArrowUp' || e.code === 'Space' || e.code === 'KeyW') keys.jump = false;
+  });
+
+  function bindHold(el, onDown, onUp) {
+    el.addEventListener('mousedown', onDown);
+    el.addEventListener('touchstart', function (ev) {
+      ev.preventDefault();
+      // Touch devices have no R key, so any control tap restarts once the round has ended.
+      if (state === 'won' || state === 'lost') { resetGame(); return; }
+      onDown();
+    }, { passive: false });
+    el.addEventListener('mouseup', onUp);
+    el.addEventListener('mouseleave', onUp);
+    el.addEventListener('touchend', onUp);
+  }
+  bindHold(document.getElementById('ajg2-left'), function () { keys.left = true; }, function () { keys.left = false; });
+  bindHold(document.getElementById('ajg2-right'), function () { keys.right = true; }, function () { keys.right = false; });
+  bindHold(document.getElementById('ajg2-jump'), function () { keys.jump = true; }, function () { keys.jump = false; });
+  document.getElementById('ajg2-jump').addEventListener('click', function () { if (state === 'won' || state === 'lost') resetGame(); });
+  canvas.addEventListener('touchstart', function (ev) {
+    if (state === 'won' || state === 'lost') { ev.preventDefault(); resetGame(); }
+  }, { passive: false });
+  canvas.addEventListener('click', function () { if (state === 'won' || state === 'lost') resetGame(); });
+
+  // On narrow screens the 800x300 canvas becomes quite short once scaled to fit — give it a taller box instead of stretching it.
+  var mobileMq = window.matchMedia('(max-width: 640px)');
+  function applyMobileSize(e) {
+    if (e.matches) {
+      canvas.style.height = '260px';
+      canvas.style.objectFit = 'contain';
+    } else {
+      canvas.style.height = 'auto';
+      canvas.style.objectFit = '';
+    }
+  }
+  applyMobileSize(mobileMq);
+  if (mobileMq.addEventListener) { mobileMq.addEventListener('change', applyMobileSize); } else { mobileMq.addListener(applyMobileSize); }
+
+  loop();
+})();
+</script>
+</main></div>
+    <script src="/site.js" defer></script>
+  </body>
+</html>

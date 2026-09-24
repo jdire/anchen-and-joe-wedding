@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Wedding photo placeholder</title>
+  <desc id="desc">A soft cream, teal, and gold placeholder for a wedding photograph.</desc>
+  <rect width="800" height="1000" fill="#f0ebd8"/>
+  <rect x="34" y="34" width="732" height="932" fill="#faf7ee" stroke="#bf9b3a" stroke-width="3"/>
+  <path d="M120 760c120-150 210-205 280-205s160 55 280 205" fill="none" stroke="#d4e8e8" stroke-width="50"/>
+  <circle cx="320" cy="390" r="92" fill="#019ca6" opacity=".2"/>
+  <circle cx="480" cy="390" r="92" fill="#bf9b3a" opacity=".22"/>
+  <path d="M250 520c55-55 245-55 300 0" fill="none" stroke="#017077" stroke-width="4"/>
+  <text x="400" y="850" fill="#017077" font-family="Georgia, serif" font-size="34" font-style="italic" text-anchor="middle">A moment to come</text>
+</svg>

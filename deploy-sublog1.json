@@ -1,0 +1,2697 @@
+﻿[
+    {
+        "log_time":  "2026-09-18T15:54:56.9000161Z",
+        "id":  "",
+        "message":  "Command: /opt/Kudu/Scripts/parallel_rsync.sh /tmp/zipdeploy/extracted /home/site/wwwroot 8 /tmp/ True False  ",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:54:58.5415178Z",
+        "id":  "",
+        "message":  "Run rsync from: /tmp/zipdeploy/extracted/ to: /home/site/wwwroot/ in 8 parallel threads",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:54:58.8416559Z",
+        "id":  "",
+        "message":  "Delete options: clean=True, use manifest=False, directory to ignore=",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:54:58.9526835Z",
+        "id":  "",
+        "message":  "Prev manifest = /tmp/tmpSoJQjf.tmp and next /tmp/tmpSoJQjf.tmp",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:54:59.2940673Z",
+        "id":  "",
+        "message":  "Cleaning up /tmp//filelist.txt and /tmp//splits",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:54:59.9065847Z",
+        "id":  "",
+        "message":  "Creating a list of all files at /tmp//filelist.txt",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:00.1182529Z",
+        "id":  "",
+        "message":  "rsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/login\\index.html\": Invalid argument (22)",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:00.2006869Z",
+        "id":  "",
+        "message":  "rsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/order-of-the-day\\index.html\": Invalid argument (22)",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:00.5929031Z",
+        "id":  "",
+        "message":  "rsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/rsvp\\index.html\": Invalid argument (22)",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:00.9047018Z",
+        "id":  "",
+        "message":  "No directory to exclude.",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:01.214012Z",
+        "id":  "",
+        "message":  "Created /tmp//filelist.txt. Total number of files to be synced = 38.",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:01.3762248Z",
+        "id":  "",
+        "message":  "rsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\The proposal.jpg\": Invalid argument (22)",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:01.537433Z",
+        "id":  "",
+        "message":  "Created batches from the list of files. Processing 5 files in each thread",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:01.869031Z",
+        "id":  "",
+        "message":  "rsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\last 11 years.jpg\": Invalid argument (22)",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:02.6415294Z",
+        "id":  "",
+        "message":  "Running rsync for filelist /tmp//splits/split.aa from /tmp/zipdeploy/extracted/ to /home/site/wwwroot/",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:04.0900911Z",
+        "id":  "",
+        "message":  "rsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\rat-darwin.jpg\": Invalid argument (22)",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:04.2295598Z",
+        "id":  "",
+        "message":  "Running rsync for filelist /tmp//splits/split.ab from /tmp/zipdeploy/extracted/ to /home/site/wwwroot/",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:04.623481Z",
+        "id":  "",
+        "message":  "rsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\rat-nova.jpg\": Invalid argument (22)",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:05.1055461Z",
+        "id":  "",
+        "message":  "Running rsync for filelist /tmp//splits/split.ac from /tmp/zipdeploy/extracted/ to /home/site/wwwroot/",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:05.5691361Z",
+        "id":  "",
+        "message":  "rsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\rat-remy.jpg\": Invalid argument (22)",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:05.7412061Z",
+        "id":  "",
+        "message":  "Running rsync for filelist /tmp//splits/split.ad from /tmp/zipdeploy/extracted/ to /home/site/wwwroot/",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:05.971771Z",
+        "id":  "",
+        "message":  "rsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\rat-sky.jpg\": Invalid argument (22)",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:06.5742835Z",
+        "id":  "",
+        "message":  "rsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\rat-xena.jpg\": Invalid argument (22)",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:06.6453276Z",
+        "id":  "",
+        "message":  "Running rsync for filelist /tmp//splits/split.af from /tmp/zipdeploy/extracted/ to /home/site/wwwroot/",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:06.9771961Z",
+        "id":  "",
+        "message":  "rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1347) [sender=3.2.7]",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:07.108069Z",
+        "id":  "",
+        "message":  "Running rsync for filelist /tmp//splits/split.ae from /tmp/zipdeploy/extracted/ to /home/site/wwwroot/",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:07.3283734Z",
+        "id":  "",
+        "message":  "rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1347) [sender=3.2.7]",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:07.3888462Z",
+        "id":  "",
+        "message":  "Running rsync for filelist /tmp//splits/split.ag from /tmp/zipdeploy/extracted/ to /home/site/wwwroot/",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:07.4884415Z",
+        "id":  "",
+        "message":  "rsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/rats\\index.html\": Invalid argument (22)",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:07.5208637Z",
+        "id":  "",
+        "message":  "",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:07.5584719Z",
+        "id":  "",
+        "message":  "rsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/the-castle\\index.html\": Invalid argument (22)",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:07.6811539Z",
+        "id":  "",
+        "message":  "Number of files: 5 (reg: 5)",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:07.8121512Z",
+        "id":  "",
+        "message":  "rsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\How we fell in love.jpg\": Invalid argument (22)",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:07.8615353Z",
+        "id":  "",
+        "message":  "Number of created files: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:08.092801Z",
+        "id":  "",
+        "message":  "rsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\How we met.jpg\": Invalid argument (22)",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:08.1923123Z",
+        "id":  "",
+        "message":  "Number of deleted files: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:08.3243131Z",
+        "id":  "",
+        "message":  "Number of regular files transferred: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:08.3750669Z",
+        "id":  "",
+        "message":  "rsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/travel---accommodation\\index.html\": Invalid argument (22)",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:08.4455221Z",
+        "id":  "",
+        "message":  "Total file size: 619.89K bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:08.5155443Z",
+        "id":  "",
+        "message":  "rsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\The Wedding.jpg\": Invalid argument (22)",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:08.5661749Z",
+        "id":  "",
+        "message":  "Total transferred file size: 0 bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:08.6163837Z",
+        "id":  "",
+        "message":  "rsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\rat-lancelot.jpg\": Invalid argument (22)",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:08.6659127Z",
+        "id":  "",
+        "message":  "Literal data: 0 bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:08.7273909Z",
+        "id":  "",
+        "message":  "rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1347) [sender=3.2.7]",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:08.79809Z",
+        "id":  "",
+        "message":  "Matched data: 0 bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:08.9392034Z",
+        "id":  "",
+        "message":  "rsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/evening-qa\\index.html\": Invalid argument (22)",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:08.9876156Z",
+        "id":  "",
+        "message":  "File list size: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:09.0378051Z",
+        "id":  "",
+        "message":  "rsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\The engagment.jpg\": Invalid argument (22)",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:09.1094914Z",
+        "id":  "",
+        "message":  "File list generation time: 0.008 seconds",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:09.1674811Z",
+        "id":  "",
+        "message":  "rsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\rat-arthur.jpg\": Invalid argument (22)",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:09.3096369Z",
+        "id":  "",
+        "message":  "rsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/food\\index.html\": Invalid argument (22)",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:09.3285417Z",
+        "id":  "",
+        "message":  "File list transfer time: 0.000 seconds",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:09.4203138Z",
+        "id":  "",
+        "message":  "rsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/placeholders\\wedding-photo.svg\": Invalid argument (22)",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:09.4397445Z",
+        "id":  "",
+        "message":  "Total bytes sent: 274",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:09.4912083Z",
+        "id":  "",
+        "message":  "rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1347) [sender=3.2.7]",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:09.5318726Z",
+        "id":  "",
+        "message":  "Total bytes received: 12",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:09.582777Z",
+        "id":  "",
+        "message":  "",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:09.6318676Z",
+        "id":  "",
+        "message":  "rsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/q---a-s\\index.html\": Invalid argument (22)",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:09.6621012Z",
+        "id":  "",
+        "message":  "sent 274 bytes  received 12 bytes  190.67 bytes/sec",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:09.7129123Z",
+        "id":  "",
+        "message":  "rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1347) [sender=3.2.7]",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:09.7632752Z",
+        "id":  "",
+        "message":  "total size is 619.89K  speedup is 2,167.47",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:09.8026016Z",
+        "id":  "",
+        "message":  "rsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/evening-rsvp\\index.html\": Invalid argument (22)",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:09.8723589Z",
+        "id":  "",
+        "message":  "Attempt 1: Rsync for filelist /tmp//splits/split.ab completed with exit code 23",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:09.8927904Z",
+        "id":  "",
+        "message":  "rsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/hidden-game\\index.html\": Invalid argument (22)",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:09.9429172Z",
+        "id":  "",
+        "message":  "",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:09.963452Z",
+        "id":  "",
+        "message":  "rsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\rat-merlin.jpg\": Invalid argument (22)",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:10.0239537Z",
+        "id":  "",
+        "message":  "Number of files: 5 (reg: 5)",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:10.0430637Z",
+        "id":  "",
+        "message":  "rsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/story-time\\index.html\": Invalid argument (22)",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:10.083542Z",
+        "id":  "",
+        "message":  "Number of created files: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:10.1134057Z",
+        "id":  "",
+        "message":  "rsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\rat-ivy.jpg\": Invalid argument (22)",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:10.1535993Z",
+        "id":  "",
+        "message":  "Number of deleted files: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:10.1754969Z",
+        "id":  "",
+        "message":  "rsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/the-reception\\index.html\": Invalid argument (22)",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:10.2350613Z",
+        "id":  "",
+        "message":  "Number of regular files transferred: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:10.2849849Z",
+        "id":  "",
+        "message":  "rsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\.gitkeep\": Invalid argument (22)",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:10.4680511Z",
+        "id":  "",
+        "message":  "Total file size: 1.26M bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:10.646973Z",
+        "id":  "",
+        "message":  "rsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/login\\index.html\": Invalid argument (22)",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:10.7385304Z",
+        "id":  "",
+        "message":  "Total transferred file size: 0 bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:10.8397213Z",
+        "id":  "",
+        "message":  "rsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/order-of-the-day\\index.html\": Invalid argument (22)",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:10.8887395Z",
+        "id":  "",
+        "message":  "Literal data: 0 bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:10.9880357Z",
+        "id":  "",
+        "message":  "Matched data: 0 bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:11.0307384Z",
+        "id":  "",
+        "message":  "rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1347) [sender=3.2.7]",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:11.1201968Z",
+        "id":  "",
+        "message":  "File list size: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:11.1519237Z",
+        "id":  "",
+        "message":  "rsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/rsvp\\index.html\": Invalid argument (22)",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:11.1913515Z",
+        "id":  "",
+        "message":  "File list generation time: 0.001 seconds",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:11.2511816Z",
+        "id":  "",
+        "message":  "rsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\The proposal.jpg\": Invalid argument (22)",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:11.3028338Z",
+        "id":  "",
+        "message":  "File list transfer time: 0.000 seconds",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:11.3623692Z",
+        "id":  "",
+        "message":  "rsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\last 11 years.jpg\": Invalid argument (22)",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:11.4026313Z",
+        "id":  "",
+        "message":  "Total bytes sent: 209",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:11.4937534Z",
+        "id":  "",
+        "message":  "rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1347) [sender=3.2.7]",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:11.5240567Z",
+        "id":  "",
+        "message":  "Total bytes received: 12",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:11.5842784Z",
+        "id":  "",
+        "message":  "rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1347) [sender=3.2.7]",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:11.6433458Z",
+        "id":  "",
+        "message":  "",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:11.6741056Z",
+        "id":  "",
+        "message":  "rsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\rat-darwin.jpg\": Invalid argument (22)",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:11.7353416Z",
+        "id":  "",
+        "message":  "sent 209 bytes  received 12 bytes  147.33 bytes/sec",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:11.8561107Z",
+        "id":  "",
+        "message":  "rsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\rat-nova.jpg\": Invalid argument (22)",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:11.9151327Z",
+        "id":  "",
+        "message":  "total size is 1.26M  speedup is 5,696.04",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:11.9346228Z",
+        "id":  "",
+        "message":  "rsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\rat-remy.jpg\": Invalid argument (22)",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:11.9756737Z",
+        "id":  "",
+        "message":  "Running rsync for filelist /tmp//splits/split.ah from /tmp/zipdeploy/extracted/ to /home/site/wwwroot/",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:12.0452344Z",
+        "id":  "",
+        "message":  "rsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\rat-sky.jpg\": Invalid argument (22)",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:12.1156741Z",
+        "id":  "",
+        "message":  "Attempt 1: Rsync for filelist /tmp//splits/split.aa completed with exit code 23",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:12.1355643Z",
+        "id":  "",
+        "message":  "rsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\rat-xena.jpg\": Invalid argument (22)",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:12.18629Z",
+        "id":  "",
+        "message":  "",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:12.2863617Z",
+        "id":  "",
+        "message":  "rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1347) [sender=3.2.7]",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:12.3273113Z",
+        "id":  "",
+        "message":  "Number of files: 5 (reg: 5)",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:12.3873382Z",
+        "id":  "",
+        "message":  "rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1347) [sender=3.2.7]",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:12.426778Z",
+        "id":  "",
+        "message":  "Number of created files: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:12.4884588Z",
+        "id":  "",
+        "message":  "rsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/evening-rsvp\\index.html\": Invalid argument (22)",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:12.539061Z",
+        "id":  "",
+        "message":  "Number of deleted files: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:12.5773545Z",
+        "id":  "",
+        "message":  "rsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/hidden-game\\index.html\": Invalid argument (22)",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:12.6303534Z",
+        "id":  "",
+        "message":  "Number of regular files transferred: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:12.6708984Z",
+        "id":  "",
+        "message":  "rsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/evening-qa\\index.html\": Invalid argument (22)",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:12.748231Z",
+        "id":  "",
+        "message":  "Total file size: 1.10M bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:12.7690248Z",
+        "id":  "",
+        "message":  "rsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/story-time\\index.html\": Invalid argument (22)",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:12.8488435Z",
+        "id":  "",
+        "message":  "Total transferred file size: 0 bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:12.8719948Z",
+        "id":  "",
+        "message":  "rsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\rat-ivy.jpg\": Invalid argument (22)",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:12.9418271Z",
+        "id":  "",
+        "message":  "Literal data: 0 bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:12.9609506Z",
+        "id":  "",
+        "message":  "rsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\The engagment.jpg\": Invalid argument (22)",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:13.052044Z",
+        "id":  "",
+        "message":  "Matched data: 0 bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:13.0807537Z",
+        "id":  "",
+        "message":  "rsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\rat-arthur.jpg\": Invalid argument (22)",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:13.1423147Z",
+        "id":  "",
+        "message":  "File list size: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:13.16329Z",
+        "id":  "",
+        "message":  "rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1347) [sender=3.2.7]",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:13.2033067Z",
+        "id":  "",
+        "message":  "File list generation time: 0.001 seconds",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:13.2339189Z",
+        "id":  "",
+        "message":  "rsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/food\\index.html\": Invalid argument (22)",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:13.2912296Z",
+        "id":  "",
+        "message":  "File list transfer time: 0.000 seconds",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:13.3222184Z",
+        "id":  "",
+        "message":  "rsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/the-reception\\index.html\": Invalid argument (22)",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:13.3744765Z",
+        "id":  "",
+        "message":  "Total bytes sent: 286",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:13.4348186Z",
+        "id":  "",
+        "message":  "rsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\.gitkeep\": Invalid argument (22)",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:13.494671Z",
+        "id":  "",
+        "message":  "Total bytes received: 15",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:13.5654737Z",
+        "id":  "",
+        "message":  "rsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/rats\\index.html\": Invalid argument (22)",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:13.5958578Z",
+        "id":  "",
+        "message":  "",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:13.6736358Z",
+        "id":  "",
+        "message":  "rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1347) [sender=3.2.7]",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:13.6953701Z",
+        "id":  "",
+        "message":  "sent 286 bytes  received 15 bytes  602.00 bytes/sec",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:13.755126Z",
+        "id":  "",
+        "message":  "rsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/travel---accommodation\\index.html\": Invalid argument (22)",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:13.7963742Z",
+        "id":  "",
+        "message":  "total size is 1.10M  speedup is 3,665.55",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:13.8647373Z",
+        "id":  "",
+        "message":  "rsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\The Wedding.jpg\": Invalid argument (22)",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:13.9259027Z",
+        "id":  "",
+        "message":  "Attempt 1: Rsync for filelist /tmp//splits/split.ad completed with exit code 23",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:13.9654414Z",
+        "id":  "",
+        "message":  "rsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\rat-lancelot.jpg\": Invalid argument (22)",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:14.0177204Z",
+        "id":  "",
+        "message":  "",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:14.0778227Z",
+        "id":  "",
+        "message":  "rsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/the-castle\\index.html\": Invalid argument (22)",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:14.1079941Z",
+        "id":  "",
+        "message":  "Number of files: 5 (reg: 5)",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:14.1765963Z",
+        "id":  "",
+        "message":  "rsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\How we fell in love.jpg\": Invalid argument (22)",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:14.196823Z",
+        "id":  "",
+        "message":  "Number of created files: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:14.2594605Z",
+        "id":  "",
+        "message":  "rsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\How we met.jpg\": Invalid argument (22)",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:14.3081585Z",
+        "id":  "",
+        "message":  "Number of deleted files: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:14.3302253Z",
+        "id":  "",
+        "message":  "rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1347) [sender=3.2.7]",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:14.3900603Z",
+        "id":  "",
+        "message":  "Number of regular files transferred: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:14.4286781Z",
+        "id":  "",
+        "message":  "rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1347) [sender=3.2.7]",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:14.4505889Z",
+        "id":  "",
+        "message":  "Total file size: 972.95K bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:14.4814235Z",
+        "id":  "",
+        "message":  "rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1347) [sender=3.2.7]",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:14.541651Z",
+        "id":  "",
+        "message":  "Total transferred file size: 0 bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:14.5813727Z",
+        "id":  "",
+        "message":  "rsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/placeholders\\wedding-photo.svg\": Invalid argument (22)",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:14.6405837Z",
+        "id":  "",
+        "message":  "Literal data: 0 bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:14.6723039Z",
+        "id":  "",
+        "message":  "rsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/q---a-s\\index.html\": Invalid argument (22)",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:14.7929929Z",
+        "id":  "",
+        "message":  "Matched data: 0 bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:15.0614017Z",
+        "id":  "",
+        "message":  "rsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\rat-merlin.jpg\": Invalid argument (22)",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:15.1946285Z",
+        "id":  "",
+        "message":  "rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1347) [sender=3.2.7]",
+        "type":  1,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:15.3056674Z",
+        "id":  "",
+        "message":  "File list size: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:15.4961806Z",
+        "id":  "",
+        "message":  "File list generation time: 0.001 seconds",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:15.5673074Z",
+        "id":  "",
+        "message":  "File list transfer time: 0.000 seconds",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:15.6554325Z",
+        "id":  "",
+        "message":  "Total bytes sent: 257",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:15.7755541Z",
+        "id":  "",
+        "message":  "Total bytes received: 22",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:15.8766441Z",
+        "id":  "",
+        "message":  "",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:15.9688522Z",
+        "id":  "",
+        "message":  "sent 257 bytes  received 22 bytes  558.00 bytes/sec",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:16.0497218Z",
+        "id":  "",
+        "message":  "total size is 972.95K  speedup is 3,487.28",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:16.0901755Z",
+        "id":  "",
+        "message":  "Attempt 1: Rsync for filelist /tmp//splits/split.ac completed with exit code 23",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:16.1502422Z",
+        "id":  "",
+        "message":  "",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:16.3401584Z",
+        "id":  "",
+        "message":  "Number of files: 5 (reg: 5)",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:16.3996705Z",
+        "id":  "",
+        "message":  "Number of created files: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:16.4802182Z",
+        "id":  "",
+        "message":  "Number of deleted files: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:16.6119363Z",
+        "id":  "",
+        "message":  "Number of regular files transferred: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:16.663005Z",
+        "id":  "",
+        "message":  "Total file size: 4.67M bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:16.7129397Z",
+        "id":  "",
+        "message":  "Total transferred file size: 0 bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:16.8128519Z",
+        "id":  "",
+        "message":  "Literal data: 0 bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:16.8819885Z",
+        "id":  "",
+        "message":  "Matched data: 0 bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:16.9449991Z",
+        "id":  "",
+        "message":  "File list size: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:17.0140944Z",
+        "id":  "",
+        "message":  "File list generation time: 0.001 seconds",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:17.0949022Z",
+        "id":  "",
+        "message":  "File list transfer time: 0.000 seconds",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:17.1648898Z",
+        "id":  "",
+        "message":  "Total bytes sent: 266",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:17.2155911Z",
+        "id":  "",
+        "message":  "Total bytes received: 22",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:17.2951567Z",
+        "id":  "",
+        "message":  "",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:17.344974Z",
+        "id":  "",
+        "message":  "sent 266 bytes  received 22 bytes  192.00 bytes/sec",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:17.4161463Z",
+        "id":  "",
+        "message":  "total size is 4.67M  speedup is 16,222.25",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:17.5075215Z",
+        "id":  "",
+        "message":  "Attempt 1: Rsync for filelist /tmp//splits/split.ae completed with exit code 23",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:17.5971474Z",
+        "id":  "",
+        "message":  "",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:17.6767146Z",
+        "id":  "",
+        "message":  "Number of files: 5 (reg: 5)",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:17.7967698Z",
+        "id":  "",
+        "message":  "Number of created files: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:17.9195102Z",
+        "id":  "",
+        "message":  "Number of deleted files: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:18.0202044Z",
+        "id":  "",
+        "message":  "Number of regular files transferred: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:18.0813658Z",
+        "id":  "",
+        "message":  "Total file size: 293.02K bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:18.1606513Z",
+        "id":  "",
+        "message":  "Total transferred file size: 0 bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:18.2705649Z",
+        "id":  "",
+        "message":  "Literal data: 0 bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:18.3305296Z",
+        "id":  "",
+        "message":  "Matched data: 0 bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:18.4306993Z",
+        "id":  "",
+        "message":  "File list size: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:18.4826811Z",
+        "id":  "",
+        "message":  "File list generation time: 0.001 seconds",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:18.5332999Z",
+        "id":  "",
+        "message":  "File list transfer time: 0.000 seconds",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:18.6038948Z",
+        "id":  "",
+        "message":  "Total bytes sent: 247",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:18.6623427Z",
+        "id":  "",
+        "message":  "Total bytes received: 15",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:18.7643682Z",
+        "id":  "",
+        "message":  "",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:18.8149718Z",
+        "id":  "",
+        "message":  "sent 247 bytes  received 15 bytes  174.67 bytes/sec",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:18.9854131Z",
+        "id":  "",
+        "message":  "total size is 293.02K  speedup is 1,118.38",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:19.1047132Z",
+        "id":  "",
+        "message":  "Attempt 1: Rsync for filelist /tmp//splits/split.ag completed with exit code 23",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:19.1465635Z",
+        "id":  "",
+        "message":  "",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:19.1964295Z",
+        "id":  "",
+        "message":  "Number of files: 3 (reg: 3)",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:19.2679728Z",
+        "id":  "",
+        "message":  "Number of created files: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:19.3587847Z",
+        "id":  "",
+        "message":  "Number of deleted files: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:19.4078006Z",
+        "id":  "",
+        "message":  "Number of regular files transferred: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:19.4578821Z",
+        "id":  "",
+        "message":  "Total file size: 23.42K bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:19.5198581Z",
+        "id":  "",
+        "message":  "Total transferred file size: 0 bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:19.5891691Z",
+        "id":  "",
+        "message":  "Literal data: 0 bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:19.6293865Z",
+        "id":  "",
+        "message":  "Matched data: 0 bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:19.7190467Z",
+        "id":  "",
+        "message":  "File list size: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:19.8097894Z",
+        "id":  "",
+        "message":  "File list generation time: 0.001 seconds",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:19.869944Z",
+        "id":  "",
+        "message":  "File list transfer time: 0.000 seconds",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:19.9622093Z",
+        "id":  "",
+        "message":  "Total bytes sent: 186",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:20.1626845Z",
+        "id":  "",
+        "message":  "Total bytes received: 12",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:20.2334407Z",
+        "id":  "",
+        "message":  "",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:20.3739294Z",
+        "id":  "",
+        "message":  "sent 186 bytes  received 12 bytes  132.00 bytes/sec",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:20.46296Z",
+        "id":  "",
+        "message":  "total size is 23.42K  speedup is 118.30",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:20.525241Z",
+        "id":  "",
+        "message":  "",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:20.585192Z",
+        "id":  "",
+        "message":  "Number of files: 5 (reg: 5)",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:20.6353612Z",
+        "id":  "",
+        "message":  "Number of created files: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:20.6944853Z",
+        "id":  "",
+        "message":  "Number of deleted files: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:20.7566995Z",
+        "id":  "",
+        "message":  "Number of regular files transferred: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:20.8261393Z",
+        "id":  "",
+        "message":  "Total file size: 619.89K bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:20.8864263Z",
+        "id":  "",
+        "message":  "Total transferred file size: 0 bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:20.9366103Z",
+        "id":  "",
+        "message":  "Literal data: 0 bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:20.9873818Z",
+        "id":  "",
+        "message":  "Matched data: 0 bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:21.1475702Z",
+        "id":  "",
+        "message":  "File list size: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:21.2991147Z",
+        "id":  "",
+        "message":  "File list generation time: 0.001 seconds",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:21.3594406Z",
+        "id":  "",
+        "message":  "File list transfer time: 0.000 seconds",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:21.4197356Z",
+        "id":  "",
+        "message":  "Total bytes sent: 274",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:21.5107147Z",
+        "id":  "",
+        "message":  "Total bytes received: 12",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:21.6198934Z",
+        "id":  "",
+        "message":  "",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:21.708609Z",
+        "id":  "",
+        "message":  "sent 274 bytes  received 12 bytes  114.40 bytes/sec",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:21.8199008Z",
+        "id":  "",
+        "message":  "total size is 619.89K  speedup is 2,167.47",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:21.9223676Z",
+        "id":  "",
+        "message":  "Attempt 1: Rsync for filelist /tmp//splits/split.ah completed with exit code 23",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:22.0316787Z",
+        "id":  "",
+        "message":  "Attempt 2: Rsync for filelist /tmp//splits/split.ab completed with exit code 23",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:22.1336744Z",
+        "id":  "",
+        "message":  "",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:22.302163Z",
+        "id":  "",
+        "message":  "Number of files: 5 (reg: 5)",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:22.4051851Z",
+        "id":  "",
+        "message":  "Number of created files: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:22.49535Z",
+        "id":  "",
+        "message":  "Number of deleted files: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:22.5448267Z",
+        "id":  "",
+        "message":  "Number of regular files transferred: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:22.615394Z",
+        "id":  "",
+        "message":  "Total file size: 1.26M bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:22.675598Z",
+        "id":  "",
+        "message":  "Total transferred file size: 0 bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:22.7365313Z",
+        "id":  "",
+        "message":  "Literal data: 0 bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:22.8255943Z",
+        "id":  "",
+        "message":  "Matched data: 0 bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:22.8780036Z",
+        "id":  "",
+        "message":  "File list size: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:22.9012553Z",
+        "id":  "",
+        "message":  "File list generation time: 0.641 seconds",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:22.9171253Z",
+        "id":  "",
+        "message":  "File list transfer time: 0.000 seconds",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:22.9371614Z",
+        "id":  "",
+        "message":  "Total bytes sent: 209",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:22.9596286Z",
+        "id":  "",
+        "message":  "Total bytes received: 12",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:23.0023529Z",
+        "id":  "",
+        "message":  "",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:23.0218623Z",
+        "id":  "",
+        "message":  "sent 209 bytes  received 12 bytes  88.40 bytes/sec",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:23.0364668Z",
+        "id":  "",
+        "message":  "total size is 1.26M  speedup is 5,696.04",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:23.0572036Z",
+        "id":  "",
+        "message":  "Attempt 2: Rsync for filelist /tmp//splits/split.aa completed with exit code 23",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:23.0776344Z",
+        "id":  "",
+        "message":  "",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:23.0929458Z",
+        "id":  "",
+        "message":  "Number of files: 5 (reg: 5)",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:23.1133891Z",
+        "id":  "",
+        "message":  "Number of created files: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:23.1332961Z",
+        "id":  "",
+        "message":  "Number of deleted files: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:23.1514558Z",
+        "id":  "",
+        "message":  "Number of regular files transferred: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:23.1668142Z",
+        "id":  "",
+        "message":  "Total file size: 352.50K bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:23.1838723Z",
+        "id":  "",
+        "message":  "Total transferred file size: 0 bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:23.2216404Z",
+        "id":  "",
+        "message":  "Literal data: 0 bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:23.2346665Z",
+        "id":  "",
+        "message":  "Matched data: 0 bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:23.2929935Z",
+        "id":  "",
+        "message":  "File list size: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:23.3434097Z",
+        "id":  "",
+        "message":  "File list generation time: 0.001 seconds",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:23.3937711Z",
+        "id":  "",
+        "message":  "File list transfer time: 0.000 seconds",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:23.4552988Z",
+        "id":  "",
+        "message":  "Total bytes sent: 233",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:23.5392068Z",
+        "id":  "",
+        "message":  "Total bytes received: 18",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:23.5598468Z",
+        "id":  "",
+        "message":  "",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:23.5775713Z",
+        "id":  "",
+        "message":  "sent 233 bytes  received 18 bytes  100.40 bytes/sec",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:23.5953026Z",
+        "id":  "",
+        "message":  "total size is 352.50K  speedup is 1,404.36",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:23.6380263Z",
+        "id":  "",
+        "message":  "Attempt 1: Rsync for filelist /tmp//splits/split.af completed with exit code 23",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:23.7462843Z",
+        "id":  "",
+        "message":  "",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:23.8494793Z",
+        "id":  "",
+        "message":  "Number of files: 5 (reg: 5)",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:23.9878036Z",
+        "id":  "",
+        "message":  "Number of created files: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:24.0404993Z",
+        "id":  "",
+        "message":  "Number of deleted files: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:24.1090482Z",
+        "id":  "",
+        "message":  "Number of regular files transferred: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:24.1716717Z",
+        "id":  "",
+        "message":  "Total file size: 4.67M bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:24.2011645Z",
+        "id":  "",
+        "message":  "Total transferred file size: 0 bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:24.2212281Z",
+        "id":  "",
+        "message":  "Literal data: 0 bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:24.2444083Z",
+        "id":  "",
+        "message":  "Matched data: 0 bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:24.2660342Z",
+        "id":  "",
+        "message":  "File list size: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:24.2858407Z",
+        "id":  "",
+        "message":  "File list generation time: 0.001 seconds",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:24.3103022Z",
+        "id":  "",
+        "message":  "File list transfer time: 0.000 seconds",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:24.3660657Z",
+        "id":  "",
+        "message":  "Total bytes sent: 266",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:24.3854201Z",
+        "id":  "",
+        "message":  "Total bytes received: 22",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:24.4032065Z",
+        "id":  "",
+        "message":  "",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:24.4163428Z",
+        "id":  "",
+        "message":  "sent 266 bytes  received 22 bytes  192.00 bytes/sec",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:24.4409442Z",
+        "id":  "",
+        "message":  "total size is 4.67M  speedup is 16,222.25",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:24.4564077Z",
+        "id":  "",
+        "message":  "Attempt 2: Rsync for filelist /tmp//splits/split.ae completed with exit code 23",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:24.4954232Z",
+        "id":  "",
+        "message":  "",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:24.5349873Z",
+        "id":  "",
+        "message":  "Number of files: 5 (reg: 5)",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:24.5758039Z",
+        "id":  "",
+        "message":  "Number of created files: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:24.7134888Z",
+        "id":  "",
+        "message":  "Number of deleted files: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:24.7863193Z",
+        "id":  "",
+        "message":  "Number of regular files transferred: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:24.8359455Z",
+        "id":  "",
+        "message":  "Total file size: 293.02K bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:25.147186Z",
+        "id":  "",
+        "message":  "Total transferred file size: 0 bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:25.438613Z",
+        "id":  "",
+        "message":  "Literal data: 0 bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:25.5183126Z",
+        "id":  "",
+        "message":  "Matched data: 0 bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:25.5696177Z",
+        "id":  "",
+        "message":  "File list size: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:25.6303496Z",
+        "id":  "",
+        "message":  "File list generation time: 0.001 seconds",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:25.740902Z",
+        "id":  "",
+        "message":  "File list transfer time: 0.000 seconds",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:25.8097831Z",
+        "id":  "",
+        "message":  "Total bytes sent: 247",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:25.8622135Z",
+        "id":  "",
+        "message":  "Total bytes received: 15",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:25.9222903Z",
+        "id":  "",
+        "message":  "",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:26.0107313Z",
+        "id":  "",
+        "message":  "sent 247 bytes  received 15 bytes  174.67 bytes/sec",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:26.1233441Z",
+        "id":  "",
+        "message":  "total size is 293.02K  speedup is 1,118.38",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:26.3330626Z",
+        "id":  "",
+        "message":  "Attempt 2: Rsync for filelist /tmp//splits/split.ag completed with exit code 23",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:26.6361593Z",
+        "id":  "",
+        "message":  "",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:26.9696799Z",
+        "id":  "",
+        "message":  "Number of files: 3 (reg: 3)",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:27.179598Z",
+        "id":  "",
+        "message":  "Number of created files: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:27.2504837Z",
+        "id":  "",
+        "message":  "Number of deleted files: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:27.3109791Z",
+        "id":  "",
+        "message":  "Number of regular files transferred: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:27.4794808Z",
+        "id":  "",
+        "message":  "Total file size: 23.42K bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:27.5428989Z",
+        "id":  "",
+        "message":  "Total transferred file size: 0 bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:27.6229107Z",
+        "id":  "",
+        "message":  "Literal data: 0 bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:27.7029746Z",
+        "id":  "",
+        "message":  "Matched data: 0 bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:27.7527534Z",
+        "id":  "",
+        "message":  "File list size: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:27.7743419Z",
+        "id":  "",
+        "message":  "File list generation time: 0.001 seconds",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:27.7924379Z",
+        "id":  "",
+        "message":  "File list transfer time: 0.000 seconds",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:27.8192139Z",
+        "id":  "",
+        "message":  "Total bytes sent: 186",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:27.834874Z",
+        "id":  "",
+        "message":  "Total bytes received: 12",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:27.8509787Z",
+        "id":  "",
+        "message":  "",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:27.8655585Z",
+        "id":  "",
+        "message":  "sent 186 bytes  received 12 bytes  396.00 bytes/sec",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:27.8815804Z",
+        "id":  "",
+        "message":  "total size is 23.42K  speedup is 118.30",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:27.9061314Z",
+        "id":  "",
+        "message":  "",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:27.9322693Z",
+        "id":  "",
+        "message":  "Number of files: 5 (reg: 5)",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:27.9614377Z",
+        "id":  "",
+        "message":  "Number of created files: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:27.9772601Z",
+        "id":  "",
+        "message":  "Number of deleted files: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:27.9967779Z",
+        "id":  "",
+        "message":  "Number of regular files transferred: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:28.0307068Z",
+        "id":  "",
+        "message":  "Total file size: 972.95K bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:28.0459443Z",
+        "id":  "",
+        "message":  "Total transferred file size: 0 bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:28.060032Z",
+        "id":  "",
+        "message":  "Literal data: 0 bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:28.0741453Z",
+        "id":  "",
+        "message":  "Matched data: 0 bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:28.0884115Z",
+        "id":  "",
+        "message":  "File list size: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:28.1163883Z",
+        "id":  "",
+        "message":  "File list generation time: 0.001 seconds",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:28.1302752Z",
+        "id":  "",
+        "message":  "File list transfer time: 0.000 seconds",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:28.1599436Z",
+        "id":  "",
+        "message":  "Total bytes sent: 257",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:28.180996Z",
+        "id":  "",
+        "message":  "Total bytes received: 22",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:28.2036621Z",
+        "id":  "",
+        "message":  "",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:28.2236228Z",
+        "id":  "",
+        "message":  "sent 257 bytes  received 22 bytes  558.00 bytes/sec",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:28.2395773Z",
+        "id":  "",
+        "message":  "total size is 972.95K  speedup is 3,487.28",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:28.2536574Z",
+        "id":  "",
+        "message":  "Attempt 2: Rsync for filelist /tmp//splits/split.ac completed with exit code 23",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:28.2679118Z",
+        "id":  "",
+        "message":  "",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:28.282274Z",
+        "id":  "",
+        "message":  "Number of files: 5 (reg: 5)",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:28.3054816Z",
+        "id":  "",
+        "message":  "Number of created files: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:28.3254033Z",
+        "id":  "",
+        "message":  "Number of deleted files: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:28.3436556Z",
+        "id":  "",
+        "message":  "Number of regular files transferred: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:28.3592116Z",
+        "id":  "",
+        "message":  "Total file size: 1.10M bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:28.3735983Z",
+        "id":  "",
+        "message":  "Total transferred file size: 0 bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:28.387536Z",
+        "id":  "",
+        "message":  "Literal data: 0 bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:28.4170163Z",
+        "id":  "",
+        "message":  "Matched data: 0 bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:28.4763175Z",
+        "id":  "",
+        "message":  "File list size: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:28.5003974Z",
+        "id":  "",
+        "message":  "File list generation time: 0.001 seconds",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:28.5290438Z",
+        "id":  "",
+        "message":  "File list transfer time: 0.000 seconds",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:28.5435756Z",
+        "id":  "",
+        "message":  "Total bytes sent: 286",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:28.5606184Z",
+        "id":  "",
+        "message":  "Total bytes received: 15",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:28.5753249Z",
+        "id":  "",
+        "message":  "",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:28.5923624Z",
+        "id":  "",
+        "message":  "sent 286 bytes  received 15 bytes  120.40 bytes/sec",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:28.6186982Z",
+        "id":  "",
+        "message":  "total size is 1.10M  speedup is 3,665.55",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:28.6340854Z",
+        "id":  "",
+        "message":  "Attempt 2: Rsync for filelist /tmp//splits/split.ad completed with exit code 23",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:28.647432Z",
+        "id":  "",
+        "message":  "Attempt 2: Rsync for filelist /tmp//splits/split.ah completed with exit code 23",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:28.6634487Z",
+        "id":  "",
+        "message":  "",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:28.6774337Z",
+        "id":  "",
+        "message":  "Number of files: 5 (reg: 5)",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:28.695322Z",
+        "id":  "",
+        "message":  "Number of created files: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:28.7158014Z",
+        "id":  "",
+        "message":  "Number of deleted files: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:28.7310349Z",
+        "id":  "",
+        "message":  "Number of regular files transferred: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:28.7485511Z",
+        "id":  "",
+        "message":  "Total file size: 352.50K bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:28.7638218Z",
+        "id":  "",
+        "message":  "Total transferred file size: 0 bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:28.7781969Z",
+        "id":  "",
+        "message":  "Literal data: 0 bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:28.8049389Z",
+        "id":  "",
+        "message":  "Matched data: 0 bytes",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:28.8232627Z",
+        "id":  "",
+        "message":  "File list size: 0",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:28.8378941Z",
+        "id":  "",
+        "message":  "File list generation time: 0.001 seconds",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:28.8524663Z",
+        "id":  "",
+        "message":  "File list transfer time: 0.000 seconds",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:28.8672095Z",
+        "id":  "",
+        "message":  "Total bytes sent: 233",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:28.884655Z",
+        "id":  "",
+        "message":  "Total bytes received: 18",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:28.92267Z",
+        "id":  "",
+        "message":  "",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:28.9393127Z",
+        "id":  "",
+        "message":  "sent 233 bytes  received 18 bytes  502.00 bytes/sec",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:28.9543322Z",
+        "id":  "",
+        "message":  "total size is 352.50K  speedup is 1,404.36",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:28.9699991Z",
+        "id":  "",
+        "message":  "Attempt 2: Rsync for filelist /tmp//splits/split.af completed with exit code 23",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:28.9846249Z",
+        "id":  "",
+        "message":  "An error has occurred during web site deployment.",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:29.0112251Z",
+        "id":  "",
+        "message":  "Rsync failed in 6 seconds",
+        "type":  0,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:29.0932375Z",
+        "id":  "",
+        "message":  "rsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/login\\index.html\": Invalid argument (22)\\nrsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/order-of-the-day\\index.html\": Invalid argument (22)\\nrsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/rsvp\\index.html\": Invalid argument (22)\\nrsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\The proposal.jpg\": Invalid argument (22)\\nrsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\last 11 years.jpg\": Invalid argument (22)\\nrsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\rat-darwin.jpg\": Invalid argument (22)\\nrsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\rat-nova.jpg\": Invalid argument (22)\\nrsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\rat-remy.jpg\": Invalid argument (22)\\nrsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\rat-sky.jpg\": Invalid argument (22)\\nrsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\rat-xena.jpg\": Invalid argument (22)\\nrsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1347) [sender=3.2.7]\\nrsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1347) [sender=3.2.7]\\nrsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/rats\\index.html\": Invalid argument (22)\\nrsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/the-castle\\index.html\": Invalid argument (22)\\nrsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\How we fell in love.jpg\": Invalid argument (22)\\nrsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\How we met.jpg\": Invalid argument (22)\\nrsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/travel---accommodation\\index.html\": Invalid argument (22)\\nrsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\The Wedding.jpg\": Invalid argument (22)\\nrsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\rat-lancelot.jpg\": Invalid argument (22)\\nrsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1347) [sender=3.2.7]\\nrsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/evening-qa\\index.html\": Invalid argument (22)\\nrsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\The engagment.jpg\": Invalid argument (22)\\nrsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\rat-arthur.jpg\": Invalid argument (22)\\nrsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/food\\index.html\": Invalid argument (22)\\nrsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/placeholders\\wedding-photo.svg\": Invalid argument (22)\\nrsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1347) [sender=3.2.7]\\nrsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/q---a-s\\index.html\": Invalid argument (22)\\nrsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1347) [sender=3.2.7]\\nrsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/evening-rsvp\\index.html\": Invalid argument (22)\\nrsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/hidden-game\\index.html\": Invalid argument (22)\\nrsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\rat-merlin.jpg\": Invalid argument (22)\\nrsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/story-time\\index.html\": Invalid argument (22)\\nrsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\rat-ivy.jpg\": Invalid argument (22)\\nrsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/the-reception\\index.html\": Invalid argument (22)\\nrsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\.gitkeep\": Invalid argument (22)\\nrsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/login\\index.html\": Invalid argument (22)\\nrsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/order-of-the-day\\index.html\": Invalid argument (22)\\nrsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1347) [sender=3.2.7]\\nrsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/rsvp\\index.html\": Invalid argument (22)\\nrsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\The proposal.jpg\": Invalid argument (22)\\nrsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\last 11 years.jpg\": Invalid argument (22)\\nrsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1347) [sender=3.2.7]\\nrsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1347) [sender=3.2.7]\\nrsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\rat-darwin.jpg\": Invalid argument (22)\\nrsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\rat-nova.jpg\": Invalid argument (22)\\nrsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\rat-remy.jpg\": Invalid argument (22)\\nrsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\rat-sky.jpg\": Invalid argument (22)\\nrsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\rat-xena.jpg\": Invalid argument (22)\\nrsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1347) [sender=3.2.7]\\nrsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1347) [sender=3.2.7]\\nrsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/evening-rsvp\\index.html\": Invalid argument (22)\\nrsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/hidden-game\\index.html\": Invalid argument (22)\\nrsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/evening-qa\\index.html\": Invalid argument (22)\\nrsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/story-time\\index.html\": Invalid argument (22)\\nrsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\rat-ivy.jpg\": Invalid argument (22)\\nrsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\The engagment.jpg\": Invalid argument (22)\\nrsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\rat-arthur.jpg\": Invalid argument (22)\\nrsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1347) [sender=3.2.7]\\nrsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/food\\index.html\": Invalid argument (22)\\nrsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/the-reception\\index.html\": Invalid argument (22)\\nrsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\.gitkeep\": Invalid argument (22)\\nrsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/rats\\index.html\": Invalid argument (22)\\nrsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1347) [sender=3.2.7]\\nrsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/travel---accommodation\\index.html\": Invalid argument (22)\\nrsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\The Wedding.jpg\": Invalid argument (22)\\nrsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\rat-lancelot.jpg\": Invalid argument (22)\\nrsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/the-castle\\index.html\": Invalid argument (22)\\nrsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\How we fell in love.jpg\": Invalid argument (22)\\nrsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\How we met.jpg\": Invalid argument (22)\\nrsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1347) [sender=3.2.7]\\nrsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1347) [sender=3.2.7]\\nrsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1347) [sender=3.2.7]\\nrsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/placeholders\\wedding-photo.svg\": Invalid argument (22)\\nrsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/q---a-s\\index.html\": Invalid argument (22)\\nrsync: [generator] recv_generator: failed to stat \"/home/site/wwwroot/websites\\AD2903022\\images\\rat-merlin.jpg\": Invalid argument (22)\\nrsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1347) [sender=3.2.7]\\n/opt/Kudu/Scripts/starter.sh /opt/Kudu/Scripts/parallel_rsync.sh /tmp/zipdeploy/extracted /home/site/wwwroot 8 /tmp/ True False  ",
+        "type":  2,
+        "details_url":  null
+    },
+    {
+        "log_time":  "2026-09-18T15:55:29.4258358Z",
+        "id":  "",
+        "message":  "Using cached version of deployment script (command: \u0027azure -y --no-dot-deployment -r \"/tmp/zipdeploy/extracted\" -o \"/home/site/deployments/tools\" --basic --sitePath \"/tmp/zipdeploy/extracted\"\u0027).",
+        "type":  0,
+        "details_url":  null
+    }
+]

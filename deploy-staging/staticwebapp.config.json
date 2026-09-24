@@ -1,0 +1,96 @@
+{
+  "auth": {
+    "rolesSource": "/api/GetRoles",
+    "identityProviders": {
+      "customOpenIdConnectProviders": {
+        "wedding": {
+          "registration": {
+            "clientIdSettingName": "WEDDING_CLIENT_ID",
+            "clientCredential": {
+              "clientSecretSettingName": "WEDDING_CLIENT_SECRET"
+            },
+            "openIdConnectConfiguration": {
+              "wellKnownOpenIdConfiguration": "https://AnchenandJoeWedding.ciamlogin.com/77169875-115f-4516-8543-daf5aaf2e0c4/v2.0/.well-known/openid-configuration"
+            }
+          },
+          "login": {
+            "nameClaimType": "email",
+            "scopes": ["openid", "profile", "email"],
+            "loginParameterNames": []
+          }
+        }
+      }
+    }
+  },
+  "routes": [
+    {
+      "route": "/site.css",
+      "allowedRoles": ["anonymous"]
+    },
+    {
+      "route": "/site.js",
+      "allowedRoles": ["anonymous"]
+    },
+    {
+      "route": "/placeholders/*",
+      "allowedRoles": ["anonymous"]
+    },
+    {
+      "route": "/websites/*",
+      "allowedRoles": ["anonymous"]
+    },
+    {
+      "route": "/login/*",
+      "allowedRoles": ["anonymous"]
+    },
+    {
+      "route": "/order-of-the-day/*",
+      "allowedRoles": ["ceremony"]
+    },
+    {
+      "route": "/story-time/*",
+      "allowedRoles": ["authenticated"]
+    },
+    {
+      "route": "/the-castle/*",
+      "allowedRoles": ["authenticated"]
+    },
+    {
+      "route": "/q---a-s/*",
+      "allowedRoles": ["ceremony"]
+    },
+    {
+      "route": "/food/*",
+      "allowedRoles": ["ceremony"]
+    },
+    {
+      "route": "/rsvp/*",
+      "allowedRoles": ["ceremony"]
+    },
+    {
+      "route": "/evening-qa/*",
+      "allowedRoles": ["evening"]
+    },
+    {
+      "route": "/evening-rsvp/*",
+      "allowedRoles": ["evening"]
+    },
+    {
+      "route": "/*",
+      "allowedRoles": ["authenticated"]
+    }
+  ],
+  "navigationFallback": {
+    "rewrite": "/404.html",
+    "exclude": ["/*.{css,js,png,gif,jpg,jpeg,svg,webp,ico,woff,woff2}"]
+  },
+  "responseOverrides": {
+    "401": {
+      "rewrite": "/login/"
+    }
+  },
+  "globalHeaders": {
+    "X-Content-Type-Options": "nosniff",
+    "Referrer-Policy": "strict-origin-when-cross-origin"
+  }
+}

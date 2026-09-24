@@ -13,6 +13,7 @@
 
 :root {
   --ds-gold: #BF9B3A;
+  --ds-blue: #00AAB9;
   --ds-teal: #017077;
   --ds-heading: #000000;
   --ds-body: #1a1a1a;
@@ -40,7 +41,7 @@
   font-weight: 700;
   letter-spacing: 0.35em;
   text-transform: uppercase;
-  color: var(--ds-gold);
+  color: var(--ds-blue);
   text-align: center;
   margin: 0 0 10px;
 }

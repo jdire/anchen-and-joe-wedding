@@ -1,0 +1,8 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "az": true,
+        "&": true,
+        "Out-File": true,
+        "git remote": true
+    }
+}

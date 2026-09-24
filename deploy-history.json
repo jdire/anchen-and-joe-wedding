@@ -1,0 +1,80 @@
+﻿[
+  {
+    "active": true,
+    "author": "N/A",
+    "author_email": "N/A",
+    "build_summary": {
+      "errors": [],
+      "warnings": []
+    },
+    "complete": true,
+    "deployer": "Push-Deployer",
+    "deployment_tag": "",
+    "end_time": "2026-09-18T16:56:50.9878982Z",
+    "id": "d5dcbcde-fcc9-4bc5-8b13-dad7a3e62f17",
+    "is_readonly": true,
+    "is_temp": false,
+    "last_success_end_time": "2026-09-18T16:56:50.9878982Z",
+    "log_url": "https://anchen-joe-protected.scm.azurewebsites.net/api/deployments/d5dcbcde-fcc9-4bc5-8b13-dad7a3e62f17/log",
+    "message": "Created via a push deployment",
+    "progress": "",
+    "received_time": "2026-09-18T16:56:42.6960369Z",
+    "site_name": "anchen-joe-protected",
+    "start_time": "2026-09-18T16:56:44.2920046Z",
+    "status": 4,
+    "status_text": "",
+    "url": "https://anchen-joe-protected.scm.azurewebsites.net/api/deployments/d5dcbcde-fcc9-4bc5-8b13-dad7a3e62f17"
+  },
+  {
+    "active": false,
+    "author": "N/A",
+    "author_email": "N/A",
+    "build_summary": {
+      "errors": [],
+      "warnings": []
+    },
+    "complete": true,
+    "deployer": "OneDeploy",
+    "deployment_tag": "",
+    "end_time": "2026-09-18T16:55:35.5975123Z",
+    "id": "6506b5b3-f1e9-49d2-928a-066a10ad8160",
+    "is_readonly": true,
+    "is_temp": false,
+    "last_success_end_time": "2026-09-18T16:55:35.5975123Z",
+    "log_url": "https://anchen-joe-protected.scm.azurewebsites.net/api/deployments/6506b5b3-f1e9-49d2-928a-066a10ad8160/log",
+    "message": "OneDeploy",
+    "progress": "",
+    "received_time": "2026-09-18T16:55:23.4425997Z",
+    "site_name": "anchen-joe-protected",
+    "start_time": "2026-09-18T16:55:25.0221046Z",
+    "status": 4,
+    "status_text": "",
+    "url": "https://anchen-joe-protected.scm.azurewebsites.net/api/deployments/6506b5b3-f1e9-49d2-928a-066a10ad8160"
+  },
+  {
+    "active": false,
+    "author": "N/A",
+    "author_email": "N/A",
+    "build_summary": {
+      "errors": [],
+      "warnings": []
+    },
+    "complete": true,
+    "deployer": "OneDeploy",
+    "deployment_tag": "",
+    "end_time": "2026-09-18T16:12:29.2249712Z",
+    "id": "2497549c-109f-4ba9-928e-7de35c9b397f",
+    "is_readonly": true,
+    "is_temp": false,
+    "last_success_end_time": "2026-09-18T16:12:29.2249712Z",
+    "log_url": "https://anchen-joe-protected.scm.azurewebsites.net/api/deployments/2497549c-109f-4ba9-928e-7de35c9b397f/log",
+    "message": "OneDeploy",
+    "progress": "",
+    "received_time": "2026-09-18T16:12:01.0810599Z",
+    "site_name": "anchen-joe-protected",
+    "start_time": "2026-09-18T16:12:03.3858958Z",
+    "status": 4,
+    "status_text": "",
+    "url": "https://anchen-joe-protected.scm.azurewebsites.net/api/deployments/2497549c-109f-4ba9-928e-7de35c9b397f"
+  }
+]
